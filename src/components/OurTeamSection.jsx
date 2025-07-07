@@ -16,7 +16,7 @@ import sneha from "../assets/team/sneha.jpg";
 import zubair from "../assets/team/zubair.jpg";
 import ronit from "../assets/team/ronit.jpg";
 import kanika from "../assets/team/kanika.jpg";
-import Raina from "../assets/team/raina.jpg";
+import raina from "../assets/team/raina.jpg";
 import shubham from "../assets/team/shubham.jpg";
 import arpita from "../assets/team/arpita.jpg";
 
@@ -64,9 +64,9 @@ const OurTeamSection = () => {
       linkedin: ""
     },
     {
-      image: juiTollenImg,
-      name: "Janine Tubon",
-      title: "Virtual Assistant",
+      image: raina,
+      name: "Raina Gupta",
+      title: "Opertions Manager",
       linkedin: ""
     },
     {

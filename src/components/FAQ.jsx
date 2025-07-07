@@ -88,13 +88,23 @@ export default function FAQ() {
 
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section with Video */}
       <section className="relative min-h-[80vh]">
-        <div
-          className="bg-cover bg-center min-h-[80vh] flex items-center justify-center text-center text-black px-4 transition-all duration-300"
-          style={{ backgroundImage: "url('/assets/hero-bg.png')" }}
-        >
-          <div className="space-y-4">
+        <div className="relative min-h-[80vh] flex items-center justify-center text-center text-black px-4">
+          {/* Background Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          >
+            <source src="/assets/hero-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          {/* Text Overlay */}
+          <div className="relative z-10 space-y-4">
             <p className="uppercase text-sm tracking-widest text-gray-700">
               Have Questions?
             </p>
@@ -105,10 +115,9 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* FAQ Section - All in one column below heading */}
+      {/* FAQ Section */}
       <section className="bg-white py-20 px-6 md:px-20 font-['Roboto'] text-[#0A0D17]">
         <div className="max-w-4xl mx-auto space-y-10">
-          {/* Intro */}
           <div className="space-y-4 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-roboto leading-tight">
               Have any questions? <br />
@@ -119,7 +128,6 @@ export default function FAQ() {
             </p>
           </div>
 
-          {/* Accordion */}
           <div className="space-y-6">
             {faqData.map((faq, index) => (
               <div

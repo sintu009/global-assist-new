@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Facebook, Instagram, Linkedin } from "lucide-react"; // ✅ Import Lucide icons
-
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 const serviceDropdown = [
   { name: 'ADMINISTRATIVE EXECUTIVE', path: '/administrative-executive' },
@@ -40,42 +39,24 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-purple-200 px-6 py-10 border-t">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 items-start">
-        {/* Logo and Social Icons */}
+    <footer className="bg-purple-200 px-6 pt-10 pb-6 border-t">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-start">
+        {/* Column 1: Logo & Navigation */}
         <div>
           <img src="/assets/logo.png" alt="Global Assist" className="mb-4 w-28" />
 
-          {/* 🔗 Social Media Icons */}
-<div className="flex gap-4 mb-6">
-  <a
-    href="https://www.facebook.com/GlobalAssist123"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Facebook"
-    title="Facebook"
-  >
-    <Facebook className="w-6 h-6 text-[#1877F2] hover:scale-110 hover:text-[#145DA0] transition-transform duration-300" />
-  </a>
-  <a
-    href="https://www.instagram.com/theglobalassist/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-    title="Instagram"
-  >
-    <Instagram className="w-6 h-6 text-[#E4405F] hover:scale-110 hover:text-[#C13584] transition-transform duration-300" />
-  </a>
-  <a
-    href="https://www.linkedin.com/company/theglobalassist/?viewAsMember=true"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-    title="LinkedIn"
-  >
-    <Linkedin className="w-6 h-6 text-[#0A66C2] hover:scale-110 hover:text-[#004182] transition-transform duration-300" />
-  </a>
-</div>
+          {/* Social Icons */}
+          <div className="flex gap-4 mb-6">
+            <a href="https://www.facebook.com/GlobalAssist123" target="_blank" rel="noopener noreferrer">
+              <Facebook className="w-6 h-6 text-[#1877F2] hover:scale-110 transition-transform duration-300" />
+            </a>
+            <a href="https://www.instagram.com/theglobalassist/" target="_blank" rel="noopener noreferrer">
+              <Instagram className="w-6 h-6 text-[#E4405F] hover:scale-110 transition-transform duration-300" />
+            </a>
+            <a href="https://www.linkedin.com/company/theglobalassist/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="w-6 h-6 text-[#0A66C2] hover:scale-110 transition-transform duration-300" />
+            </a>
+          </div>
 
           <h4 className="font-semibold mb-2">NAVIGATION</h4>
           <ul className="space-y-1 text-sm">
@@ -89,7 +70,9 @@ export default function Footer() {
                     type="button"
                   >
                     Services
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
                   </button>
                   {servicesOpen && (
                     <div className="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded shadow-lg z-50">
@@ -110,9 +93,7 @@ export default function Footer() {
                 <li key={name}>
                   <Link
                     to={path}
-                    className={`hover:underline ${
-                      currentPath === path ? 'text-pink-600 font-medium' : ''
-                    }`}
+                    className={`hover:underline ${currentPath === path ? 'text-pink-600 font-medium' : ''}`}
                   >
                     {name}
                   </Link>
@@ -122,60 +103,58 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Others */}
-        <div>
+        {/* Column 2: Others */}
+        <div className="lg:ml-[-200px]">
           <h4 className="font-semibold mb-2">OTHERS</h4>
           <ul className="space-y-1 text-sm">
             <li><a href="#" className="hover:underline">Blog</a></li>
-            <li>
-              <Link to="/privacy-policy" className="hover:underline">
-                  Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link to="/case-studies" className="hover:underline">
-              Case Studies
-              </Link>
-            </li>
+            <li><Link to="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
+            <li><Link to="/case-studies" className="hover:underline">Case Studies</Link></li>
             <li><a href="/terms-conditions" className="hover:underline">Terms & Conditions</a></li>
           </ul>
         </div>
 
-        {/* Location & Contact */}
-        <div className="space-y-4 text-sm">
-          <div className="flex gap-2">
-            <img src="/assets/flag-canada.png" alt="Canada" className="w-6 h-4" />
-            <img src="/assets/flag-usa.png" alt="USA" className="w-6 h-4" />
-            <img src="/assets/flag-philippines.png" alt="Philippines" className="w-6 h-4" />
-            <img src="/assets/flag-india.png" alt="India" className="w-6 h-4" />
-            <img src="/assets/flag-venezuela.png" alt="Venezuela" className="w-6 h-4" />
+        {/* Column 3: Flag Grid & Contact */}
+        <div className="lg:ml-[-240px]">
+          <h4 className="font-semibold mb-3">OUR LOCATIONS</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-21 text-[13px] text-black font-medium leading-relaxed text-center">
+            <div>
+              <img src="/assets/flag-canada.png" alt="Canada" className="w-18 h-12 mx-auto mb-2" />
+              <p>5165 Queen Mary Rd<br />- GR-2 Unit #101<br />Montreal, QC H3W 1X7</p>
+            </div>
+            <div>
+              <img src="/assets/flag-india.png" alt="India" className="w-18 h-12 mx-auto mb-2" />
+              <p>Block B, Sector 58<br />Noida, Uttar Pradesh<br />- 201301</p>
+            </div>
+            <div>
+              <img src="/assets/flag-philippines.png" alt="Philippines" className="w-18 h-12 mx-auto mb-2" />
+              <p>BF Homes,<br />Manila, 1718</p>
+            </div>
+            <div>
+              <img src="/assets/flag-usa.png" alt="USA" className="w-17 h-12 mx-auto mb-2" />
+              <p>1309 Coffen Avenue<br />STE 1200, Sheridan,<br />Wyoming, 82801</p>
+            </div>
+            <div>
+              <img src="/assets/flag-venezuela.png" alt="Venezuela" className="w-17 h-12 mx-auto mb-2" />
+              <p>Las Gaviotas Bldg,<br />Milagro St. Puerto La Cruz<br />6023, Venezuela.</p>
+            </div>
           </div>
-          <div className="flex items-start gap-2">
-            <span>📍</span>
-            <p>5165 Queen Mary Rd – GR-2 Unit #101 Montreal, QC H3W 1X7</p>
-          </div>
-          <div className="flex items-center gap-2">
+
+          {/* Contact Number */}
+          <div className="flex items-center gap-2 justify-center mt-5 text-sm">
             <span>📞</span>
             <span>+1 514-700-7280</span>
+            <button
+              onClick={handleCopy}
+              className="border border-dashed px-2 py-1 rounded text-xs ml-2"
+            >
+              {copied ? "Copied!" : "Copy"}
+            </button>
           </div>
-          <button
-            onClick={handleCopy}
-            className="border border-dashed px-3 py-1 rounded text-xs mt-1"
-          >
-            {copied ? "Copied!" : "Copy number"}
-          </button>
-        </div>
-
-        {/* Profile Photo */}
-        <div>
-          <img
-            src="/assets/profile-woman.png"
-            alt="Team Member"
-            className="rounded-lg w-full max-w-[180px] mx-auto"
-          />
         </div>
       </div>
 
+      {/* Footer Bottom */}
       <div className="text-center text-sm mt-10 text-gray-600">
         © Global Assist 2024
       </div>
