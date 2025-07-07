@@ -10,7 +10,7 @@ import mandeep from "../assets/team/mandeep.jpg";
 import aradhya from "../assets/team/Aradhya.png";
 import manav from "../assets/team/Manav.png";
 import anjali from "../assets/team/anushka.jpg";
-import natasha from "../assets/team/natasha.jpg";
+import natasha from '../assets/team/natasha.jpg';
 import jonald from "../assets/team/Jonald.jpeg";
 import sneha from "../assets/team/sneha.jpg";
 import zubair from "../assets/team/zubair.jpg";
