@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import adminImage from "../assets/contact-image.png";
 
 const titles = [
@@ -74,6 +75,13 @@ const titles = [
 const ServicesWeOffer = () => {
   const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev === titles.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   const prevSlide = () => {
     setIndex((prev) => (prev === 0 ? titles.length - 1 : prev - 1));
   };
@@ -84,77 +92,65 @@ const ServicesWeOffer = () => {
 
   return (
     <section className="relative bg-[#0f0e1b] text-white pt-8 pb-56 px-6 overflow-hidden min-h-[90vh] font-['Roboto']">
-      {/* Navigation Buttons */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]"
-      >
-        ←
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]"
-      >
-        →
-      </button>
+      <button onClick={prevSlide} className="absolute left-4 top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]">←</button>
+      <button onClick={nextSlide} className="absolute right-4 top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]">→</button>
 
-      {/* Heading */}
       <div className="absolute w-full left-0 text-center z-0" style={{ top: "4rem" }}>
         <p className="text-xl md:text-3xl text-gray-300 font-normal">The service we offer</p>
       </div>
 
- {/* Big Title */}
-<div
-  className="absolute"
-  style={{ top: "8rem", left: 0, width: "100%", textAlign: "center", zIndex: 0 }}
->
-  <h1
-    className={`text-[14vw] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#A0A3DC] via-[#42376D] to-[#A0A3DC]
-      ${["MEDICAL VIRTUAL ASSISTANCE","BUSINESS DEVELOPMENT", "WEBSITE & APP DEVELOPMENT", "CUSTOMIZED CRM SOFTWARE", "ACCOUNTING & BOOKKEEPING","SOCIAL MEDIA MANAGEMENT"].includes(titles[index].big)
-        ? "md:text-8xl"
-        : "md:text-9xl"
-      }`}
-  >
-    {titles[index].big}
-  </h1>
-</div>
-
-      {/* Center Image */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[300px] md:w-[800px] pointer-events-none">
-        <img
-          src={adminImage}
-          alt={titles[index].big}
-          className="w-full object-contain"
-          style={{ height: "auto", maxHeight: "700px" }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between gap-16 h-[700px] mt-[-12rem]">
-        {/* Left Text */}
-        <div className="md:w-1/3 text-left space-y-6 pb-12 mt-0 -mb-6">
-          <p className="text-2xl md:text-4xl font-semibold text-white whitespace-nowrap">
-            Unlocking Efficiency
-          </p>
-          <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug">
-            {titles[index].sub}
-          </h3>
-        </div>
-
-        {/* Spacer */}
-        <div className="w-[600px] md:w-[800px] h-full" />
-
-        {/* Right Text */}
-        <div className="md:w-1/3 self-end -mb-32 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
-          <p>{titles[index].desc}</p>
-          <NavLink
-            to={titles[index].path}
-            className="bg-[#2a2a3c] text-white text-lg px-10 py-5 rounded hover:bg-[#3a3a50] transition inline-block"
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div
+            className="absolute"
+            style={{ top: "8rem", left: 0, width: "100%", textAlign: "center", zIndex: 0 }}
           >
-            Explore More →
-          </NavLink>
-        </div>
-      </div>
+            <h1
+              className={`text-[14vw] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#A0A3DC] via-[#42376D] to-[#A0A3DC]
+                ${["MEDICAL VIRTUAL ASSISTANCE", "BUSINESS DEVELOPMENT", "WEBSITE & APP DEVELOPMENT", "CUSTOMIZED CRM SOFTWARE", "ACCOUNTING & BOOKKEEPING", "SOCIAL MEDIA MANAGEMENT"].includes(titles[index].big)
+                  ? "md:text-8xl"
+                  : "md:text-9xl"
+                }`}
+            >
+              {titles[index].big}
+            </h1>
+          </div>
+
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[300px] md:w-[800px] pointer-events-none">
+            <img
+              src={adminImage}
+              alt={titles[index].big}
+              className="w-full object-contain"
+              style={{ height: "auto", maxHeight: "700px" }}
+            />
+          </div>
+
+          <div className="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between gap-16 h-[700px] mt-[-12rem]">
+            <div className="md:w-1/3 text-left space-y-6 pb-12 mt-0 -mb-6">
+              <p className="text-2xl md:text-4xl font-semibold text-white whitespace-nowrap">Unlocking Efficiency</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug">{titles[index].sub}</h3>
+            </div>
+
+            <div className="w-[600px] md:w-[800px] h-full" />
+
+            <div className="md:w-1/3 self-end -mb-32 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
+              <p>{titles[index].desc}</p>
+              <NavLink
+                to={titles[index].path}
+                className="bg-[#2a2a3c] text-white text-lg px-10 py-5 rounded hover:bg-[#3a3a50] transition inline-block"
+              >
+                Explore More →
+              </NavLink>
+            </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </section>
   );
 };
