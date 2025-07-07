@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cs1 from "../assets/cs1.png"; // Thumbnail image
-import cs2 from "../assets/cs2.png";
-import cs3 from "../assets/cs3.png";
-import cs4 from "../assets/cs4.jpeg";
+import cs1 from "../assets/case1.png"; // Thumbnail image
+import cs2 from "../assets/case2.png";
+import cs3 from "../assets/case3.png";
+import cs4 from "../assets/case4.png";
 
 const caseStudies = [
   {
