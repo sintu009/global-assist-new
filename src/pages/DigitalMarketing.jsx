@@ -5,10 +5,8 @@ import dm2 from "../assets/dm2.png";
 import dm3 from "../assets/dm3.png";
 import dm4 from "../assets/dm4.png";
 import dm5 from "../assets/dm5.png";
-import smm2 from "../assets/smm2.png";
-import smm3 from "../assets/smm3.png";
-import smm4 from "../assets/smm4.png";
-import smm5 from "../assets/smm5.png";
+import dmproject1 from "../assets/dmproject1.png";
+import dmproject2 from "../assets/dmproject2.png";
 import GetInTouch from "../components/GetInTouch";
 import { CalendarDays, Mail } from "lucide-react";
 import dmBg from "../assets/dm-bg.png";
@@ -153,22 +151,49 @@ const DigitalMarketing = () => {
 ))}
 
 
-      {/* Our Projects */}
-      <section className="px-4 max-w-7xl mx-auto py-1">
-        <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
-          Our Projects
-        </span>
-        <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">Project We Have Done</h2>
-        <p className="text-gray-600 max-w-3xl mb-10 text-sm md:text-base text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <img src={smm2} alt="Project 1" className="rounded-2xl object-cover w-full h-full" />
-          <img src={smm3} alt="Project 2" className="rounded-2xl object-cover w-full h-full" />
-          <img src={smm4} alt="Project 3" className="rounded-2xl object-cover w-full h-full" />
-          <img src={smm5} alt="Project 4" className="rounded-2xl object-cover w-full h-full" />
-        </div>
-      </section>
+{/* Projects Section */}
+ <section className="px-4 max-w-7xl mx-auto py-1">
+   {/* Label */}
+   <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
+     Our Projects
+   </span>
+ 
+   {/* Heading */}
+   <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
+     Project We Have Done
+   </h2>
+ 
+   {/* Subtext */}
+   <p className="text-gray-600 max-w-3xl mb-10 text-sm md:text-base text-left">
+     
+   </p>
+ 
+   {/* Image Row */}
+   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <a
+       href=""
+       target="_blank"
+       rel="noopener noreferrer"
+     >
+       <img
+         src={dmproject1}
+         alt="Project 1"
+         className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
+       />
+     </a>
+     <a
+       href=""
+       target="_blank"
+       rel="noopener noreferrer"
+     >
+       <img
+         src={dmproject2}
+         alt="Project 2"
+         className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
+       />
+     </a>
+   </div>
+ </section>
 
       {/* Contact Form */}
       <div className="mt-24" />
