@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import smm1 from '../assets/smm1.png';4
 import smm6 from '../assets/smm1.2.png';
@@ -30,6 +31,7 @@ const bubbleFloat = {
 };
 
 const SocialMediaManagement = () => {
+  const navigate = useNavigate();
   return (
     <div className="font-roboto">
       {/* Hero Section */}
@@ -52,7 +54,10 @@ const SocialMediaManagement = () => {
             Unlocking the Potential: Harnessing Social Media Marketing for Business Growth.
             Dive into the world of Social Media Marketing and unleash its full potential today.
           </p>
-          <button className="bg-[#0A0D17] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition">
+          <button
+            onClick={() => navigate('/contact')}
+            className="bg-[#0A0D17] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition inline-block"
+          >
             Get Started
           </button>
         </motion.div>
