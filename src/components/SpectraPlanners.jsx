@@ -61,17 +61,17 @@ const topic3Items = [
 const topic4Items = [
   {
     image: podcastOne,
-    title: "Podcast Session One",
+    title: "",
     description: "An insightful session featuring key takeaways from industry leaders.",
   },
   {
     image: podcastTwo,
-    title: "Podcast Session Two",
+    title: "",
     description: "Exploring growth strategies with our expert panel.",
   },
   {
     image: podcastThree,
-    title: "Podcast Session Three",
+    title: "",
     description: "Real stories, real impact — from our amazing clients.",
   },
 ];
@@ -111,7 +111,7 @@ export default function SpectraPlanners() {
         {/* Topic 01 */}
         <div className="max-w-7xl mx-auto -mb-1">
           <h2 className="text-2xl md:text-2xl md:pl-20 font-roboto text-gray-800 uppercase">
-            TOPIC 01
+            
           </h2>
         </div>
         <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
@@ -138,7 +138,7 @@ export default function SpectraPlanners() {
       {/* Topic 02 */}
       <div className="bg-[#444444] py-8 px-4 md:px-29 text-white">
         <div className="max-w-7xl mx-auto -mb-2">
-          <h2 className="text-2xl md:text-2xl md:pl-4 font-roboto uppercase">TOPIC 02</h2>
+          <h2 className="text-2xl md:text-2xl md:pl-4 font-roboto uppercase"></h2>
         </div>
         <div className="overflow-x-auto scrollbar-hide">
           <div className="flex gap-6 px-2 md:px-0 w-max">
@@ -166,7 +166,7 @@ export default function SpectraPlanners() {
       {/* Topic 03 */}
       <div className="bg-white py-8 px-4 md:px-0">
         <div className="max-w-7xl mx-auto -mb-2">
-          <h2 className="text-2xl md:text-2xl md:pl-20 font-roboto text-gray-800 uppercase">TOPIC 03</h2>
+          <h2 className="text-2xl md:text-2xl md:pl-20 font-roboto text-gray-800 uppercase"></h2>
         </div>
         <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
           {topic3Items.map((item, index) => (
@@ -185,7 +185,7 @@ export default function SpectraPlanners() {
       {/* Topic 04 */}
       <div className="bg-[#444444] py-8 px-4 md:px-0">
         <div className="max-w-7xl mx-auto -mb-2">
-          <h2 className="text-2xl md:text-2xl md:pl-20 font-roboto text-gray-800 uppercase">TOPIC 04</h2>
+          <h2 className="text-2xl md:text-2xl md:pl-20 font-roboto text-gray-800 uppercase"></h2>
         </div>
         <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
           {topic4Items.map((item, index) => (
@@ -205,7 +205,7 @@ export default function SpectraPlanners() {
       {/* Topic 05 */}
       <div className="bg-white py-8 px-4 md:px-0">
         <div className="max-w-7xl mx-auto -mb-2">
-          <h2 className="text-2xl md:text-2xl md:pl-20 font-roboto text-gray-800 uppercase">TOPIC 05</h2>
+          <h2 className="text-2xl md:text-2xl md:pl-20 font-roboto text-gray-800 uppercase"> </h2>
         </div>
         <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
           {topic5Items.map((item, index) => (
