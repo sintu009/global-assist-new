@@ -201,7 +201,7 @@ export default function AccountingBookkeeping() {
         {/* Image Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <a
-            href="https://quickbooks.intuit.com/#"
+            href="https://www.youtube.com/watch?v=yOa8dYEjcJQ"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -212,7 +212,7 @@ export default function AccountingBookkeeping() {
             />
           </a>
           <a
-            href="https://www.xero.com/"
+            href="https://www.youtube.com/watch?v=voNIXa0AKjU"
             target="_blank"
             rel="noopener noreferrer"
           >
