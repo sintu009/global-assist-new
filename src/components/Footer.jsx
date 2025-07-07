@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 
 const serviceDropdown = [
   { name: 'ADMINISTRATIVE EXECUTIVE', path: '/administrative-executive' },
@@ -111,12 +111,18 @@ export default function Footer() {
             <li><Link to="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
             <li><Link to="/case-studies" className="hover:underline">Case Studies</Link></li>
             <li><a href="/terms-conditions" className="hover:underline">Terms & Conditions</a></li>
+            <li className="mt-14 font-bold">📞+1 514-700-7280</li>   
+            <li className="mt-4 font-bold">📞866-450-1441(Toll Free)</li>
+            <li className="mt-4 font-bold flex items-center gap-2">
+  <Mail className="w-4 h-4" />
+  info@theglobalassist.com
+</li>
           </ul>
+          
         </div>
 
         {/* Column 3: Flag Grid & Contact */}
-        <div className="lg:ml-[-240px]">
-          <h4 className="font-semibold mb-3">OUR LOCATIONS</h4>
+        <div className="lg:ml-[-400px]">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-21 text-[13px] text-black font-medium leading-relaxed text-center">
             <div>
               <img src="/assets/flag-canada.png" alt="Canada" className="w-18 h-12 mx-auto mb-2" />
@@ -138,18 +144,6 @@ export default function Footer() {
               <img src="/assets/flag-venezuela.png" alt="Venezuela" className="w-17 h-12 mx-auto mb-2" />
               <p>Las Gaviotas Bldg,<br />Milagro St. Puerto La Cruz<br />6023, Venezuela.</p>
             </div>
-          </div>
-
-          {/* Contact Number */}
-          <div className="flex items-center gap-2 justify-center mt-5 text-sm">
-            <span>📞</span>
-            <span>+1 514-700-7280</span>
-            <button
-              onClick={handleCopy}
-              className="border border-dashed px-2 py-1 rounded text-xs ml-2"
-            >
-              {copied ? "Copied!" : "Copy"}
-            </button>
           </div>
         </div>
       </div>

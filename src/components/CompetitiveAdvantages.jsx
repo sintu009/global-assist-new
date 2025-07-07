@@ -55,24 +55,15 @@ export default function CompetitiveAdvantages() {
   return (
     <section className="font-roboto min-h-screen bg-white text-gray-800 overflow-x-hidden">
       {/* Heading */}
-<div
+{/* <div
   className="h-screen snap-start flex items-center justify-center px-6 text-center bg-cover bg-center bg-no-repeat"
   style={{ backgroundImage: `url(${advantagesBg})` }}
 >
   <h2 className="text-3xl md:text-4xl font-semibold text-black drop-shadow-lg">
     Our Competitive Advantages
   </h2>
-</div>
-
-
-{/* <div
-  className="h-screen snap-start flex items-center justify-center px-6 text-center bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('../assets/advantages-bg.avif')" }}
->
-  <h2 className="text-3xl md:text-4xl font-semibold text-white drop-shadow-lg">
-    Our Competitive Advantages
-  </h2>
 </div> */}
+
       {/* Scroll Sections */}
       {advantages.map((adv, index) => {
         let middleImage = mid1;

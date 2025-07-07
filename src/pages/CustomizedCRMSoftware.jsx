@@ -153,7 +153,7 @@ export default function CustomizedCRMSoftware() {
         {/* Image Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <a
-            href="https://kajabi.com/?gad_source=1"
+            href="https://www.youtube.com/watch?v=mYnMaO6BPFE"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -164,7 +164,7 @@ export default function CustomizedCRMSoftware() {
             />
           </a>
           <a
-            href="https://www.gohighlevel.com/634876a5?fp_ref=crm-pricing-reviews&fp_sid=rachcrm&gad_source=1&gad_campaignid=22003480948&gbraid=0AAAAA-jUDK2qVNCTaJXSnSgHFiByaPHFY&gclid=Cj0KCQjw953DBhCyARIsANhIZoaqSVosP3ijRrjbibF0Rve9qqTfSgzcKTnEvfwmW0yf7io6vSxi8PIaAgrMEALw_wcB"
+            href="https://www.youtube.com/watch?v=bFTIQDCvIrc"
             target="_blank"
             rel="noopener noreferrer"
           >

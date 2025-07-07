@@ -5,10 +5,6 @@ import lg1 from "../assets/lg1.png";
 import lg2 from "../assets/lg2.png";
 import lg3 from "../assets/lg3.png";
 import lg4 from "../assets/lg4.png";
-import smm2 from "../assets/smm2.png";
-import smm3 from "../assets/smm3.png";
-import smm4 from "../assets/smm4.png";
-import smm5 from "../assets/smm5.png";
 import GetInTouch from '../components/GetInTouch';
 import lgproject1 from "../assets/lgproject1.png";
 import lgproject2 from "../assets/lgproject2.png"; 
@@ -131,7 +127,7 @@ const LeadGeneration = () => {
    {/* Image Row */}
    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
      <a
-       href="https://www.gohighlevel.com/634876a5?fp_ref=crm-pricing-reviews&fp_sid=rachcrm&gad_source=1&gad_campaignid=22003480948&gbraid=0AAAAA-jUDK2qVNCTaJXSnSgHFiByaPHFY&gclid=Cj0KCQjw953DBhCyARIsANhIZoaqSVosP3ijRrjbibF0Rve9qqTfSgzcKTnEvfwmW0yf7io6vSxi8PIaAgrMEALw_wcB"
+       href="https://www.youtube.com/watch?v=bFTIQDCvIrc"
        target="_blank"
        rel="noopener noreferrer"
      >
@@ -142,7 +138,7 @@ const LeadGeneration = () => {
        />
      </a>
      <a
-       href="https://www.apollo.io/sign-up?utm_campaign=referrers_thefastlaneforum3482&utm_gspartnerkey=thefastlaneforum3482&utm_medium=partner&utm_source=affiliates_partnerstack&pscd=get.apollo.io&ps_partner_key=dGhlZmFzdGxhbmVmb3J1bTM0ODI&ps_xid=NGD7txlEf2fOPv&gsxid=NGD7txlEf2fOPv&gspk=dGhlZmFzdGxhbmVmb3J1bTM0ODI&gad_source=1&gad_campaignid=20739736503&gbraid=0AAAAAqeCQRbMkqdlBpETV9FJ4aXD5Oz7x&gclid=Cj0KCQjw953DBhCyARIsANhIZoa2o_SQBlJA0BaoGGN1pZViFpbtR_9T_OkVesX1SM5EDZio3L_R-q4aApKMEALw_wcB"
+       href="https://www.youtube.com/watch?v=Bnr5Xqzr-Ec"
        target="_blank"
        rel="noopener noreferrer"
      >
