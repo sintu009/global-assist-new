@@ -1,0 +1,164 @@
+import React from "react";
+import { motion } from "framer-motion";
+import lgHero from "../assets/lghero.png";
+import lg1 from "../assets/lg1.png";
+import lg2 from "../assets/lg2.png";
+import lg3 from "../assets/lg3.png";
+import lg4 from "../assets/lg4.png";
+import smm2 from "../assets/smm2.png";
+import smm3 from "../assets/smm3.png";
+import smm4 from "../assets/smm4.png";
+import smm5 from "../assets/smm5.png";
+import GetInTouch from '../components/GetInTouch';
+import lgproject1 from "../assets/lgproject1.png";
+import lgproject2 from "../assets/lgproject2.png"; 
+
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.2 } }
+};
+
+const LeadGeneration = () => {
+  return (
+    <div className="overflow-x-hidden">
+      {/* Hero Section */}
+      <motion.section
+        className="h-[90vh] bg-cover bg-center flex items-center relative text-white font-roboto"
+        style={{ backgroundImage: `url(${lgHero})` }}
+        initial="hidden"
+        animate="visible"
+  variants={fadeUp}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <motion.div
+          className="relative z-10 max-w-6xl px-6 sm:px-10 md:px-24 lg:px-52 ml-auto"
+          variants={fadeUp}
+        >
+          <span className="text-2xs font-semibold bg-[#FFFFFF29] text-white px-3 py-1 rounded-full mb-4 inline-block">
+            LEAD GENERATION
+          </span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Lead generation <br /> Service
+          </h1>
+          <p className="text-sm md:text-base max-w-md">
+            Are you struggling to attract quality leads? Our lead generation services are here to help.
+          </p>
+        </motion.div>
+      </motion.section>
+
+      {/* Features Section */}
+      <motion.section
+        className="py-8 md:py-22 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        variants={fadeUp}
+      >
+        {/* Left Text */}
+        <motion.div className="mt-8 md:mt-20" variants={fadeUp}>
+          <h2 className="text-3xl font-semibold mb-5 text-[#061C3A]">Targeted Approach</h2>
+          <p className="text-sm text-[#333] mb-8">
+            Employing advanced techniques to reach your ideal audience, ensuring every lead is a potential customer.
+          </p>
+          <h2 className="text-3xl font-semibold mb-5 text-[#061C3A]">Multi-Channel Strategy</h2>
+          <p className="text-sm text-[#333]">
+            Utilizing social media, email, content marketing, and more to maximize reach and engagement.
+          </p>
+        </motion.div>
+
+        {/* Right Image Collage */}
+        <motion.div className="flex flex-col md:flex-row gap-6 w-full" variants={fadeUp}>
+          <div className="relative h-[300px] md:h-[300px] w-full md:w-1/2 rounded-xl overflow-hidden md:translate-y-14">
+            <img src={lg1} alt="Main" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <button className="w-10 h-10 bg-white text-blue-600 rounded-full shadow-md flex items-center justify-center">
+                ▶
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 w-full md:w-1/2">
+            <div className="h-[240px] rounded-xl overflow-hidden">
+              <img src={lg2} alt="Side 1" className="w-full h-full object-cover" />
+            </div>
+            <div className="h-[180px] rounded-xl overflow-hidden">
+              <img src={lg3} alt="Side 2" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </motion.div>
+      </motion.section>
+
+      {/* Quality & Optimization */}
+      <motion.section
+        className="py-20 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        variants={fadeUp}
+      >
+        <motion.div variants={fadeUp}>
+          <img src={lg4} alt="Lead Quality" className="rounded-xl w-full h-auto object-cover" />
+        </motion.div>
+        <motion.div variants={fadeUp}>
+          <h2 className="text-3xl font-semibold mb-5 text-[#061C3A]">Quality Over Quantity</h2>
+          <p className="text-sm text-[#333] mb-8">
+            Prioritizing quality leads, focusing on delivering prospects genuinely interested in your offer.
+          </p>
+          <h2 className="text-3xl font-semibold mb-5 text-[#061C3A]">Continuous Optimization</h2>
+          <p className="text-sm text-[#333]">
+            Constantly monitoring and optimizing strategies to ensure optimal performance, keeping your pipeline filled with high-quality leads.
+          </p>
+        </motion.div>
+      </motion.section>
+
+ {/* Projects Section */}
+ <section className="px-4 max-w-7xl mx-auto py-1">
+   {/* Label */}
+   <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
+     Our Projects
+   </span>
+ 
+   {/* Heading */}
+   <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
+     Project We Have Done
+   </h2>
+ 
+   {/* Subtext */}
+   <p className="text-gray-600 max-w-3xl mb-10 text-sm md:text-base text-left">
+     
+   </p>
+ 
+   {/* Image Row */}
+   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <a
+       href="https://www.gohighlevel.com/634876a5?fp_ref=crm-pricing-reviews&fp_sid=rachcrm&gad_source=1&gad_campaignid=22003480948&gbraid=0AAAAA-jUDK2qVNCTaJXSnSgHFiByaPHFY&gclid=Cj0KCQjw953DBhCyARIsANhIZoaqSVosP3ijRrjbibF0Rve9qqTfSgzcKTnEvfwmW0yf7io6vSxi8PIaAgrMEALw_wcB"
+       target="_blank"
+       rel="noopener noreferrer"
+     >
+       <img
+         src={lgproject1}
+         alt="Project 1"
+         className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
+       />
+     </a>
+     <a
+       href="https://www.apollo.io/sign-up?utm_campaign=referrers_thefastlaneforum3482&utm_gspartnerkey=thefastlaneforum3482&utm_medium=partner&utm_source=affiliates_partnerstack&pscd=get.apollo.io&ps_partner_key=dGhlZmFzdGxhbmVmb3J1bTM0ODI&ps_xid=NGD7txlEf2fOPv&gsxid=NGD7txlEf2fOPv&gspk=dGhlZmFzdGxhbmVmb3J1bTM0ODI&gad_source=1&gad_campaignid=20739736503&gbraid=0AAAAAqeCQRbMkqdlBpETV9FJ4aXD5Oz7x&gclid=Cj0KCQjw953DBhCyARIsANhIZoa2o_SQBlJA0BaoGGN1pZViFpbtR_9T_OkVesX1SM5EDZio3L_R-q4aApKMEALw_wcB"
+       target="_blank"
+       rel="noopener noreferrer"
+     >
+       <img
+         src={lgproject2}
+         alt="Project 2"
+         className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
+       />
+     </a>
+   </div>
+ </section>
+ 
+      <div className="mt-24" />
+      <GetInTouch />
+    </div>
+  );
+};
+
+export default LeadGeneration;
