@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+
 
 const serviceDropdown = [
   { name: 'ADMINISTRATIVE EXECUTIVE', path: '/administrative-executive' },
@@ -40,8 +41,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-purple-200 px-6 pt-10 pb-6 border-t">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-start">
+    <footer className="bg-purple-200 px-5 pt-10 pb-6 border-t">
+      <div className="max-w-screen-2xl w-full mx-auto grid md:grid-cols-3 gap-8 items-start">
         {/* Column 1: Logo & Navigation */}
         <div>
           <img src="/assets/logo.png" alt="Global Assist" className="mb-4 w-28" />
@@ -116,8 +117,15 @@ export default function Footer() {
             <li><Link to="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
             <li><Link to="/case-studies" className="hover:underline">Case Studies</Link></li>
             <li><a href="/terms-conditions" className="hover:underline">Terms & Conditions</a></li>
-            <li className="mt-14 font-bold">📞+1 514-700-7280</li>
-            <li className="mt-4 font-bold">📞866-450-1441 (Toll Free)</li>
+            <li className="mt-14 font-bold flex items-center gap-2">
+  <Phone className="w-4 h-4 text-black" />
+  +1 514-700-7280
+</li>
+<li className="mt-4 font-bold flex items-center gap-2">
+  <Phone className="w-4 h-4 text-black" />
+  866-450-1441 (Toll Free)
+</li>
+
             <li className="mt-4 font-bold flex items-center gap-2">
               <Mail className="w-4 h-4" />
               info@theglobalassist.com
@@ -127,7 +135,7 @@ export default function Footer() {
 
         {/* Column 3: Flag Grid & Contact */}
         <div className="lg:ml-[-400px]">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-[13px] text-black font-medium leading-relaxed text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-[14px] text-black font-medium leading-relaxed text-center">
             <div>
               <img src="/assets/flag-canada.png" alt="Canada" className="w-18 h-12 mx-auto mb-2" />
               <p className="max-w-[180px] mx-auto">
@@ -138,12 +146,12 @@ export default function Footer() {
               </p>
             </div>
             <div>
-              <img src="/assets/flag-india.png" alt="India" className="w-18 h-12 mx-auto mb-2" />
+              <img src="/assets/flag-usa.png" alt="USA" className="w-18 h-12 mx-auto mb-2" />
               <p className="max-w-[180px] mx-auto">
-                Block B<br />
-                Sector 58<br />
-                Noida, Uttar Pradesh<br />
-                201301
+                1309 Coffen Avenue<br />
+                STE 1200<br />
+                Sheridan, Wyoming<br />
+                82801
               </p>
             </div>
             <div>
@@ -155,21 +163,21 @@ export default function Footer() {
               </p>
             </div>
             <div>
-              <img src="/assets/flag-usa.png" alt="USA" className="w-17 h-12 mx-auto mb-2" />
-              <p className="max-w-[180px] mx-auto">
-                1309 Coffen Avenue<br />
-                STE 1200<br />
-                Sheridan, Wyoming<br />
-                82801
-              </p>
-            </div>
-            <div>
-              <img src="/assets/flag-venezuela.png" alt="Venezuela" className="w-17 h-12 mx-auto mb-2" />
+              <img src="/assets/flag-venezuela.png" alt="Venezuela" className="w-18 h-12 mx-auto mb-2" />
               <p className="max-w-[180px] mx-auto">
                 Las Gaviotas Bldg<br />
                 Milagro St.<br />
                 Puerto La Cruz<br />
                 6023, Venezuela
+              </p>
+            </div>
+            <div>
+              <img src="/assets/flag-india.png" alt="India" className="w-18 h-12 mx-auto mb-2" />
+              <p className="max-w-[180px] mx-auto">
+                Block B<br />
+                Sector 58<br />
+                Noida, Uttar Pradesh<br />
+                201301
               </p>
             </div>
           </div>

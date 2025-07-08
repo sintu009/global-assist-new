@@ -88,19 +88,28 @@ export default function SpectraPlanners() {
       </div>
 
       {/* Topic 02 */}
-      <div className="bg-[#444444] py-8 px-4 text-white">
+       {/* Topic 02 */}
+      <div className="bg-[#444444] py-8 px-4 md:px-29 text-white">
+        <div className="max-w-7xl mx-auto -mb-2">
+          <h2 className="text-2xl md:text-2xl md:pl-4 font-roboto uppercase"></h2>
+        </div>
         <div className="overflow-x-auto scrollbar-hide">
-          <div className="flex gap-6 px-2 w-max">
+          <div className="flex gap-6 px-2 md:px-0 w-max">
             {topic2Items.map((item, index) => (
               <div key={index} className="bg-[#444444] rounded-[32px] p-8 transition duration-300 min-w-[100vw] sm:min-w-0">
                 <div className="w-full md:w-[360px] h-[240px] mb-6 rounded-[24px] overflow-hidden">
                   <iframe
-                    width="100%" height="100%" src={item.videoUrl} title={item.title}
-                    frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen className="rounded-[24px]"
+                    width="100%"
+                    height="100%"
+                    src={item.videoUrl}
+                    title={item.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-[24px]"
                   ></iframe>
                 </div>
-                <h3 className="text-[20px] font-bold mb-2">{item.title}</h3>
+                <h3 className="text-[20px] font-bold mb-2 text-white">{item.title}</h3>
               </div>
             ))}
           </div>
@@ -156,7 +165,7 @@ export default function SpectraPlanners() {
             <div ref={scrollRef} className="flex overflow-x-scroll gap-6 scrollbar-hide scroll-smooth px-8">
               {appreciationImages.map((img, idx) => (
                 <div key={idx} className="min-w-[260px] md:min-w-[300px] lg:min-w-[360px]">
-                  <img src={img} alt={`Appreciation ${idx + 1}`} className="rounded-2xl w-full h-[300px] object-cover" />
+                  <img src={img} alt={`Appreciation ${idx + 1}`} className="rounded-2xl w-full h-[360px] object-cover" />
                 </div>
               ))}
             </div>

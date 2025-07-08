@@ -36,10 +36,9 @@ export default function HeroSection() {
         <div className="space-y-4">
           <p className="uppercase text-sm tracking-widest text-gray-700">One Stop Shop</p>
           <h1 className="text-3xl md:text-5xl font-semibold leading-snug text-black">
-            Accomplish More. Juggle Less. We’re<br /> your{" "}
-            <span className="text-purple-700 font-bold">virtual assistants</span>, bookkeepers,
+            Accomplish More. Juggle Less. We’re Your<br />service provider and we help you improve{" "}
             <br />
-            web experts
+            the processes in your company
           </h1>
           <button
   onClick={() => navigate("/contact")}
