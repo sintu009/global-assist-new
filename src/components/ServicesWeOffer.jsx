@@ -107,22 +107,15 @@ const ServicesWeOffer = () => {
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.6 }}
         >
-          <div
-            className="absolute"
-            style={{ top: "8rem", left: 0, width: "100%", textAlign: "center", zIndex: 0 }}
-          >
-            <h1
-              className={`text-[14vw] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#A0A3DC] via-[#42376D] to-[#A0A3DC]
-                ${["MEDICAL VIRTUAL ASSISTANCE", "BUSINESS DEVELOPMENT", "WEBSITE & APP DEVELOPMENT", "CUSTOMIZED CRM SOFTWARE", "ACCOUNTING & BOOKKEEPING", "SOCIAL MEDIA MANAGEMENT"].includes(titles[index].big)
-                  ? "md:text-8xl"
-                  : "md:text-9xl"
-                }`}
-            >
+          {/* Mobile title text */}
+          <div className="absolute block text-center md:hidden" style={{ top: "8rem", left: 0, width: "100%", zIndex: 0 }}>
+            <h1 className="text-[12vw] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#A0A3DC] via-[#42376D] to-[#A0A3DC]">
               {titles[index].big}
             </h1>
           </div>
 
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[220px] md:w-[800px] pointer-events-none">
+          {/* Image - Hidden on mobile */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[220px] md:w-[800px] pointer-events-none hidden md:block">
             <img
               src={adminImage}
               alt={titles[index].big}
@@ -131,6 +124,7 @@ const ServicesWeOffer = () => {
             />
           </div>
 
+          {/* Content Block */}
           <div className="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between gap-16 h-[700px] mt-[-12rem]">
             <div className="md:w-1/3 text-left space-y-6 pb-12 mt-0 -mb-6">
               <p className="text-2xl md:text-4xl font-semibold text-white whitespace-nowrap">Unlocking Efficiency</p>
@@ -139,14 +133,16 @@ const ServicesWeOffer = () => {
 
             <div className="w-[600px] md:w-[800px] h-full" />
 
-            <div className="md:w-1/3 self-end -mb-32 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
-              <p>{titles[index].desc}</p>
-              <NavLink
-                to={titles[index].path}
-                className="bg-[#2a2a3c] text-white text-lg px-10 py-5 rounded hover:bg-[#3a3a50] transition inline-block"
-              >
-                Explore More →
-              </NavLink>
+            <div className="md:w-1/3 self-end -mb-32 space-y-6 text-gray-300 text-lg md:text-2xl pb-12">
+              <p className="text-center md:text-left">{titles[index].desc}</p>
+              <div className="flex justify-center md:justify-start">
+                <NavLink
+                  to={titles[index].path}
+                  className="bg-[#2a2a3c] text-white text-lg px-10 py-5 rounded hover:bg-[#3a3a50] transition inline-block"
+                >
+                  Explore More →
+                </NavLink>
+              </div>
             </div>
           </div>
         </motion.div>
