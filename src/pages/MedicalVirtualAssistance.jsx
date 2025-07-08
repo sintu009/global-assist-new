@@ -86,42 +86,39 @@ export default function MedicalVirtualAssistant() {
   initial="hidden"
   whileInView="visible"
   viewport={{ once: false, amount: 0.2 }}
-  className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
+  className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-30 mb-24"
 >
   {features.map((feature, index) => (
     <motion.div
       key={index}
       variants={fadeUp}
-      className="flex flex-col items-center gap-4 bg-white rounded-md"
+      className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center"
     >
-      <div className="w-[75%]">
-        <img
-          src={
-            index === 0
-              ? mva6
-              : index === 1
-              ? mva5
-              : index === 2
-              ? mva4
-              : index === 3
-              ? mva3
-              : mva2
-          }
-          alt={feature.title}
-          className="w-full h-[260px] object-cover rounded-2xl"
-        />
-        <div className="pt-3">
-          <h3 className="text-base mb-1 font-[Poppins,sans-serif] font-semibold">
-            {feature.title}
-          </h3>
-          <p className="text-sm text-gray-600 font-[Poppins,sans-serif]">
-            {feature.desc}
-          </p>
-        </div>
-      </div>
+      <img
+        src={
+          index === 0
+            ? mva6
+            : index === 1
+            ? mva5
+            : index === 2
+            ? mva4
+            : index === 3
+            ? mva3
+            : mva2
+        }
+        alt={feature.title}
+        className="w-full h-[260px] object-cover rounded-2xl mb-4"
+      />
+      <h3 className="text-lg font-semibold font-[roboto,sans-serif] mb-2 text-center text-[#2F327D]">
+        {feature.title}
+      </h3>
+      <p className="text-sm text-gray-600 font-[roboto,sans-serif] text-center">
+        {feature.desc}
+      </p>
     </motion.div>
   ))}
 </motion.div>
+
 
 
       {/* Get In Touch */}

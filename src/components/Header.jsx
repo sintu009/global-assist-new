@@ -29,10 +29,10 @@ export default function Header() {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
     { name: 'Spectra Planners', path: '/spectra-planners' },
     { name: 'How It Works', path: '/how-it-works' },
     { name: 'FAQ', path: '/faq' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   useEffect(() => {

@@ -12,9 +12,9 @@ const HomePage = () => {
       <HeroSection />
       <ServicesWeOffer />
         <CompetitiveAdvantages />/
-       <GetInTouch /> 
        <IniniteLogoSlider/>
        <StatsAndReviews/>
+       <GetInTouch />
     </main>
   );
 };

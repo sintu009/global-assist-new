@@ -43,19 +43,19 @@ const titles = [
   {
     big: "DIGITAL MARKETING",
     sub: "Digital Marketing",
-    desc: "Increase visibility and conversions with results-driven marketing strategies.",
+    desc: "Maximize Your Digital Presence with Tailored Marketing Solutions.",
     path: "/digital-marketing",
   },
   {
     big: "WEBSITE & APP DEVELOPMENT",
     sub: "Website & App Development",
-    desc: "Get scalable, responsive, and user-friendly digital solutions built to grow.",
+    desc: "Transform your vision into powerful mobile apps with our expert app development service. Get started today!",
     path: "/website-app-development",
   },
   {
     big: "CUSTOMIZED CRM SOFTWARE",
     sub: "Customized CRM Software",
-    desc: "Optimize your customer relationships with tailored CRM platforms.",
+    desc: "Transform your vision into powerful mobile apps with our expert app development service. Get started today!",
     path: "/customized-crm-software",
   },
   {
@@ -67,7 +67,7 @@ const titles = [
   {
     big: "CALL CENTER SUPPORT",
     sub: "Call Center Support",
-    desc: "Deliver exceptional customer service with our expert virtual call support.",
+    desc: "With our Call Centre Support, you can elevate your customer service standards, cultivate loyalty, and drive business growth. Trust us to be your reliable partner in delivering exceptional customer experiences.",
     path: "/call-center-support",
   },
 ];
@@ -92,21 +92,34 @@ const ServicesWeOffer = () => {
 
   return (
     <section className="relative bg-[#0f0e1b] text-white pt-8 pb-56 px-6 overflow-hidden min-h-[90vh] font-['Roboto']">
-      <button onClick={prevSlide} className="absolute left-4 top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]">←</button>
-      <button onClick={nextSlide} className="absolute right-4 top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]">→</button>
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]"
+      >
+        ←
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]"
+      >
+        →
+      </button>
 
       <div className="absolute w-full left-0 text-center z-0" style={{ top: "4rem" }}>
         <p className="text-xl md:text-3xl text-gray-300 font-normal">The service we offer</p>
       </div>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.6 }}
-        >
+<AnimatePresence mode="wait">
+  <motion.div
+    key={index}
+    initial={{ x: "100%", opacity: 0 }}
+    animate={{ x: "0%", opacity: 1 }}
+    exit={{ x: "-100%", opacity: 0 }}
+    transition={{ duration: 0.6, ease: "easeInOut" }}
+    className="absolute inset-0"
+  >
+
+
           <div
             className="absolute"
             style={{ top: "8rem", left: 0, width: "100%", textAlign: "center", zIndex: 0 }}
@@ -122,7 +135,7 @@ const ServicesWeOffer = () => {
             </h1>
           </div>
 
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[220px] md:w-[800px] pointer-events-none hidden md:block">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[220px] md:w-[500px] pointer-events-none hidden md:block">
             <img
               src={adminImage}
               alt={titles[index].big}
@@ -133,13 +146,18 @@ const ServicesWeOffer = () => {
 
           <div className="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between gap-16 h-[700px] mt-[-12rem]">
             <div className="md:w-1/3 text-left space-y-6 pb-12 mt-0 -mb-6">
-              <p className="text-2xl md:text-4xl font-semibold text-white whitespace-nowrap">Unlocking Efficiency</p>
-              <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug">{titles[index].sub}</h3>
+              <p className="text-2xl md:text-4xl font-semibold text-white whitespace-nowrap"></p>
+              <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug">
+                {titles[index].sub}
+              </h3>
+              {/* ✅ Show description on desktop */}
+              <p className="hidden md:block text-base text-gray-300">{titles[index].desc}</p>
             </div>
 
             <div className="w-[600px] md:w-[800px] h-full" />
 
             <div className="md:w-1/3 self-end -mb-32 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
+              {/* ✅ Show description on mobile */}
               <p className="block md:hidden text-center px-4 text-base">{titles[index].desc}</p>
               <div className="flex md:block justify-center md:justify-start">
                 <NavLink
