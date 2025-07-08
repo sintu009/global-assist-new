@@ -58,9 +58,10 @@ const FormPopup = ({ onClose }) => {
 
       {/* Form Modal */}
       <div
-        className="relative z-50 w-[90%] max-w-md rounded-xl bg-cover bg-center p-6 text-white shadow-xl"
-        style={{ backgroundImage: `url(${bgImage})` }}
-      >
+  className="relative z-50 w-[90%] max-w-md max-h-[90vh] overflow-y-auto rounded-xl bg-cover bg-center p-6 text-white shadow-xl"
+  style={{ backgroundImage: `url(${bgImage})` }}
+>
+
         {/* Close Button */}
         <button
           onClick={onClose}
