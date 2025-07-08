@@ -131,16 +131,20 @@ const VideoEditing = () => {
 
   {/* Image Row */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <img
-      src={veproject2}
-      alt="Project 1"
-      className="rounded-2xl object-cover w-full h-[250px] md:h-[320px]"
-    />
-    <img
-      src={veproject1}
-      alt="Project 2"
-      className="rounded-2xl object-cover w-full h-[250px] md:h-[320px]"
-    />
+    <a href="https://drive.google.com/file/d/18vUWWwWaibstK3e_eGCMWdz9rMzzWcP_/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <img
+        src={veproject2}
+        alt="Project 1"
+        className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
+      />
+    </a>
+    <a href="https://drive.google.com/file/d/1V6-02rigLzuWrJwy-FBDLR97r_HZvVc4/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <img
+        src={veproject1}
+        alt="Project 2"
+        className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
+      />
+    </a>
   </div>
 </section>
       <div className="mt-24" />
