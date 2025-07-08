@@ -122,7 +122,7 @@ const ServicesWeOffer = () => {
             </h1>
           </div>
 
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[300px] md:w-[800px] pointer-events-none">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[220px] md:w-[800px] pointer-events-none">
             <img
               src={adminImage}
               alt={titles[index].big}
