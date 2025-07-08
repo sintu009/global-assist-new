@@ -141,12 +141,14 @@ const ServicesWeOffer = () => {
 
             <div className="md:w-1/3 self-end -mb-32 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
               <p className="block md:hidden text-center px-4 text-base">{titles[index].desc}</p>
-              <NavLink
-                to={titles[index].path}
-                className="bg-[#2a2a3c] text-white text-lg px-10 py-5 rounded hover:bg-[#3a3a50] transition inline-block mx-auto md:mx-0"
-              >
-                Explore More →
-              </NavLink>
+              <div className="flex md:block justify-center md:justify-start">
+                <NavLink
+                  to={titles[index].path}
+                  className="bg-[#2a2a3c] text-white text-lg px-10 py-5 rounded hover:bg-[#3a3a50] transition inline-block mx-auto md:mx-0"
+                >
+                  Explore More →
+                </NavLink>
+              </div>
             </div>
           </div>
         </motion.div>
