@@ -34,7 +34,7 @@ export default function AccountingBookkeeping() {
           <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
             ACCOUNTING & BOOKKEEPING
           </span>
-          <h1 className="text-4xl md:text-4xl font-extrabold text-[#2F327D] mb-4 leading-snug font-[Nunito_Sans,sans-serif]">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#2F327D] mb-4 leading-snug font-[Nunito_Sans,sans-serif]">
             Foundational Pillars of <br />
             Financial Management: <br />
             Accounting and<br />Bookkeeping

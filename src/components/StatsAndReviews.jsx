@@ -55,24 +55,23 @@ const StatsAndReviews = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20 max-w-6xl mx-auto">
         <div className="w-64 h-56 sm:w-72 sm:h-56 bg-pink-100 rounded-3xl p-5 flex flex-col justify-end">
           <h3 className="text-3xl font-semibold text-black">
-            <CountUp end={10000} duration={3} separator="," enableScrollSpy />+
+            <CountUp end={2100} duration={3} separator="," enableScrollSpy />+
           </h3>
-          <p className="text-sm text-gray-400 mt-1">Active Jobs in Fintech</p>
+          <p className="text-sm text-gray-400 mt-1">Trusted by users</p>
         </div>
 
-        <div className="w-64 h-56 sm:w-72 sm:h-56 bg-white rounded-3xl overflow-hidden shadow-md flex items-center justify-center">
-          <img
-            src={statsImage}
-            alt="Stats Graphic"
-            className="object-cover w-full h-full"
-          />
+      <div className="w-64 h-56 sm:w-72 sm:h-56 bg-pink-100 rounded-3xl p-5 flex flex-col justify-end">
+          <h3 className="text-3xl font-semibold text-black">
+            <CountUp end={4} duration={3} enableScrollSpy /> Rewards
+          </h3>
+          <p className="text-sm text-gray-400 mt-1">Industry Recognitions</p>
         </div>
 
         <div className="w-64 h-56 sm:w-72 sm:h-56 bg-pink-100 rounded-3xl p-5 flex flex-col justify-end">
           <h3 className="text-3xl font-semibold text-black">
-            <CountUp end={98} duration={3} enableScrollSpy />%
+            <CountUp end={1700} duration={3} enableScrollSpy />+
           </h3>
-          <p className="text-sm text-gray-400 mt-1">Client Retention Rate</p>
+          <p className="text-sm text-gray-400 mt-1">Projects Done</p>
         </div>
       </div>
 
@@ -85,21 +84,6 @@ const StatsAndReviews = () => {
             Stories that inspire. See the happiness our solutions generate.
           </p>
 
-          {/* CountUp Numbers */}
-          <div className="text-4xl font-inter">
-            <CountUp end={2100} duration={3} separator="," enableScrollSpy />+
-          </div>
-          <p className="text-sm text-gray-500 mb-6">Trusted by users</p>
-
-          <div className="text-2xl font-inter">
-            <CountUp end={4} duration={2} enableScrollSpy /> Rewards
-          </div>
-          <p className="text-sm text-gray-500 mb-4">Industry Recognitions</p>
-
-          <div className="text-2xl font-inter">
-            <CountUp end={1700} duration={3} separator="," enableScrollSpy />+ Projects Done
-          </div>
-          <p className="text-sm text-gray-500">Across Fintech, Real Estate, and more</p>
         </div>
 
         {/* Right Side: Auto Scrolling Reviews */}

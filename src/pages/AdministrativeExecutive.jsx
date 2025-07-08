@@ -66,7 +66,7 @@ export default function AdministrativeExecutive() {
           <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
             ADMINISTRATIVE EXECUTIVE
           </span>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#2F327D] mb-4 leading-snug font-[Nunito_Sans,sans-serif]">
+          <h1 className="text-3xl md:text-5xl font-bold text-[#2F327D] mb-4 leading-snug font-[Nunito_Sans,sans-serif]">
             Unlocking Efficiency - <br />
             Administrative & <br />
             Executive Assistant

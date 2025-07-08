@@ -177,7 +177,7 @@ export default function CompetitiveAdvantages() {
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.4 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 5 }}
           />
         </div>
 
@@ -196,8 +196,8 @@ export default function CompetitiveAdvantages() {
               style={{ height: "440px", objectFit: "cover" }}
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.4 }}
-              transition={{ duration: 1 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 10 }}
             />
             <p className="absolute top-28 text-xl font-normal px-2 z-0 leading-snug text-gray-700">
               Global Assist is consistently ranked as one of the top virtual

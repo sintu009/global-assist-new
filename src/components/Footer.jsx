@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 
@@ -21,6 +21,7 @@ export default function Footer() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
   const currentPath = location.pathname;
+  const dropdownRef = useRef(null);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -62,11 +63,15 @@ export default function Footer() {
           <ul className="space-y-1 text-sm">
             {navLinks.map(({ name, path }) =>
               name === 'Services' ? (
-                <li key={name} className="relative">
+                <li key={name} className="relative" ref={dropdownRef}>
                   <button
                     className="hover:underline font-medium flex items-center gap-1"
                     onClick={() => setServicesOpen((v) => !v)}
-                    onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
+                    onBlur={(e) => {
+                      if (!dropdownRef.current?.contains(e.relatedTarget)) {
+                        setTimeout(() => setServicesOpen(false), 100);
+                      }
+                    }}
                     type="button"
                   >
                     Services
@@ -93,7 +98,7 @@ export default function Footer() {
                 <li key={name}>
                   <Link
                     to={path}
-                    className={`hover:underline ${currentPath === path ? 'text-pink-600 font-medium' : ''}`}
+                    className={`hover:underline ${currentPath === path ? 'text-purple-600 font-medium' : ''}`}
                   >
                     {name}
                   </Link>
@@ -111,38 +116,61 @@ export default function Footer() {
             <li><Link to="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
             <li><Link to="/case-studies" className="hover:underline">Case Studies</Link></li>
             <li><a href="/terms-conditions" className="hover:underline">Terms & Conditions</a></li>
-            <li className="mt-14 font-bold">📞+1 514-700-7280</li>   
-            <li className="mt-4 font-bold">📞866-450-1441(Toll Free)</li>
+            <li className="mt-14 font-bold">📞+1 514-700-7280</li>
+            <li className="mt-4 font-bold">📞866-450-1441 (Toll Free)</li>
             <li className="mt-4 font-bold flex items-center gap-2">
-  <Mail className="w-4 h-4" />
-  info@theglobalassist.com
-</li>
+              <Mail className="w-4 h-4" />
+              info@theglobalassist.com
+            </li>
           </ul>
-          
         </div>
 
         {/* Column 3: Flag Grid & Contact */}
         <div className="lg:ml-[-400px]">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-21 text-[13px] text-black font-medium leading-relaxed text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-[13px] text-black font-medium leading-relaxed text-center">
             <div>
               <img src="/assets/flag-canada.png" alt="Canada" className="w-18 h-12 mx-auto mb-2" />
-              <p>5165 Queen Mary Rd<br />- GR-2 Unit #101<br />Montreal, QC H3W 1X7</p>
+              <p className="max-w-[180px] mx-auto">
+                5165 Queen Mary Rd<br />
+                GR-2 Unit #101<br />
+                Montreal, QC<br />
+                H3W 1X7
+              </p>
             </div>
             <div>
               <img src="/assets/flag-india.png" alt="India" className="w-18 h-12 mx-auto mb-2" />
-              <p>Block B, Sector 58<br />Noida, Uttar Pradesh<br />- 201301</p>
+              <p className="max-w-[180px] mx-auto">
+                Block B<br />
+                Sector 58<br />
+                Noida, Uttar Pradesh<br />
+                201301
+              </p>
             </div>
             <div>
               <img src="/assets/flag-philippines.png" alt="Philippines" className="w-18 h-12 mx-auto mb-2" />
-              <p>BF Homes,<br />Manila, 1718</p>
+              <p className="max-w-[180px] mx-auto">
+                BF Homes<br />
+                Manila<br />
+                1718
+              </p>
             </div>
             <div>
               <img src="/assets/flag-usa.png" alt="USA" className="w-17 h-12 mx-auto mb-2" />
-              <p>1309 Coffen Avenue<br />STE 1200, Sheridan,<br />Wyoming, 82801</p>
+              <p className="max-w-[180px] mx-auto">
+                1309 Coffen Avenue<br />
+                STE 1200<br />
+                Sheridan, Wyoming<br />
+                82801
+              </p>
             </div>
             <div>
               <img src="/assets/flag-venezuela.png" alt="Venezuela" className="w-17 h-12 mx-auto mb-2" />
-              <p>Las Gaviotas Bldg,<br />Milagro St. Puerto La Cruz<br />6023, Venezuela.</p>
+              <p className="max-w-[180px] mx-auto">
+                Las Gaviotas Bldg<br />
+                Milagro St.<br />
+                Puerto La Cruz<br />
+                6023, Venezuela
+              </p>
             </div>
           </div>
         </div>

@@ -129,7 +129,7 @@ export default function CallCenterSupport() {
   {/* Image Row */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     <a
-      href="https://www.ooma.com/small-business-phone-systems/mobile-app/"
+      href="https://www.youtube.com/watch?v=a0u6YPDFOnU"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -140,7 +140,7 @@ export default function CallCenterSupport() {
       />
     </a>
     <a
-      href="https://www.vonage.com/"
+      href="https://www.youtube.com/watch?v=YggaoyFhNbw"
       target="_blank"
       rel="noopener noreferrer"
     >
