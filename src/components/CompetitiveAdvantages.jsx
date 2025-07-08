@@ -44,12 +44,16 @@ export default function CompetitiveAdvantages() {
   }, []);
 
   const fadeIn = {
-    hidden: { opacity: 0, y: isMobile ? 30 : 80 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } },
+    hidden: { opacity: 0, y: isMobile ? 20 : 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   const sideFade = (direction) => ({
-    hidden: { opacity: 0, x: isMobile ? 0 : direction === "left" ? -80 : 80 },
+    hidden: { opacity: 0, x: isMobile ? 0 : direction === "left" ? -40 : 40 },
     visible: {
       opacity: 1,
       x: 0,
@@ -58,7 +62,7 @@ export default function CompetitiveAdvantages() {
   });
 
   return (
-    <section className="font-roboto min-h-screen bg-white text-gray-800 overflow-x-hidden">
+    <section className="font-roboto bg-white text-gray-800 overflow-x-hidden">
       {advantages.map((adv, index) => {
         let middleImage = mid1;
         if (adv.id === 3) middleImage = mid3;
@@ -70,7 +74,7 @@ export default function CompetitiveAdvantages() {
         return (
           <motion.div
             key={adv.id}
-            className="min-h-[90vh] py-10 snap-start flex flex-col justify-center px-6 md:px-20"
+            className="min-h-fit py-16 md:py-24 snap-start flex flex-col justify-center px-6 md:px-20"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
@@ -155,7 +159,7 @@ export default function CompetitiveAdvantages() {
         );
       })}
 
-      {/* Mobile + Desktop CTA Section */}
+      {/* CTA Section */}
       <div className="min-h-screen snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
         <div className="block md:hidden space-y-4">
           <div className="text-xl font-semibold text-gray-700">

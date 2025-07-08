@@ -6,68 +6,68 @@ import adminImage from "../assets/contact-image.png";
 const titles = [
   {
     big: "ADMINISTRATIVE",
-    sub: "Administrative & Executive Assistant",
+    //sub: "Administrative & Executive Assistant",
     desc: "In the fast-paced world of business, having a reliable Administrative & Executive Assistant is like having a trusted ally by your side.",
     path: "/administrative-executive",
   },
   {
     big: "MEDICAL VIRTUAL ASSISTANCE",
-    sub: "Medical Virtual Assistance",
+    //sub: "Medical Virtual Assistance",
     desc: "Let us handle the paperwork while you focus on providing exceptional patient care. Welcome to a new era of efficiency with Global Assist.",
     path: "/medical-virtual-assistance",
   },
   {
     big: "VIDEO EDITING",
-    sub: "Video Editing",
+    //sub: "Video Editing",
     desc: "Dont let mediocre editing hold you back. Join the ranks of satisfied clients who have experienced the transformative power of Global Assist.",
     path: "/video-editing",
   },
   {
     big: "ACCOUNTING & BOOKKEEPING",
-    sub: "Accounting & Bookkeeping",
+    //sub: "Accounting & Bookkeeping",
     desc: "Achieve Financial Mastery: Optimize Your Business with Professional Accounting and Bookkeeping Services. Contact Us for Expert Guidance",
     path: "/accounting-bookkeeping",
   },
   {
     big: "SOCIAL MEDIA MANAGEMENT",
-    sub: "Social Media Management",
+    //sub: "Social Media Management",
     desc: "Maximize Your Digital Presence with Tailored Marketing Solutions.",
     path: "/social-media-management",
   },
   {
     big: "LEADS GENERATION",
-    sub: "Leads Generation",
+    //sub: "Leads Generation",
     desc: "Don't let a lack of leads hold your business back. Partner with us to take your lead generation efforts to the next level and fuel your growth.",
     path: "/leads-generation",
   },
   {
     big: "DIGITAL MARKETING",
-    sub: "Digital Marketing",
+    //sub: "Digital Marketing",
     desc: "Maximize Your Digital Presence with Tailored Marketing Solutions.",
     path: "/digital-marketing",
   },
   {
     big: "WEBSITE & APP DEVELOPMENT",
-    sub: "Website & App Development",
+    //sub: "Website & App Development",
     desc: "Transform your vision into powerful mobile apps with our expert app development service. Get started today!",
     path: "/website-app-development",
   },
   {
     big: "CUSTOMIZED CRM SOFTWARE",
-    sub: "Customized CRM Software",
+    //sub: "Customized CRM Software",
     desc: "Transform your vision into powerful mobile apps with our expert app development service. Get started today!",
     path: "/customized-crm-software",
   },
   {
     big: "BUSINESS DEVELOPMENT",
-    sub: "Business Development",
+    //sub: "Business Development",
     desc: "Strategize and scale your business with targeted growth plans and execution.",
     path: "/business-development",
   },
   {
     big: "CALL CENTER SUPPORT",
-    sub: "Call Center Support",
-    desc: "With our Call Centre Support, you can elevate your customer service standards, cultivate loyalty, and drive business growth. Trust us to be your reliable partner in delivering exceptional customer experiences.",
+    //sub: "Call Center Support",
+    desc: "With our Call Centre Support, you can elevate your customer service standards, cultivate loyalty, and drive business growth.",
     path: "/call-center-support",
   },
 ];
@@ -151,7 +151,7 @@ const ServicesWeOffer = () => {
                 {titles[index].sub}
               </h3>
               {/* ✅ Show description on desktop */}
-              <p className="hidden md:block text-base text-gray-300">{titles[index].desc}</p>
+              <p className="hidden md:block text-2xl text-gray-300">{titles[index].desc}</p>
             </div>
 
             <div className="w-[600px] md:w-[800px] h-full" />
@@ -159,10 +159,10 @@ const ServicesWeOffer = () => {
             <div className="md:w-1/3 self-end -mb-32 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
               {/* ✅ Show description on mobile */}
               <p className="block md:hidden text-center px-4 text-base">{titles[index].desc}</p>
-              <div className="flex md:block justify-center md:justify-start">
+              <div className="flex md:block justify-center md:justify-start mt-8 md:-mt-40">
                 <NavLink
                   to={titles[index].path}
-                  className="bg-[#2a2a3c] text-white text-lg px-10 py-5 rounded hover:bg-[#3a3a50] transition inline-block mx-auto md:mx-0"
+                  className="bg-[#2a2a3c] text-white text-lg px-8 py-4 rounded hover:bg-[#3a3a50] transition inline-block mx-auto md:mx-0"
                 >
                   Explore More →
                 </NavLink>
