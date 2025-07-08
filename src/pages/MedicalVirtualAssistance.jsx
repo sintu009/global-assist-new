@@ -1,12 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import mva1 from "../assets/mva1.png";
+import vmabg from "../assets/vmabg.png"; // <-- use this image for hero section
 import mva2 from "../assets/mva2.png";
 import mva3 from "../assets/mva3.png";
-import mva4 from "../assets/mva4.png";  
+import mva4 from "../assets/mva4.png";
 import mva5 from "../assets/mva5.png";
 import mva6 from "../assets/mva6.png";
-
 import GetInTouch from "../components/GetInTouch";
 
 const features = [
@@ -44,84 +43,77 @@ const fadeUp = {
 export default function MedicalVirtualAssistant() {
   return (
     <div className="font-sans text-[#222]">
-      {/* Hero Section with Overlay Text */}
+      {/* HERO SECTION - Heading Left, Image Right */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
         animate="visible"
-        className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden"
+        className="w-full bg-[#F9F9FB] py-12 md:py-20 px-4 md:px-12 lg:px-20 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
       >
-        <img
-          src={mva1}
-          alt="Medical Virtual Assistance"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-xl md:text-4xl lg:text-5xl font-bold text-black text-center leading-snug">
+        {/* Text Content */}
+        <div className="max-w-xl text-center md:text-left">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2F327D] leading-snug mb-4">
             MEDICAL VIRTUAL <br /> ASSISTANCE
           </h1>
+          <p className="text-[#555] text-sm md:text-base leading-relaxed">
+            At Global Assist, we're dedicated to simplifying your medical
+            practice's administrative tasks, so you can focus on what truly
+            matters: your patients. Our specialized Virtual Assistant (VA)
+            services are designed to streamline your operations and boost
+            efficiency. Here's why you should choose us:
+          </p>
+        </div>
+
+        {/* Image on Right */}
+        <div className="w-full md:w-[50%] max-w-3xl">
+          <img
+            src={vmabg}
+            alt="Medical Virtual Assistance"
+            className="w-full h-auto object-contain transform translate-x-4 -translate-y-12 md:translate-x-20 md:-translate-y-20"
+          />
         </div>
       </motion.div>
 
-      {/* Intro Text */}
+      {/* Feature Cards */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        className="max-w-4xl font-inter mx-auto text-center px-4 mt-12 mb-10 text-sm text-[#797979]"
+        viewport={{ once: false, amount: 0.2 }}
+        className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-30 mb-24 mt-16"
       >
-        <p>
-          At Global Assist, we’re dedicated to simplifying your medical practice’s administrative tasks,
-          so you can focus on what truly matters: your patients. Our specialized Virtual Assistant (VA)
-          services are designed to streamline your operations and boost efficiency. Here’s why you should
-          choose us:
-        </p>
+        {features.map((feature, index) => (
+          <motion.div
+            key={index}
+            variants={fadeUp}
+            className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center"
+          >
+            <img
+              src={
+                index === 0
+                  ? mva6
+                  : index === 1
+                  ? mva5
+                  : index === 2
+                  ? mva4
+                  : index === 3
+                  ? mva3
+                  : mva2
+              }
+              alt={feature.title}
+              className="w-full h-[260px] object-cover rounded-2xl mb-4"
+            />
+            <h3 className="text-lg font-semibold text-[#2F327D] mb-2 text-center font-['Roboto']">
+              {feature.title}
+            </h3>
+            <p className="text-sm text-gray-600 text-center font-['Roboto']">
+              {feature.desc}
+            </p>
+          </motion.div>
+        ))}
       </motion.div>
 
-      {/* Feature Cards */}
-{/* Feature Cards */}
-<motion.div
-  variants={fadeUp}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
-  className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-30 mb-24"
->
-  {features.map((feature, index) => (
-    <motion.div
-      key={index}
-      variants={fadeUp}
-      className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center"
-    >
-      <img
-        src={
-          index === 0
-            ? mva6
-            : index === 1
-            ? mva5
-            : index === 2
-            ? mva4
-            : index === 3
-            ? mva3
-            : mva2
-        }
-        alt={feature.title}
-        className="w-full h-[260px] object-cover rounded-2xl mb-4"
-      />
-      <h3 className="text-lg font-semibold font-[roboto,sans-serif] mb-2 text-center text-[#2F327D]">
-        {feature.title}
-      </h3>
-      <p className="text-sm text-gray-600 font-[roboto,sans-serif] text-center">
-        {feature.desc}
-      </p>
-    </motion.div>
-  ))}
-</motion.div>
-
-
-
-      {/* Get In Touch */}
+      {/* Contact Section */}
       <motion.div
         variants={fadeUp}
         initial="hidden"

@@ -126,9 +126,9 @@ const ServicesWeOffer = () => {
           >
             <h1
               className={`text-[14vw] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#A0A3DC] via-[#42376D] to-[#A0A3DC]
-                ${["MEDICAL VIRTUAL ASSISTANCE", "BUSINESS DEVELOPMENT", "WEBSITE & APP DEVELOPMENT", "CUSTOMIZED CRM SOFTWARE", "ACCOUNTING & BOOKKEEPING", "SOCIAL MEDIA MANAGEMENT"].includes(titles[index].big)
-                  ? "md:text-8xl"
-                  : "md:text-9xl"
+                ${["MEDICAL VIRTUAL ASSISTANCE", "WEBSITE & APP DEVELOPMENT", "CUSTOMIZED CRM SOFTWARE", "ACCOUNTING & BOOKKEEPING", "SOCIAL MEDIA MANAGEMENT","CALL CENTER SUPPORT"].includes(titles[index].big)
+                  ? "md:text-7xl"
+                  : "md:text-8xl"
                 }`}
             >
               {titles[index].big}

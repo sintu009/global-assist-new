@@ -8,7 +8,7 @@ import IniniteLogoSlider from "./InfiniteLogoSlider";
 
 const HomePage = () => {
   return (
-    <main className="font-quicksand">
+    <main className="">
       <HeroSection />
       <ServicesWeOffer />
         <CompetitiveAdvantages />/

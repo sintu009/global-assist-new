@@ -31,6 +31,7 @@ import roy from "../assets/team/roy.jpg";
 import gurjeet from "../assets/team/gurjeet.jpg";
 import gema from "../assets/team/gema.png";
 import arias from "../assets/team/arias.jpg";
+import anjali2 from "../assets/team/anjali.jpg";
 
 // Team Card Component
 const OtherTeamMemberCard = ({ image, name, title, linkedin }) => (
@@ -81,6 +82,7 @@ const OurTeamSection = () => {
     { image: gurjeet, name: "GURJEET KAUR RANA", title: "Virtual Assistant" },
     { image: gema, name: "Gema Rebolledo", title: "Administration & Social Media VA" },
     { image: arias, name: "Fiorella Arias", title: "Real Estate transaction coordinator" },
+    { image: anjali2, name: "Anjali", title: "Sales and Business Development" },
   ];
 
   const ceoData = {
