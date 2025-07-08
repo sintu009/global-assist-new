@@ -90,7 +90,7 @@ const OurTeamSection = () => {
     title: "FOUNDER and CEO",
     image: Laiminaimg,
     shortDesc: "Meet Lamina Methuselha, the visionary founder and CEO behind Global Assist Inc...",
-    fullDesc: "Full CEO description here...",
+    fullDesc: "Meet Lamina Methuselha, the visionary founder and CEO behind Global Assist Inc,. a dynamic and growing organization revolutionizing outsourcing and virtual work solutions for small and mid-size firms by providing more employment opportunities and delivering innovative virtual solutions that empower business to thrive in today’s dynamic landscape.Lamina's professional journey, with an impressive 15 years of corporate expertise, reflects her unwavering commitment to excellence. Having spearheaded a successful staffing brand for 8 years, she transitioned to establish Global Assist Inc. as her own visionary venture. Her mission? To bridge the gap for small and mid-size businesses by connecting them with top-tier talent, thereby combatting unemployment while enabling individuals to pursue their passions from the comfort of their homes. Beyond her professional pursuits, Lamina is a devoted mother of two who cherishes quality time spent with her family and delights in exploring new destinations through travel.",
     linkedin: "https://www.linkedin.com/in/laimina-m-824a89137/"
   };
 
@@ -99,7 +99,7 @@ const OurTeamSection = () => {
     title: "CO-FOUNDER and COO",
     image: charlesimg,
     shortDesc: "Introducing Charles Methuselha, the dynamic Co-Founder and Chief Operating Officer...",
-    fullDesc: "Full COO description here...",
+    fullDesc: "Introducing Charles Methuselha, the dynamic Co-Founder and Chief Operating Officer driving innovation and efficiency at Global Assist Inc. With a keen focus on creating robust SOPs, implementing protocols, and optimizing systems, Charles plays a pivotal role in ensuring the organization operates seamlessly.Boasting an impressive 25 years of multifaceted experience across diverse industries including Recruiting, Real Estate, Corporate, ITES, BPO, KPO, and Aviation, Charles brings a wealth of expertise to the table. His extensive background spans key domains such as Operations, Sales, Business Development, Training, and Administration, making him a versatile leader adept at navigating complex challenges and driving strategic growth initiatives.Beyond his professional prowess, Charles is fueled by a passion for fast cars and engineering, embodying a perfect blend of work and play. While he thrives in the fast-paced business world, he also understands the importance of family, always prioritizing quality time with loved ones.",
     linkedin: "https://www.linkedin.com/in/charles-methuselha-302ba8a5/"
   };
 

@@ -37,11 +37,11 @@ const AboutV1Hero = () => {
         {/* Description Text */}
         <div className="mt-20 grid md:grid-cols-2 gap-10 text-gray-800 text-sm md:text-base leading-relaxed">
           <p>
-           Global Assist Inc. is a leading 360-degree Business solution firm with offices in the USA, Canada, India, and the Philippines and branches spread globally. We identify with the importance of your work and make sure that your requirements are looked after in the best way possible.
+           Global Assist Inc. is a leading 360-degree Business solution firm with offices in the USA, Canada, India, and the Philippines and branches spread globally. We identify with the importance of your work and make sure that your requirements are looked after in the best way possible. We are more than just a Virtual Assistant Company.
           </p>
 
           <p>
-            Accounts, Bookkeeping, Travel Booking, Research, Emails, & Scheduling. Accounts, Bookkeeping, Travel Booking, Research, Emails, & Scheduling. Accounts, Bookkeeping, Travel Booking, Research, Emails, & Scheduling. Accounts, Bookkeeping, Travel Booking, Research, Emails, & Scheduling. Accounts.
+            Our dedicated team of Prompt, Precise & Proficient VAs at Global Assist comes in a set of 3 at a cost of 1 where they efficiently analyze the workflow and draw upon a near-endless catalog of best practices to proactively outline work that needs to be done. Every discussion with us is a powerful productivity pit stop that helps you fine-tune your efficiency to leave you more at ease and better focused.
           </p>
         </div>
       </div>
