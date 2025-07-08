@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import num1 from "../assets/num1.png";
 import num2 from "../assets/num2.png";
@@ -12,13 +12,12 @@ import mid1 from "../assets/mid1.png";
 import mid2 from "../assets/mid2.png";
 import mid3 from "../assets/mid3.png";
 import mid4 from "../assets/mid4.png";
-import advantagesBg from "../assets/advantages-bg.png";
 
 const advantages = [
   {
     id: 1,
     numImg: num1,
-    desc: `In today's business world, diversification is essential for survival and growth. At Global Assist, we offer a diverse team of virtual assistants from around the world, including India, the Philippines, Canada, and the Central America. Each VA brings unique skills, ensuring a perfect match for your needs. Whether it's admin, creative, or technical support, our team seamlessly integrates into your operations, offering fresh perspectives and tailored solutions. Continuously expanding our talent pool, we stay agile to meet evolving business demands. With diverse skills and cultural insights, we provide flexibility to tackle any challenge, keeping your operations competitive and agile`,
+    desc: `In today's business world, diversification is essential for survival and growth. At Global Assist, we offer a diverse team of virtual assistants from around the world, including India, the Philippines, Canada, and the Central America. Each VA brings unique skills, ensuring a perfect match for your needs. Whether it's admin, creative, or technical support, our team seamlessly integrates into your operations, offering fresh perspectives and tailored solutions. Continuously expanding our talent pool, we stay agile to meet evolving business demands. With diverse skills and cultural insights, we provide flexibility to tackle any challenge, keeping your operations competitive and agile.`,
   },
   {
     id: 2,
@@ -37,77 +36,65 @@ const advantages = [
   },
 ];
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 80 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } },
-};
-
-const sideFade = (direction) => ({
-  hidden: { opacity: 0, x: direction === "left" ? -80 : 80 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-});
-
 export default function CompetitiveAdvantages() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: isMobile ? 30 : 80 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } },
+  };
+
+  const sideFade = (direction) => ({
+    hidden: { opacity: 0, x: isMobile ? 0 : direction === "left" ? -80 : 80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  });
+
   return (
     <section className="font-roboto min-h-screen bg-white text-gray-800 overflow-x-hidden">
-      {/* Heading */}
-{/* <div
-  className="h-screen snap-start flex items-center justify-center px-6 text-center bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: `url(${advantagesBg})` }}
->
-  <h2 className="text-3xl md:text-4xl font-semibold text-black drop-shadow-lg">
-    Our Competitive Advantages
-  </h2>
-</div> */}
-
-      {/* Scroll Sections */}
       {advantages.map((adv, index) => {
         let middleImage = mid1;
-
-if (adv.id === 3) {
-  middleImage = mid3;
-} else if (adv.id === 4) {
-  middleImage = mid4;
-} else if (index % 2 === 1) {
-  middleImage = mid2;
-}
+        if (adv.id === 3) middleImage = mid3;
+        else if (adv.id === 4) middleImage = mid4;
+        else if (index % 2 === 1) middleImage = mid2;
 
         const isEven = index % 2 === 0;
 
         return (
           <motion.div
             key={adv.id}
-            className="h-screen snap-start flex flex-col justify-center px-6 md:px-20"
+            className="min-h-[90vh] py-10 snap-start flex flex-col justify-center px-6 md:px-20"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={fadeIn}
           >
             <div className="grid md:grid-cols-3 gap-10 items-center max-w-7xl mx-auto">
               {isEven ? (
                 <>
-                  {/* Num Image */}
                   <motion.div
                     className="flex flex-col items-center order-1"
-                    variants={sideFade("left")}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.2 }}
+                    variants={sideFade("left")}
                   >
                     <img src={adv.numImg} alt={`num${adv.id}`} className="w-60 h-auto" />
                   </motion.div>
 
-                  {/* Middle Image */}
                   <motion.div
                     className="flex justify-center order-2"
-                    variants={fadeIn}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.2 }}
+                    variants={fadeIn}
                   >
                     <img
                       src={middleImage}
@@ -116,37 +103,34 @@ if (adv.id === 3) {
                     />
                   </motion.div>
 
-                  {/* Text */}
                   <motion.div
                     className="text-sm md:text-base text-justify order-3"
-                    variants={sideFade("right")}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.2 }}
+                    variants={sideFade("right")}
                   >
                     {adv.desc}
                   </motion.div>
                 </>
               ) : (
                 <>
-                  {/* Num Image */}
                   <motion.div
                     className="flex flex-col items-center order-1 md:order-3"
-                    variants={sideFade("right")}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.2 }}
+                    variants={sideFade("right")}
                   >
                     <img src={adv.numImg} alt={`num${adv.id}`} className="w-60 h-auto" />
                   </motion.div>
 
-                  {/* Middle Image */}
                   <motion.div
                     className="flex justify-center order-2 md:order-2"
-                    variants={fadeIn}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.2 }}
+                    variants={fadeIn}
                   >
                     <img
                       src={middleImage}
@@ -155,13 +139,12 @@ if (adv.id === 3) {
                     />
                   </motion.div>
 
-                  {/* Text */}
                   <motion.div
                     className="text-sm md:text-base text-justify order-3 md:order-1"
-                    variants={sideFade("left")}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.2 }}
+                    variants={sideFade("left")}
                   >
                     {adv.desc}
                   </motion.div>
@@ -172,9 +155,8 @@ if (adv.id === 3) {
         );
       })}
 
-      {/* Mobile View Section */}
+      {/* Mobile + Desktop CTA Section */}
       <div className="min-h-screen snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
-        {/* Mobile Version */}
         <div className="block md:hidden space-y-4">
           <div className="text-xl font-semibold text-gray-700">
             Battle-tested Service You<br />Can Count On
@@ -192,14 +174,13 @@ if (adv.id === 3) {
             alt="App"
             className="w-[260px] mt-4 mx-auto"
             style={{ height: "500px", objectFit: "cover" }}
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.4 }}
-            transition={{ duration: 1, delay: 2 }}
+            transition={{ duration: 1 }}
           />
         </div>
 
-        {/* Desktop Version */}
         <div className="hidden md:flex flex-row items-end gap-34 max-w-[100vw] overflow-hidden">
           <img
             src={left}
@@ -216,7 +197,7 @@ if (adv.id === 3) {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.4 }}
-              transition={{ duration: 1, delay: 2 }}
+              transition={{ duration: 1 }}
             />
             <p className="absolute top-28 text-xl font-normal px-2 z-0 leading-snug text-gray-700">
               Global Assist is consistently ranked as one of the top virtual
