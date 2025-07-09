@@ -131,7 +131,7 @@ const VideoEditing = () => {
 
   {/* Image Row */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <a href="https://drive.google.com/file/d/18vUWWwWaibstK3e_eGCMWdz9rMzzWcP_/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <a href="https://drive.google.com/file/d/15KQBjuqDaR8e0yuPMdhN6MqD2PAjGcUr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
       <img
         src={veproject2}
         alt="Project 1"

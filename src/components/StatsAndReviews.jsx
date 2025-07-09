@@ -7,37 +7,37 @@ import statsImage from "../assets/stat2.png";
 const reviews = [
   {
     stars: "★★★★★",
-    text: "Our VA is consistent and hard-working and has proved to be an asset...",
+    text: "Our VA is consistent and hard-working and has proved to be an asset. I am pleased with the services we have received from Global Assist",
     name: "Victoria Segovia",
     position: "Communications Manager, USA",
   },
   {
     stars: "★★★★★",
-    text: "We really enjoy having the services as part of our business model...",
+    text: "We really enjoy having the services as part of our business model. VA is a good communicator, consistent, very organized trustworthy, and reliable. The service has been extremely professional and accessible. We definitely think every business should try it.",
     name: "Malindi Demery",
     position: "Managing Director, USA",
   },
   {
     stars: "★★★★★",
-    text: "I have worked with Shraddha. She has been excellent...",
+    text: "I have worked with Shraddha. She has been excellent! She has been conscientious, punctual, and attentive. She has provided invaluable insights and her perspective during the task. I appreciate whatever resources I was provided to improve our virtual work.",
     name: "Phill Garrow",
     position: "Writer",
   },
   {
     stars: "★★★★★",
-    text: "The sales Virtual Assistant allotted to me did a very good job...",
+    text: "The sales Virtual Assistant allotted to me did a very good job on all assignments. He called Potential prospects of my Real Estate business to alert them to a building that was for lease at the beach. He Stirred up great interest with a few clients calling me before I could call them. His Admin work was also very good.",
     name: "David Milstead",
     position: "Managing Senior Director, USA",
   },
   {
     stars: "★★★★★",
-    text: "I highly recommend the quality of work, professionalism and speed...",
+    text: "I highly recommend the quality of work, professionalism and speed in which VA from Global Assist works. They have added immense value to the marketing team, despite working virtually. I have absolutely no hesitation in recommending their competency for any project",
     name: "Dorina Lipovanciuc",
     position: "Managing Director, USA",
   },
   {
     stars: "★★★★★",
-    text: "My VA was detail oriented, a receptive listener and effective communicator...",
+    text: "My VA was detail oriented, a receptive listener and effective communicator. She would think on her own feet after an assignment was given and often demonstrated her best efforts when working on an assignment. I would use her again when the need arises.",
     name: "Confidential",
     position: "Confidential",
   },
