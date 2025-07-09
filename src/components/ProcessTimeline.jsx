@@ -97,12 +97,13 @@ export default function ProcessTimeline() {
       className="relative bg-white py-24 px-4 max-w-6xl mx-auto"
     >
       {/* Center vertical progress line */}
-      <div className="absolute left-1/2 top-0 w-[2px] bg-gray-200 h-full transform -translate-x-1/2 z-0">
-        <div
-          className="bg-[#553982] w-full transition-all duration-300 ease-linear"
-          style={{ height: `${progressHeight}%` }}
-        />
-      </div>
+<div className="hidden md:block absolute left-1/2 top-0 w-[2px] bg-gray-200 h-full transform -translate-x-1/2 z-0">
+  <div
+    className="bg-[#553982] w-full transition-all duration-300 ease-linear"
+    style={{ height: `${progressHeight}%` }}
+  />
+</div>
+
 
       {/* Step content */}
       <div className="relative z-10 flex flex-col gap-20">

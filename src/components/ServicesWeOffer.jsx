@@ -125,14 +125,13 @@ const ServicesWeOffer = () => {
             style={{ top: "8rem", left: 0, width: "100%", textAlign: "center", zIndex: 0 }}
           >
             <h1
-              className={`text-[14vw] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#A0A3DC] via-[#42376D] to-[#A0A3DC]
-                ${["MEDICAL VIRTUAL ASSISTANCE", "WEBSITE & APP DEVELOPMENT", "CUSTOMIZED CRM SOFTWARE", "ACCOUNTING & BOOKKEEPING", "SOCIAL MEDIA MANAGEMENT","CALL CENTER SUPPORT"].includes(titles[index].big)
-                  ? "md:text-7xl"
-                  : "md:text-8xl"
-                }`}
-            >
-              {titles[index].big}
-            </h1>
+  className={`
+    text-[10vw] md:text-[6vw] font-extrabold break-words leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#A0A3DC] via-[#42376D] to-[#A0A3DC]
+  `}
+>
+  {titles[index].big}
+</h1>
+
           </div>
 
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[220px] md:w-[500px] pointer-events-none hidden md:block">
