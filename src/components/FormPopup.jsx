@@ -9,6 +9,9 @@ const FormPopup = ({ onClose }) => {
   const [emailError, setEmailError] = useState('');
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
+  const [service, setService] = useState('');
+
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
     setEmailError('');
@@ -103,23 +106,36 @@ const FormPopup = ({ onClose }) => {
             className="w-full rounded-md p-3 text-black bg-white focus:outline-none"
           />
           <select
-            name="service"
-            required
-            className="w-full rounded-md p-3 text-black bg-white focus:outline-none"
-          >
-            <option value="">What service do you need?</option>
-            <option>Administrative Executive</option>
-            <option>Medical Virtual Assistance</option>
-            <option>Video Editing</option>
-            <option>Accounting & Bookkeeping</option>
-            <option>Social Media Management</option>
-            <option>Leads Generation</option>
-            <option>Digital Marketing</option>
-            <option>Website & App Development</option>
-            <option>Customized CRM Software</option>
-            <option>Business Development</option>
-            <option>Call Center Support</option>
-          </select>
+  name="service"
+  required
+  className="w-full rounded-md p-3 text-black bg-white focus:outline-none"
+  onChange={(e) => setService(e.target.value)}
+>
+  <option value="">What service do you need?</option>
+  <option>Administrative Executive</option>
+  <option>Medical Virtual Assistance</option>
+  <option>Video Editing</option>
+  <option>Accounting & Bookkeeping</option>
+  <option>Social Media Management</option>
+  <option>Leads Generation</option>
+  <option>Digital Marketing</option>
+  <option>Website & App Development</option>
+  <option>Customized CRM Software</option>
+  <option>Business Development</option>
+  <option>Call Center Support</option>
+  <option>Others</option>
+</select>
+
+{service === "Others" && (
+  <input
+    type="text"
+    name="custom_service"
+    placeholder="Please specify your requirement"
+    className="w-full rounded-md p-3 text-black bg-white focus:outline-none"
+    required
+  />
+)}
+
           <textarea
             name="message"
             placeholder="Requirements detail"

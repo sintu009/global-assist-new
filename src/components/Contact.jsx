@@ -8,6 +8,8 @@ import formBgImage from "../assets/form-bg-new2.jpg";
 const Contact = () => {
   const formRef = useRef();
   const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [selectedService, setSelectedService] = useState("");
+  const [customService, setCustomService] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,7 +29,9 @@ const Contact = () => {
       .then(() => {
         alert("Message sent successfully!");
         formRef.current.reset();
-        setRecaptchaToken(null); // Reset reCAPTCHA
+        setRecaptchaToken(null);
+        setSelectedService("");
+        setCustomService("");
       })
       .catch((error) => {
         console.error("Email send error:", error);
@@ -103,24 +107,44 @@ const Contact = () => {
             placeholder="Phone"
             className="w-full px-4 py-3 rounded-lg bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-400"
           />
+
+          {/* Service Dropdown */}
           <select
-            name="service"
-            required
+            value={selectedService}
+            onChange={(e) => setSelectedService(e.target.value)}
             className="w-full rounded-md p-3 text-black bg-white focus:outline-none"
+            required
           >
             <option value="">What service do you need?</option>
-            <option>Administrative Executive</option>
-            <option>Medical Virtual Assistance</option>
-            <option>Video Editing</option>
-            <option>Accounting & Bookkeeping</option>
-            <option>Social Media Management</option>
-            <option>Leads Generation</option>
-            <option>Digital Marketing</option>
-            <option>Website & App Development</option>
-            <option>Customized CRM Software</option>
-            <option>Business Development</option>
-            <option>Call Center Support</option>
+            <option value="Administrative Executive">Administrative Executive</option>
+            <option value="Medical Virtual Assistance">Medical Virtual Assistance</option>
+            <option value="Video Editing">Video Editing</option>
+            <option value="Accounting & Bookkeeping">Accounting & Bookkeeping</option>
+            <option value="Social Media Management">Social Media Management</option>
+            <option value="Leads Generation">Leads Generation</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Website & App Development">Website & App Development</option>
+            <option value="Customized CRM Software">Customized CRM Software</option>
+            <option value="Business Development">Business Development</option>
+            <option value="Call Center Support">Call Center Support</option>
+            <option value="Others">Others</option>
           </select>
+
+          {/* Conditional Input for 'Others' */}
+          {selectedService === "Others" ? (
+            <input
+              type="text"
+              name="service"
+              placeholder="Please specify your service"
+              value={customService}
+              onChange={(e) => setCustomService(e.target.value)}
+              required
+              className="w-full px-4 py-3 rounded-lg bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+          ) : (
+            <input type="hidden" name="service" value={selectedService} />
+          )}
+
           <textarea
             name="message"
             rows="4"
@@ -135,10 +159,9 @@ const Contact = () => {
             <label className="flex items-start gap-2">
               <input type="checkbox" name="sms_consent" className="mt-1" required />
               <span>
-                I Consent to Receive SMS Notifications, Alerts from Global Assist Inc.
-                Message frequency varies. Message & data rates may apply. Text HELP to
-                (438) 408-6799 for assistance. You can reply STOP to unsubscribe at any
-                time.
+                I Consent to Receive SMS Notifications, Alerts from Global Assist Inc. Message
+                frequency varies. Message & data rates may apply. Text HELP to (438) 408-6799
+                for assistance. You can reply STOP to unsubscribe at any time.
               </span>
             </label>
             <label className="flex items-start gap-2">
