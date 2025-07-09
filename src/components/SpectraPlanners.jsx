@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import planner7 from "../assets/planner7.jpeg";
-import planner8 from "../assets/planner8.jpeg";
 import planner9 from "../assets/planner9.jpeg";
+import natashaclient from "../assets/natashaclient.mp4";
 import podcastOne from "../assets/podcast-one.jpg";
 import podcastTwo from "../assets/podcast-two.jpg";
 import podcastThree from "../assets/podcast-three.jpeg";
@@ -28,9 +28,9 @@ const topic2Items = [
 ];
 
 const topic3Items = [
-  { image: planner7, title: "Award" },
-  { image: planner8, title: "Client Testimony" },
-  { image: planner9, title: "Award" },
+  { image: planner7, title: "Award", type: "image" },
+  { video: natashaclient, title: "Client Testimony", type: "video" },
+  { image: planner9, title: "Award", type: "image" },
 ];
 
 const topic4Items = [
@@ -94,7 +94,7 @@ export default function SpectraPlanners() {
       </div>
 
      {/* Topic 02 */}
-<div className="bg-[#444444] py-8 px-0 md:px-2 text-white">
+<div className="bg-[#444444] py-4 px-0 md:px-2 text-white">
   <div className="max-w-7xl mx-auto relative">
     {/* Scroll Buttons */}
     <button
@@ -148,7 +148,14 @@ export default function SpectraPlanners() {
         <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
           {topic3Items.map((item, index) => (
             <div key={index} className="bg-white rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
-              <img src={item.image} alt={item.title} className="w-full h-[440px] object-fill rounded-[24px] mb-6" />
+              {item.type === "video" ? (
+                <video controls className="w-full h-[480px] object-fill rounded-[24px] mb-6" poster="">
+                  <source src={item.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <img src={item.image} alt={item.title} className="w-full h-[480px] object-fill rounded-[24px] mb-6" />
+              )}
               <h3 className="text-[20px] font-bold mb-2">{item.title}</h3>
             </div>
           ))}

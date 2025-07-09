@@ -63,7 +63,7 @@ const OurTeamSection = () => {
     { image: raina, name: "Raina Gupta", title: "Opertions Manager" },
     { image: jonald, name: "Jonald Garlan", title: "Virtual Assistant" },
     { image: jesus, name: "Jesús R. Quero", title: "Journalist / VA Marketing" },
-    { image: kanika, name: "Kanika Chauhan", title: "UI/UX Designer" },
+    { image: kanika, name: "Kanika Chauhan", title: "Project Manager" },
     { image: natasha, name: "Natasha Shukla", title: "Project Manager" },
     { image: zubair, name: "Mohd Zubair", title: "Web Developer" },
     { image: manav, name: "Manav Basotia", title: "Creative Marketing Specialist" },
