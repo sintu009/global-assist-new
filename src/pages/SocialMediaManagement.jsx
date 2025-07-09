@@ -91,7 +91,7 @@ const SocialMediaManagement = () => {
             Brand Storytelling
           </h2>
           <p className="text-gray-500 text-sm mb-8 max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius tempor incididunt ut labore et dolore magna aliqua. enim minim veniam
+            
           </p>
           <div className="flex items-start gap-3 mb-6 max-w-lg">
             <div className="w-6 h-6 flex-shrink-0 bg-[#EDE9FE] text-[#7A4DD7] rounded-full flex items-center justify-center">
