@@ -120,8 +120,8 @@ export default function SpectraPlanners() {
       <div className="bg-white py-8 px-4">
         <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
           {topic3Items.map((item, index) => (
-            <div key={index} className="bg-white rounded-[32px] md:w-[400px] p-8 min-w-[100vw] sm:min-w-0">
-              <img src={item.image} alt={item.title} className="w-[120vw] sm:w-full md:w-[560px] h-[440px] object-cover rounded-[24px] mb-6" />
+            <div key={index} className="bg-white rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
+              <img src={item.image} alt={item.title} className="w-full h-[440px] object-fill rounded-[24px] mb-6" />
               <h3 className="text-[20px] font-bold mb-2">{item.title}</h3>
             </div>
           ))}
@@ -132,8 +132,8 @@ export default function SpectraPlanners() {
       <div className="bg-[#444444] py-8 px-4 text-white">
         <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
           {topic4Items.map((item, index) => (
-            <div key={index} className="bg-[#444444] rounded-[32px] md:w-[400px] p-8 min-w-[100vw] sm:min-w-0">
-              <img src={item.image} alt={item.title} className="w-[120vw] sm:w-full md:w-[560px] h-[440px] object-cover rounded-[24px] mb-6" />
+            <div key={index} className="bg-[#444444] rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
+              <img src={item.image} alt={item.title} className="w-full h-[440px] object-fill rounded-[24px] mb-6" />
               <h3 className="text-[20px] font-bold mb-2 text-white">{item.title}</h3>
               <p className="text-[#CCCCCC] text-[16px] leading-[24px]">{item.description}</p>
             </div>
@@ -145,8 +145,8 @@ export default function SpectraPlanners() {
       <div className="bg-white py-8 px-4">
         <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
           {topic5Items.map((item, index) => (
-            <div key={index} className="bg-white rounded-[32px] md:w-[400px] p-8 min-w-[100vw] sm:min-w-0">
-              <img src={item.image} alt={item.title} className="w-[120vw] sm:w-full md:w-[560px] h-[440px] object-cover rounded-[24px] mb-6" />
+            <div key={index} className="bg-white rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
+              <img src={item.image} alt={item.title} className="w-full h-[440px] object-fill rounded-[24px] mb-6" />
               <h3 className="text-[20px] font-bold mb-2">{item.title}</h3>
               <p className="text-[#6B7280] text-[16px] leading-[24px]">{item.description}</p>
             </div>
