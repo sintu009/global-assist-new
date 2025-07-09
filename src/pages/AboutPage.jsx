@@ -9,9 +9,8 @@ const AboutPage = () => {
     <div className="overflow-hidden"> {/* Added overflow-hidden to handle potential layout shifts from rotated images */}
       <AboutV1Hero />
       <DiverseTeamSection />
-      <DepartmentsSection />
       <OurTeamSection/>
-      
+      <DepartmentsSection />
       {/* Note: The Footer and Header are already in your App.jsx, so they don't need to be here */}
     </div>
   );

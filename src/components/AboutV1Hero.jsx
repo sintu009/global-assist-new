@@ -27,9 +27,7 @@ const AboutV1Hero = () => {
           <img
             src={singleImage}
             alt="Combined collage of team and abstract images"
-            // Ensure no shadow or border is applied to the image itself if you want a seamless blend.
-            // The image itself should ideally NOT have a shadow if you want it to blend perfectly.
-            // If the transparent image still shows a shadow, it might be part of the image itself.
+            
             className="w-full max-w-6xl h-auto object-cover rounded-xl" // Removed shadow-2xl from here if it was present
           />
         </div>
@@ -37,11 +35,16 @@ const AboutV1Hero = () => {
         {/* Description Text */}
         <div className="mt-20 grid md:grid-cols-2 gap-10 text-gray-800 text-sm md:text-base leading-relaxed">
           <p>
-           Global Assist Inc. is a leading 360-degree Business solution firm with offices in the USA, Canada, India, and the Philippines and branches spread globally. We identify with the importance of your work and make sure that your requirements are looked after in the best way possible. We are more than just a Virtual Assistant Company.
+           At Global Assist Inc., our vision has always been clear: to become the trusted, one-stop solution for businesses across the globe—so they can focus on the big picture while we take care of the details.
+With decades of expertise in outsourcing and strategic support, we specialize in connecting companies with highly trained, cost-effective global talent who act as true extensions of their team. Whether you're scaling operations, improving efficiency, or simply freeing up time to grow your business, our resources are ready to deliver with precision and professionalism.
+
           </p>
 
           <p>
-            Our dedicated team of Prompt, Precise & Proficient VAs at Global Assist comes in a set of 3 at a cost of 1 where they efficiently analyze the workflow and draw upon a near-endless catalog of best practices to proactively outline work that needs to be done. Every discussion with us is a powerful productivity pit stop that helps you fine-tune your efficiency to leave you more at ease and better focused.
+            We don’t just assign assistants—we build tailored support systems. Our model offers a team of three experts at the cost of one, ensuring every task is handled with depth, speed, and accuracy. From workflow optimization to daily operations, our teams proactively anticipate needs, implement global best practices, and drive consistent results.
+With offices in the USA, Canada, India, and the Philippines, and clients around the world, Global Assist is more than a service provider—we’re a partner in your progress.
+Let us handle the work, so you can lead with clarity, confidence, and focus. ) 
+
           </p>
         </div>
       </div>
