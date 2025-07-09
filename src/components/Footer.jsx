@@ -113,7 +113,7 @@ export default function Footer() {
         <div className="lg:ml-[-200px]">
           <h4 className="font-semibold mb-2">OTHERS</h4>
           <ul className="space-y-1 text-sm">
-            <li><a href="#" className="hover:underline">Blog</a></li>
+            <li><Link to="/blog" className="hover:underline">Blog</Link></li>
             <li><Link to="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
             <li><Link to="/case-studies" className="hover:underline">Case Studies</Link></li>
             <li><a href="/terms-conditions" className="hover:underline">Terms & Conditions</a></li>
