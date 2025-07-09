@@ -58,7 +58,7 @@ export default function CustomizedCRMSoftware() {
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
             Maximize Business Potential with <br /> Custom CRM
           </h1>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+          <p className="text-base sm:text-lg text-gray-600 font-bold max-w-2xl mx-auto mb-12">
             Experience the power of tailored CRM solutions, designed to propel your
             business forward. Seamlessly integrate our CRM software into your
             existing systems, tailored to your unique processes.

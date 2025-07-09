@@ -45,8 +45,7 @@ export default function BusinessDevelopment () {
       Global Assist: Your Partner in Business Development
     </h1>
     <p className="text-[#797979]">
-      We understand that navigating the complex landscape of business development can be daunting. 
-      That’s why we’re here to offer you more than just services – we offer partnership...
+      We understand that navigating the complex landscape of business development can be daunting. That's why we're here to offer you more than just services – we offer partnership. With a deep understanding of various industries and a commitment to your success, we stand ready to assist you in achieving your business goals.
     </p>
   </div>
   <div className="flex-1">

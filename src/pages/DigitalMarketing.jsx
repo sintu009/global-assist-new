@@ -49,14 +49,14 @@ const DigitalMarketing = () => {
             <span className="mt-6 text-xs font-semibold text-[#7A4DD7] bg-purple-200 px-4 py-2 rounded-full inline-block mb-6 z-20 relative">
               DIGITAL MARKETING
             </span>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-[#1B0752] leading-tight mb-6">
-              Grow your company <br />
-              and <span className="whitespace-nowrap">improve your digital</span> <br />
-              marketing
-            </h1>
+<h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1B0752] leading-snug md:leading-tight mb-6 break-words tracking-tight">
+  Grow your company <br />
+  and improve your digital <br />
+  marketing
+</h1>
+
             <p className="text-[#555] text-base md:text-lg leading-relaxed">
-              Global Assist Inc. is a leading 360-degree Business solution firm with offices in the USA, Canada,
-              India, and the Philippines and branches spread globally.
+              Global Assist Inc. is a leading 360-degree Business solution firm with offices in the USA, Canada, India, and the Philippines and branches spread globally. We identify with the importance of your work and make sure that your requirements are looked after in the best way possible.
             </p>
           </motion.div>
 
@@ -94,28 +94,28 @@ const DigitalMarketing = () => {
     image: dm2,
     title: "STRATEGIC\nINSIGHTS",
     text:
-      "Gain valuable insights into your target audience and market trends with our data-driven approach.",
+      "Gain valuable insights into your target audience and market trends with our data-driven approach. We leverage cutting-edge analytics tools to inform every aspect of your digital marketing strategy, ensuring maximum impact and ROI.",
     reverse: false,
   },
   {
     image: dm3,
     title: "SEAMLESS\nINTEGRATION",
     text:
-      "Our solutions integrate with platforms like Google Analytics, HubSpot, and Adobe Marketing Cloud.",
+      "Worried about compatibility with your existing marketing tools? Our solutions seamlessly integrate with popular platforms such as Google Analytics, HubSpot, and Adobe Marketing Cloud, ensuring smooth workflow and enhanced efficiency.",
     reverse: true,
   },
   {
     image: dm4,
     title: "ENGAGING\nCONTENT",
     text:
-      "From social posts to video campaigns, we craft content that resonates with your audience.",
+      "Captivate your audience with compelling content tailored to their interests and preferences. From engaging social media posts to captivating video campaigns, we craft content that resonates with your audience and drives meaningful engagement.",
     reverse: false,
   },
   {
     image: dm5,
     title: "CUSTOMER-CENTRIC\nAPPROACH",
     text:
-      "Delight your audience with hyper-targeted content and data-driven insights.",
+      "Delight your audience with hyper-targeted content and data-driven insights, fostering meaningful connections and long-term loyalty.",
     reverse: true,
   },
 ].map(({ image, title, text, reverse }, idx) => (
