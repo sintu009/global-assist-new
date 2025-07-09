@@ -197,16 +197,20 @@ const SocialMediaManagement = () => {
 
   {/* Image Row */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <img
-      src={smmproject2}
-      alt="Project 1"
-      className="rounded-2xl object-cover w-full h-[250px] md:h-[320px]"
-    />
-    <img
-      src={smmproject1}
-      alt="Project 2"
-      className="rounded-2xl object-cover w-full h-[250px] md:h-[320px]"
-    />
+    <a href="https://drive.google.com/file/d/1281S4XVXPC9Rd4bb8sbTFaMgYPouC3Qj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <img
+        src={smmproject2}
+        alt="Project 1"
+        className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] cursor-pointer hover:opacity-80 transition"
+      />
+    </a>
+    <a href="https://drive.google.com/file/d/1hlSHQv6DV0EaPwp8XpRz05K40oVd8grl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <img
+        src={smmproject1}
+        alt="Project 2"
+        className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] cursor-pointer hover:opacity-80 transition"
+      />
+    </a>
   </div>
 </section>
 
