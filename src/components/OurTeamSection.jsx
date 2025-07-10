@@ -60,12 +60,13 @@ const OurTeamSection = () => {
 
   const teamMembers = [
     { image: arpita, name: "Arpita Singh", title: "Administrative Assistant" },
-    { image: jonald, name: "Jonald Garlan", title: "Virtual Assistant" },
-    { image: ankita, name: "Ankita", title: "Virtual Assistant" },
+    { image: jonald, name: "Jonald Garlan", title: "Medical VA" },
+    { image: ankita, name: "Ankita", title: "Real Estate VA" },
     { image: gema, name: "Gema Rebolledo", title: "Administration & Social Media VA" },
-    { image: gurjeet, name: "GURJEET KAUR RANA", title: "Virtual Assistant" },
+    { image: gurjeet, name: "GURJEET KAUR RANA", title: "Admin Assistant" },
     { image: karla, name: "Karla Ron", title: "Admin Assistant" },
     { image: vera, name: "Gladys Verina", title: "Real estate VA" },
+    { image: anjali2, name: "Anjali", title: "Insurance VA" },
     { image: manish, name: "Manish Khera", title: "Accountant & Bookkeeper" },
     { image: alma, name: "Alma Narvaez", title: "Bookkeeper & Admin assistant" },
     { image: shubham, name: "Shubham", title: "Graphic Designer & Video Editor" },
@@ -78,14 +79,13 @@ const OurTeamSection = () => {
     { image: zunaira, name: "Zunaira", title: "Business Developer" },
     { image: mark, name: "Mark", title: "Business Developer" },
     { image: sneha, name: "Sneha Rathode", title: "Appointment Setter" },
-    { image: aradhya, name: "Aradhya Sinha", title: "Business Development Manager" },
+    { image: aradhya, name: "Aradhya Sinha", title: "Social Media Analyst" },
     { image: mandeep, name: "Mandeep", title: "Data Analyst" },
     { image: anjali, name: "Anushka Gupta", title: "BDM & Sales Lead" },
     { image: ronit, name: "Ronit Singh Nayal", title: "Web Developer" },
     { image: arka, name: "Arka", title: "Digital Marketing Consultant" },
     { image: roy, name: "Parameswari Roy ", title: "Business Development Executive" },
     { image: arias, name: "Fiorella Arias", title: "Real Estate transaction coordinator" },
-    { image: anjali2, name: "Anjali", title: "Sales and Business Development" },
   ];
 
   const ceoData = {

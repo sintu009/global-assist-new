@@ -17,23 +17,19 @@ const featureCards = [
   {
     title: "Effective Communication",
     description:
-      "Admin assistants serve as communication hubs, ensuring messages are conveyed clearly between teams, clients, and executives, leading to increased efficiency and fewer misunderstandings.",
+      "Executive assistants excel in communication, acting as liaisons. They ensure accurate, prompt message conveyance.",
   },
   {
-    title: "Time Management Support",
+    title: "Problem Solvers Extraordinaire",
     description:
-      "Administrative assistants help executives prioritize tasks and meet deadlines by handling calendar management, reminders, and scheduling — ultimately maximizing productivity.",
+      "Admins thrive in dynamic environments, adept at troubleshooting various issues.",
   },
   {
-    title: "Document & Data Organization",
+    title: "Confidentiality and Trust",
     description:
-      "They maintain well-organized records, files, and databases, making it easy to retrieve important information quickly and ensuring operational compliance and accuracy.",
+      "Trustworthiness is paramount for admins, handling sensitive information with discretion, earning respect.",
   },
-  {
-    title: "Professional Representation",
-    description:
-      "Admin assistants often act as the first point of contact, representing the company professionally in emails, calls, and meetings — reinforcing brand image and trust.",
-  },
+
 ];
 
 const fadeUp = {

@@ -41,7 +41,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-purple-200 px-5 pt-10 pb-6 border-t">
+    <footer className="bg-purple-100 px-5 pt-10 pb-6 border-t">
       <div className="max-w-screen-2xl w-full mx-auto grid md:grid-cols-3 gap-8 items-start">
         {/* Column 1: Logo & Navigation */}
         <div>

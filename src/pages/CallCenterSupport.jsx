@@ -5,13 +5,10 @@ import icon1 from "../assets/icon1.png";
 import icon2 from "../assets/icon2.png";
 import icon3 from "../assets/icon3.png";
 import icon4 from "../assets/icon4.png";
-import smm2 from '../assets/smm2.png';
-import smm3 from '../assets/smm3.png';
-import smm4 from '../assets/smm4.png';
-import smm5 from '../assets/smm5.png';
+
 import GetInTouch from '../components/GetInTouch';
 import project1 from "../assets/project1.png";
-import project2 from "../assets/project2.png"; // Assuming you have a second project image
+import project2 from "../assets/project2.png"; 
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -44,8 +41,7 @@ export default function CallCenterSupport() {
             Support
           </h1>
           <p className="text-xm text-[#4A4A4A] mb-6 max-w-md">
-            In today’s competitive business landscape, providing exceptional customer
-            service is paramount. That’s where our Call Centre Support comes in.
+            In today's competitive business landscape, providing exceptional customer service is paramount. That's where our Call Centre Support comes in. With a team of skilled professionals, we ensure seamless communication and resolution of queries, enhancing overall customer satisfaction.
           </p>
          
         </div>
@@ -75,8 +71,8 @@ export default function CallCenterSupport() {
                 </h3>
                 <p className="text-sm text-gray-700">
                   {index === 0
-                    ? "Our call centre operates non-stop, ensuring prompt assistance anytime."
-                    : "We offer valuable insights from customer interactions with detailed analytics."}
+                    ? "Our call centre operates non-stop, ensuring prompt assistance anytime. Day or night, weekends, or holidays, we're here for your customers."
+                    : "Beyond immediate resolutions, we offer valuable insights from customer interactions. Through detailed analytics, we identify trends, pain points, and ways to enhance satisfaction."}
                 </p>
               </motion.div>
             ))}
@@ -99,8 +95,8 @@ export default function CallCenterSupport() {
                 </h3>
                 <p className="text-sm text-gray-700">
                   {index === 0
-                    ? "We handle calls, emails, chats, and social media inquiries efficiently."
-                    : "Our Call Centre Support is customizable to your requirements."}
+                    ? "Customers expect support across various channels. We handle calls, emails, chats, and social media inquiries efficiently, ensuring a seamless experience."
+                    : "Every business is unique, so are its service needs. Our Call Centre Support is customizable to your requirements, from basic queries to technical support."}
                 </p>
               </motion.div>
             ))}
