@@ -39,10 +39,13 @@
   import Blog3 from "./components/Blog3";
   import Blog4 from "./components/Blog4";
 
+  import TawkMessenger from "./components/TawkMessenger";
+
   function App() {
     return (
       <Router>
         <ScrollToTop /> {/* ✅ Ensures scroll to top on every route change */}
+        <TawkMessenger />
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />

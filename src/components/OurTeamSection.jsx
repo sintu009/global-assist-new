@@ -32,7 +32,8 @@ import gurjeet from "../assets/team/gurjeet.jpg";
 import gema from "../assets/team/gema.png";
 import arias from "../assets/team/arias.jpg";
 import anjali2 from "../assets/team/anjali.jpg";
-
+import karla from "../assets/team/karla.jpg";
+import vera from "../assets/team/vera.png";
 // Team Card Component
 const OtherTeamMemberCard = ({ image, name, title, linkedin }) => (
   <div className="flex flex-col items-center text-center">
@@ -59,9 +60,16 @@ const OurTeamSection = () => {
 
   const teamMembers = [
     { image: arpita, name: "Arpita Singh", title: "Administrative Assistant" },
+    { image: jonald, name: "Jonald Garlan", title: "Virtual Assistant" },
+    { image: ankita, name: "Ankita", title: "Virtual Assistant" },
+    { image: gema, name: "Gema Rebolledo", title: "Administration & Social Media VA" },
+    { image: gurjeet, name: "GURJEET KAUR RANA", title: "Virtual Assistant" },
+    { image: karla, name: "Karla Ron", title: "Admin Assistant" },
+    { image: vera, name: "Gladys Verina", title: "Real estate VA" },
+    { image: manish, name: "Manish Khera", title: "Accountant & Bookkeeper" },
+    { image: alma, name: "Alma Narvaez", title: "Bookkeeper & Admin assistant" },
     { image: shubham, name: "Shubham", title: "Graphic Designer & Video Editor" },
     { image: raina, name: "Raina Gupta", title: "Opertions Manager" },
-    { image: jonald, name: "Jonald Garlan", title: "Virtual Assistant" },
     { image: jesus, name: "Jesús R. Quero", title: "Journalist / VA Marketing" },
     { image: kanika, name: "Kanika Chauhan", title: "Project Manager" },
     { image: natasha, name: "Natasha Shukla", title: "Project Manager" },
@@ -74,13 +82,8 @@ const OurTeamSection = () => {
     { image: mandeep, name: "Mandeep", title: "Data Analyst" },
     { image: anjali, name: "Anushka Gupta", title: "BDM & Sales Lead" },
     { image: ronit, name: "Ronit Singh Nayal", title: "Web Developer" },
-    { image: manish, name: "Manish Khera", title: "Accountant & Bookkeeper" },
-    { image: alma, name: "Alma Narvaez", title: "Bookkeeper & Admin assistant" },
     { image: arka, name: "Arka", title: "Digital Marketing Consultant" },
-    { image: ankita, name: "Ankita", title: "Virtual Assistant" },
     { image: roy, name: "Parameswari Roy ", title: "Business Development Executive" },
-    { image: gurjeet, name: "GURJEET KAUR RANA", title: "Virtual Assistant" },
-    { image: gema, name: "Gema Rebolledo", title: "Administration & Social Media VA" },
     { image: arias, name: "Fiorella Arias", title: "Real Estate transaction coordinator" },
     { image: anjali2, name: "Anjali", title: "Sales and Business Development" },
   ];

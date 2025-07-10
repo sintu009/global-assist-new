@@ -131,14 +131,14 @@ const VideoEditing = () => {
 
   {/* Image Row */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <a href="https://drive.google.com/file/d/15KQBjuqDaR8e0yuPMdhN6MqD2PAjGcUr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <a href="https://drive.google.com/file/d/1YpG9aUbjNb2CJdd1QNqqksTeGEgOrxfb/view?t=38" target="_blank" rel="noopener noreferrer">
       <img
         src={veproject2}
         alt="Project 1"
         className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
       />
     </a>
-    <a href="https://drive.google.com/file/d/1V6-02rigLzuWrJwy-FBDLR97r_HZvVc4/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <a href="https://drive.google.com/file/d/1nD3X0A9nz5jILDMyWDk37ho_eIcoExgf/view?t=5" target="_blank" rel="noopener noreferrer">
       <img
         src={veproject1}
         alt="Project 2"
