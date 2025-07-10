@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import lgHero from "../assets/lghero.png";
+import lgHero from "../assets/lghero.jpg";
 import lg1 from "../assets/lg1.png";
 import lg2 from "../assets/lg2.png";
 import lg3 from "../assets/lg3.png";
