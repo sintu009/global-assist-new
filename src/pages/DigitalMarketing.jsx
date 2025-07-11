@@ -171,7 +171,7 @@ const DigitalMarketing = () => {
    {/* Image Row */}
    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
      <a
-       href=""
+       href="https://drive.google.com/file/d/1gy-k5Pi7nkeaX6hIwqnVt9vvn4T8hj25/view?usp=sharing"
        target="_blank"
        rel="noopener noreferrer"
      >
@@ -182,7 +182,7 @@ const DigitalMarketing = () => {
        />
      </a>
      <a
-       href=""
+       href="https://drive.google.com/file/d/1s_q42vi2_1ZEw9x73AkAUqokkxTfSX7P/view?usp=sharing"
        target="_blank"
        rel="noopener noreferrer"
      >
