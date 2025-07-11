@@ -83,7 +83,7 @@ const faqData = [
       "We follow strict confidentiality protocols. All our virtual assistants sign NDAs, and we use secure platforms to manage communication and file sharing. Your data privacy is our top priority.",
   },
   {
-    question: "how soon can we start?",
+    question: "How soon can we start?",
     answer:
       "We can begin working with you the same day you reach out. Just give us a call — we’ll schedule a meeting with your virtual assistant or project manager. Once the contract is signed, we can get started immediately.",
   },
