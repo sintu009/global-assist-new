@@ -34,6 +34,7 @@ import arias from "../assets/team/arias.jpg";
 import anjali2 from "../assets/team/anjali.jpg";
 import karla from "../assets/team/karla.jpg";
 import vera from "../assets/team/vera.png";
+import mary from "../assets/team/mary.jpg";
 // Team Card Component
 const OtherTeamMemberCard = ({ image, name, title, linkedin }) => (
   <div className="flex flex-col items-center text-center">
@@ -62,6 +63,7 @@ const OurTeamSection = () => {
     { image: arpita, name: "Arpita Singh", title: "Administrative Assistant" },
     { image: jonald, name: "Jonald Garlan", title: "Medical VA" },
     { image: ankita, name: "Ankita", title: "Real Estate VA" },
+    { image: mary, name: "Mary David", title: "Medical VA" },
     { image: karla, name: "Karla Ron", title: "Admin Assistant" },
     { image: gurjeet, name: "GURJEET KAUR RANA", title: "Admin Assistant" },
     { image: gema, name: "Gema Rebolledo", title: "Administration & Social Media VA" },
