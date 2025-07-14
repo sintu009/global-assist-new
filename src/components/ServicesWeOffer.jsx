@@ -134,14 +134,15 @@ const ServicesWeOffer = () => {
 
           </div>
 
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[230px] md:w-[450px] pointer-events-none  md:block">
-            <img
-              src={adminImage}
-              alt={titles[index].big}
-              className="w-full object-contain"
-              style={{ height: "auto", maxHeight: "700px" }}
-            />
-          </div>
+         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[220px] md:w-[450px] pointer-events-none hidden md:block">
+    <img
+        src={adminImage}
+        alt={titles[index].big}
+        className="w-full object-contain"
+        style={{ height: "auto", maxHeight: "700px" }}
+    />
+</div>
+
 
           <div className="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between gap-16 h-[700px] mt-[-12rem]">
             <div className="md:w-1/3 text-left space-y-6 pb-12 mt-0 -mb-6">

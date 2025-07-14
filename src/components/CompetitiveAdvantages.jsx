@@ -164,7 +164,8 @@ export default function CompetitiveAdvantages() {
         );
       })}
 
-      <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center space-y-6">
+    {/* CTA Section */}
+      <div className="min-h-screen snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
         <div className="block md:hidden space-y-4">
           <div className="text-xl font-semibold text-gray-700">
             Battle-tested Service You<br />Can Count On
@@ -180,15 +181,16 @@ export default function CompetitiveAdvantages() {
           <motion.img
             src={mobile}
             alt="App"
-            className="w-[260px] mt-4 mx-auto h-auto"
-            initial={{ opacity: 0, y: 60 }}
+            className="w-[260px] mt-4 mx-auto"
+            style={{ height: "500px", objectFit: "cover" }}
+            initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: isMobile, amount: 0.4 }}
-            transition={{ duration: 1.2 }}
+            viewport={{ once: false, amount: 0.4 }}
+            transition={{ duration: 5 }}
           />
         </div>
 
-        <div className="hidden md:flex flex-row items-end gap-24 max-w-[100vw] overflow-hidden">
+        <div className="hidden md:flex flex-row items-end gap-34 max-w-[100vw] overflow-hidden">
           <img
             src={left}
             alt="left"
@@ -199,11 +201,12 @@ export default function CompetitiveAdvantages() {
             <motion.img
               src={mobile}
               alt="App"
-              className="z-20 relative w-[280px] h-auto"
+              className="z-20 relative w-[280px]"
+              style={{ height: "440px", objectFit: "cover" }}
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: isMobile, amount: 0.5 }}
-              transition={{ duration: 1.5 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 10 }}
             />
             <p className="absolute top-28 text-xl font-normal px-2 z-0 leading-snug text-gray-700">
               Global Assist is consistently ranked as one of the top virtual
