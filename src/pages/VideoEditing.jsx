@@ -91,26 +91,34 @@ const VideoEditing = () => {
         </div>
       </AnimatedSection>
 
-      {/* Bottom Feature Row */}
       <AnimatedSection className="grid md:grid-cols-2 gap-12 items-center px-6 max-w-7xl mx-auto">
-        <div>
-          <img src={ve3} alt="Video Editing 2" className="rounded-xl w-3/4 mx-auto" />
-        </div>
-        <div className="space-y-12">
-          <div>
-            <h3 className="text-2xl md:text-3xl font-inter font-bold mb-5">FAST TURNAROUND</h3>
-            <p className="text-[#555]">
-              Time is of the essence, especially in the world of content creation. With our efficient workflow and quick turnaround times, you can rest assured that your videos will be delivered on schedule without sacrificing quality.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-2xl md:text-3xl font-inter font-bold mb-5">AFFORDABILITY</h3>
-            <p className="text-[#555]">
-              Quality video editing shouldn’t break the bank. At Global Assist, we offer competitive pricing options to suit any budget. Whether you're a seasoned professional or just starting out, our services are accessible to all.
-            </p>
-          </div>
-        </div>
-      </AnimatedSection>
+  {/* Desktop Image */}
+  <div className="hidden md:block">
+    <img src={ve3} alt="Video Editing 2" className="rounded-xl w-3/4 mx-auto" />
+  </div>
+
+  {/* Text Content */}
+  <div className="space-y-12">
+    <div>
+      <h3 className="text-2xl md:text-3xl font-inter font-bold mb-5">FAST TURNAROUND</h3>
+      <p className="text-[#555]">
+        Time is of the essence, especially in the world of content creation. With our efficient workflow and quick turnaround times, you can rest assured that your videos will be delivered on schedule without sacrificing quality.
+      </p>
+    </div>
+    <div>
+      <h3 className="text-2xl md:text-3xl font-inter font-bold mb-5">AFFORDABILITY</h3>
+      <p className="text-[#555]">
+        Quality video editing shouldn’t break the bank. At Global Assist, we offer competitive pricing options to suit any budget. Whether you're a seasoned professional or just starting out, our services are accessible to all.
+      </p>
+    </div>
+  </div>
+</AnimatedSection>
+
+{/* Mobile Image Below Text */}
+<div className="block md:hidden px-6 max-w-7xl mx-auto mt-12">
+  <img src={ve3} alt="Video Editing 2" className="rounded-xl w-3/4 mx-auto mb-12" />
+</div>
+
 <div className='mt-24'/>
 {/* Projects Section */}
 <section className="px-4 max-w-7xl mx-auto py-1">
@@ -131,14 +139,14 @@ const VideoEditing = () => {
 
   {/* Image Row */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <a href="https://drive.google.com/file/d/1YpG9aUbjNb2CJdd1QNqqksTeGEgOrxfb/view?t=38" target="_blank" rel="noopener noreferrer">
+    <a href="https://drive.google.com/drive/folders/1q_JkJ3V1nK6gGMzfABsN5NZQMC2JCpGx" target="_blank" rel="noopener noreferrer">
       <img
         src={veproject2}
         alt="Project 1"
         className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
       />
     </a>
-    <a href="https://drive.google.com/file/d/1nD3X0A9nz5jILDMyWDk37ho_eIcoExgf/view?t=5" target="_blank" rel="noopener noreferrer">
+    <a href="https://drive.google.com/drive/folders/1q_JkJ3V1nK6gGMzfABsN5NZQMC2JCpGx" target="_blank" rel="noopener noreferrer">
       <img
         src={veproject1}
         alt="Project 2"

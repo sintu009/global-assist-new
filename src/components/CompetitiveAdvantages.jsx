@@ -40,7 +40,12 @@ export default function CompetitiveAdvantages() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const fadeIn = {
@@ -48,7 +53,7 @@ export default function CompetitiveAdvantages() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: isMobile ? 0.8 : 1.2, ease: "easeOut" },
     },
   };
 
@@ -57,12 +62,12 @@ export default function CompetitiveAdvantages() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: isMobile ? 0.8 : 1.2, ease: "easeOut" },
     },
   });
 
   return (
-    <section className="font-roboto bg-white text-gray-800 overflow-x-hidden">
+    <section className={`font-roboto bg-white text-gray-800 overflow-x-hidden ${isMobile ? "" : "snap-y snap-mandatory"}`}>
       {advantages.map((adv, index) => {
         let middleImage = mid1;
         if (adv.id === 3) middleImage = mid3;
@@ -74,10 +79,10 @@ export default function CompetitiveAdvantages() {
         return (
           <motion.div
             key={adv.id}
-            className="min-h-fit py-16 md:py-24 snap-start flex flex-col justify-center px-6 md:px-20"
+            className={`min-h-fit py-16 md:py-24 ${isMobile ? "" : "snap-start"} flex flex-col justify-center px-6 md:px-20`}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: isMobile, amount: 0.3 }}
             variants={fadeIn}
           >
             <div className="grid md:grid-cols-3 gap-10 items-center max-w-7xl mx-auto">
@@ -87,23 +92,23 @@ export default function CompetitiveAdvantages() {
                     className="flex flex-col items-center order-1"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.2 }}
+                    viewport={{ once: isMobile, amount: 0.2 }}
                     variants={sideFade("left")}
                   >
-                    <img src={adv.numImg} alt={`num${adv.id}`} className="w-60 h-auto" />
+                    <img src={adv.numImg} alt={`num${adv.id}`} className="w-40 md:w-60 h-auto" />
                   </motion.div>
 
                   <motion.div
                     className="flex justify-center order-2"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.2 }}
+                    viewport={{ once: isMobile, amount: 0.2 }}
                     variants={fadeIn}
                   >
                     <img
                       src={middleImage}
                       alt="middle visual"
-                      className="rounded-2xl w-[350px] md:w-[400px]"
+                      className="rounded-2xl w-[280px] md:w-[400px] h-auto"
                     />
                   </motion.div>
 
@@ -111,7 +116,7 @@ export default function CompetitiveAdvantages() {
                     className="text-sm md:text-base text-justify order-3"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.2 }}
+                    viewport={{ once: isMobile, amount: 0.2 }}
                     variants={sideFade("right")}
                   >
                     {adv.desc}
@@ -123,23 +128,23 @@ export default function CompetitiveAdvantages() {
                     className="flex flex-col items-center order-1 md:order-3"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.2 }}
+                    viewport={{ once: isMobile, amount: 0.2 }}
                     variants={sideFade("right")}
                   >
-                    <img src={adv.numImg} alt={`num${adv.id}`} className="w-60 h-auto" />
+                    <img src={adv.numImg} alt={`num${adv.id}`} className="w-40 md:w-60 h-auto" />
                   </motion.div>
 
                   <motion.div
                     className="flex justify-center order-2 md:order-2"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.2 }}
+                    viewport={{ once: isMobile, amount: 0.2 }}
                     variants={fadeIn}
                   >
                     <img
                       src={middleImage}
                       alt="middle visual"
-                      className="rounded-2xl w-[350px] md:w-[400px]"
+                      className="rounded-2xl w-[280px] md:w-[400px] h-auto"
                     />
                   </motion.div>
 
@@ -147,7 +152,7 @@ export default function CompetitiveAdvantages() {
                     className="text-sm md:text-base text-justify order-3 md:order-1"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.2 }}
+                    viewport={{ once: isMobile, amount: 0.2 }}
                     variants={sideFade("left")}
                   >
                     {adv.desc}
@@ -159,8 +164,7 @@ export default function CompetitiveAdvantages() {
         );
       })}
 
-      {/* CTA Section */}
-      <div className="min-h-screen snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
+      <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center space-y-6">
         <div className="block md:hidden space-y-4">
           <div className="text-xl font-semibold text-gray-700">
             Battle-tested Service You<br />Can Count On
@@ -176,16 +180,15 @@ export default function CompetitiveAdvantages() {
           <motion.img
             src={mobile}
             alt="App"
-            className="w-[260px] mt-4 mx-auto"
-            style={{ height: "500px", objectFit: "cover" }}
-            initial={{ opacity: 0, y: 80 }}
+            className="w-[260px] mt-4 mx-auto h-auto"
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.4 }}
-            transition={{ duration: 5 }}
+            viewport={{ once: isMobile, amount: 0.4 }}
+            transition={{ duration: 1.2 }}
           />
         </div>
 
-        <div className="hidden md:flex flex-row items-end gap-34 max-w-[100vw] overflow-hidden">
+        <div className="hidden md:flex flex-row items-end gap-24 max-w-[100vw] overflow-hidden">
           <img
             src={left}
             alt="left"
@@ -196,12 +199,11 @@ export default function CompetitiveAdvantages() {
             <motion.img
               src={mobile}
               alt="App"
-              className="z-20 relative w-[280px]"
-              style={{ height: "440px", objectFit: "cover" }}
+              className="z-20 relative w-[280px] h-auto"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.5 }}
-              transition={{ duration: 10 }}
+              viewport={{ once: isMobile, amount: 0.5 }}
+              transition={{ duration: 1.5 }}
             />
             <p className="absolute top-28 text-xl font-normal px-2 z-0 leading-snug text-gray-700">
               Global Assist is consistently ranked as one of the top virtual

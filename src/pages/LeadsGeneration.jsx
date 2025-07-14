@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import lgHero from "../assets/lghero.jpg";
-import lg1 from "../assets/lg1.png";
-import lg2 from "../assets/lg2.png";
-import lg3 from "../assets/lg3.png";
+import lg1 from "../assets/lg1.jpg";
+import lg2 from "../assets/lg2.jpg";
+import lg3 from "../assets/lg3.jpg";
 import lg4 from "../assets/lg4.png";
 import GetInTouch from '../components/GetInTouch';
 import lgproject1 from "../assets/lgproject1.png";

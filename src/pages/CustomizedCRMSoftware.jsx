@@ -36,15 +36,16 @@ export default function CustomizedCRMSoftware() {
         variants={fadeUp}
       >
         <img
-          src={crmbg1}
-          alt="Background Left"
-          className="absolute left-0 top-32 w-[400px] z-0"
-        />
-        <img
-          src={crmbg2}
-          alt="Background Right"
-          className="absolute right-75 top-80 w-[500px] z-0"
-        />
+  src={crmbg1}
+  alt="Background Left"
+  className="hidden md:block absolute left-0 top-32 w-[400px] z-0"
+/>
+<img
+  src={crmbg2}
+  alt="Background Right"
+  className="hidden md:block absolute right-75 top-80 w-[500px] z-0"
+/>
+
 
         <motion.div
           className="relative z-10 max-w-6xl mx-auto px-6 text-center"

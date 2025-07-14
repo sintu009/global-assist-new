@@ -8,19 +8,9 @@ const faqData = [
       "Designed to aid users in different tasks, They are the people you hire to handle administrative, technical, or creative tasks for you, whether you're an individual or a company.",
   },
   {
-    question: "What hours will my assistant work?",
-    answer:
-      "It's all up to you. The scope of responsibilities of a Virtual Assistant knows no bounds, as they serve clients across the globe and are able to adjust working hours according to any time zone.",
-  },
-  {
     question: "How can a virtual assistant help my business?",
     answer:
       "Virtual assistants are meant to make your workplace experience easy by doing things like administrative tasks, customer support, research, among others as well.",
-  },
-  {
-    question: "What are the payment arrangements and terms for hiring a virtual assistant?",
-    answer:
-      "There are different ways in which virtual assistants are paid such as hourly rates or monthly retainers. It's based on the work to be done.",
   },
   {
     question: "Are there any limitations to the tasks a virtual assistant can perform?",
@@ -28,19 +18,24 @@ const faqData = [
       "Within their field and while considering their availability virtual agents have confined capabilities, nevertheless, their application capacity is diversified.",
   },
   {
-    question: "How do you approach target audience identification and segmentation in marketing strategies?",
+    question: "What are the payment arrangements and terms for hiring a virtual assistant?",
     answer:
-      "The process where target audience is identified covers analyzing data that is demographic, psycho graphic traits together with consumer behavior so as to find out the most reactive segments of a market where marketers should concentrate their promotion campaigns towards.",
+      "There are different ways in which virtual assistants are paid such as hourly rates or monthly retainers. It's based on the work to be done.",
   },
   {
-    question: "How do you tailor marketing strategies to align with the unique goals and challenges of my business?",
+    question: "How soon can we start?",
     answer:
-      "By carrying out a comprehensive research on the customer's sector, market segment, competition and unique selling proposition (UsP), marketing specialists customize strategies. It is for this reason that these strategies are designed in such a way that they meet particular company objectives and challenges.",
+      "We can begin working with you the same day you reach out. Just give us a call — we’ll schedule a meeting with your virtual assistant or project manager. Once the contract is signed, we can get started immediately.",
   },
   {
     question: "Where is your office?",
     answer:
       "Our office is located in Canada. We are situated in 15165 Queen Mary Rd - GR-2 Unit #101 Montreal, QC H3W 1X7l. if you need specific directions or further information on how to reach us, feel free to contact +1 514-700-7280 let me know. Our other offices are in the USA, Philippines, India and Venezuela. We also hire local Canadians.",
+  },
+  {
+    question: "What hours will my assistant work?",
+    answer:
+      "It's all up to you. The scope of responsibilities of a Virtual Assistant knows no bounds, as they serve clients across the globe and are able to adjust working hours according to any time zone.",
   },
   {
     question: "Are virtual assistants secure and trustworthy?",
@@ -51,6 +46,11 @@ const faqData = [
     question: "How much does it cost to hire a virtual assistant?",
     answer:
       "The cost of hiring a VA will vary based on a number of factors including experience, location and nature of work at hand.",
+  },
+  {
+    question: "How do you ensure the confidentiality of our data?",
+    answer:
+      "We follow strict confidentiality protocols. All our virtual assistants sign NDAs, and we use secure platforms to manage communication and file sharing. Your data privacy is our top priority.",
   },
   {
     question: "Are virtual assistants available for specific tasks or can they handle a variety of responsibilities?",
@@ -78,16 +78,17 @@ const faqData = [
       "People experts in marketing commonly deliver services of content creation and this often involves composing an engaging copy intended for webpages, blogs, articles on social media platforms, newsletters which are sent electronically as well as adverts.",
   },
   {
-    question: "How do you ensure the confidentiality of our data?",
+    question: "How do you approach target audience identification and segmentation in marketing strategies?",
     answer:
-      "We follow strict confidentiality protocols. All our virtual assistants sign NDAs, and we use secure platforms to manage communication and file sharing. Your data privacy is our top priority.",
+      "The process where target audience is identified covers analyzing data that is demographic, psycho graphic traits together with consumer behavior so as to find out the most reactive segments of a market where marketers should concentrate their promotion campaigns towards.",
   },
   {
-    question: "How soon can we start?",
+    question: "How do you tailor marketing strategies to align with the unique goals and challenges of my business?",
     answer:
-      "We can begin working with you the same day you reach out. Just give us a call — we’ll schedule a meeting with your virtual assistant or project manager. Once the contract is signed, we can get started immediately.",
+      "By carrying out a comprehensive research on the customer's sector, market segment, competition and unique selling proposition (UsP), marketing specialists customize strategies. It is for this reason that these strategies are designed in such a way that they meet particular company objectives and challenges.",
   },
 ];
+
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);

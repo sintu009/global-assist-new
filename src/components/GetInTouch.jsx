@@ -12,6 +12,8 @@ const fadeUp = {
 const GetInTouch = () => {
   const formRef = useRef();
   const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [selectedService, setSelectedService] = useState('');
+  const [customService, setCustomService] = useState('');
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,15 +29,17 @@ const GetInTouch = () => {
       formRef.current,
       'JGwllsXmyKjSd6jWG'
     )
-    .then(() => {
-      alert("Message sent successfully!");
-      formRef.current.reset();
-      setRecaptchaToken(null); // reset the recaptcha token
-    })
-    .catch((error) => {
-      console.error('Email send error:', error);
-      alert("Failed to send message. Please try again.");
-    });
+      .then(() => {
+        alert("Message sent successfully!");
+        formRef.current.reset();
+        setRecaptchaToken(null);
+        setSelectedService("");
+        setCustomService("");
+      })
+      .catch((error) => {
+        console.error('Email send error:', error);
+        alert("Failed to send message. Please try again.");
+      });
   };
 
   return (
@@ -109,6 +113,42 @@ const GetInTouch = () => {
               placeholder="Phone Number"
               className="w-full bg-[#1f1f3c] p-3 rounded-md text-white placeholder-gray-400"
             />
+
+            {/* Service Dropdown */}
+            <select
+              value={selectedService}
+              onChange={(e) => setSelectedService(e.target.value)}
+              className="w-full bg-[#1f1f3c] p-3 rounded-md text-white placeholder-gray-400"
+              required
+            >
+              <option value="">What service do you need?</option>
+              <option value="Administrative Executive">Administrative Executive</option>
+              <option value="Medical Virtual Assistance">Medical Virtual Assistance</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Accounting & Bookkeeping">Accounting & Bookkeeping</option>
+              <option value="Social Media Management">Social Media Management</option>
+              <option value="Leads Generation">Leads Generation</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              <option value="Website & App Development">Website & App Development</option>
+              <option value="Customized CRM Software">Customized CRM Software</option>
+              <option value="Business Development">Business Development</option>
+              <option value="Call Center Support">Call Center Support</option>
+              <option value="Others">Others</option>
+            </select>
+
+            {selectedService === "Others" ? (
+              <input
+                type="text"
+                name="service"
+                placeholder="Please specify your service"
+                value={customService}
+                onChange={(e) => setCustomService(e.target.value)}
+                required
+                className="w-full bg-[#1f1f3c] p-3 rounded-md text-white placeholder-gray-400"
+              />
+            ) : (
+              <input type="hidden" name="service" value={selectedService} />
+            )}
 
             <textarea
               name="message"

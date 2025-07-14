@@ -11,7 +11,7 @@ import smm7 from '../assets/smm7.png';
 import smm8 from '../assets/smm8.png';
 import smm9 from '../assets/smm9.png';
 import smmproject1 from '../assets/smmproject1.png';
-import smmproject2 from '../assets/smmproject2.png';
+
 import GetInTouch from '../components/GetInTouch';
 
 const fadeUp = {
@@ -197,14 +197,14 @@ const SocialMediaManagement = () => {
 
   {/* Image Row */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <a href="https://drive.google.com/file/d/1281S4XVXPC9Rd4bb8sbTFaMgYPouC3Qj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <a href="https://drive.google.com/drive/folders/1q_JkJ3V1nK6gGMzfABsN5NZQMC2JCpGx" target="_blank" rel="noopener noreferrer">
       <img
-        src={smmproject2}
+        src={smmproject1}
         alt="Project 1"
         className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] cursor-pointer hover:opacity-80 transition"
       />
     </a>
-    <a href="https://drive.google.com/file/d/1hlSHQv6DV0EaPwp8XpRz05K40oVd8grl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <a href="https://drive.google.com/drive/folders/1q_JkJ3V1nK6gGMzfABsN5NZQMC2JCpGx" target="_blank" rel="noopener noreferrer">
       <img
         src={smmproject1}
         alt="Project 2"
