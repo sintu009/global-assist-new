@@ -67,11 +67,10 @@ const LeadGeneration = () => {
         <motion.div className="flex flex-col md:flex-row gap-6 w-full" variants={fadeUp}>
           <div className="relative h-[300px] md:h-[300px] w-full md:w-1/2 rounded-xl overflow-hidden md:translate-y-14">
             <img src={lg1} alt="Main" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button className="w-10 h-10 bg-white text-blue-600 rounded-full shadow-md flex items-center justify-center">
-                ▶
-              </button>
-            </div>
+           <div className="relative h-[300px] md:h-[300px] w-full md:w-1/2 rounded-xl overflow-hidden md:translate-y-14">
+  <img src={lg1} alt="Main" className="w-full h-full object-cover" />
+</div>
+
           </div>
           <div className="flex flex-col gap-4 w-full md:w-1/2">
             <div className="h-[240px] rounded-xl overflow-hidden">

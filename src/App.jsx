@@ -77,10 +77,10 @@
           <Route path="/case-study-4" element={<CaseStudy4 />} />
 
           <Route path="/blog" element={<Blog />} />
-        <Route path="/blog-1" element={<Blog1 />} />
-        <Route path="/blog-2" element={<Blog2 />} />
-        <Route path="/blog-3" element={<Blog3 />} />
-        <Route path="/blog-4" element={<Blog4 />} />
+        <Route path="/blog-social-media-virtual-assistant" element={<Blog1 />} />
+        <Route path="/blog-virtual-assistant-bookkeeping" element={<Blog2 />} />
+        <Route path="/blog-affordable-virtual-assistants-for-small-business" element={<Blog3 />} />
+        <Route path="/blog-local-seo-for-business-2025" element={<Blog4 />} />
 
           <Route path="*" element={<Error404 />} />
         </Routes>
