@@ -165,7 +165,8 @@ export default function CompetitiveAdvantages() {
       })}
 
     {/* CTA Section */}
-      <div className="min-h-screen snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
+      <div className="min-h-screen md:snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
+
         <div className="block md:hidden space-y-4">
           <div className="text-xl font-semibold text-gray-700">
             Battle-tested Service You<br />Can Count On
