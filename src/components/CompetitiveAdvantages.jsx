@@ -37,181 +37,183 @@ const advantages = [
 ];
 
 export default function CompetitiveAdvantages() {
-  
- const fadeIn = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1, ease: "easeOut" },
-  },
-};
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
- const sideFade = (direction) => ({
-  hidden: { opacity: 0, x: direction === "left" ? -40 : 40 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 1, ease: "easeOut" },
-  },
-});
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+  };
 
+  const sideFade = (direction) => ({
+    hidden: { opacity: 0, x: direction === "left" ? -40 : 40 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
+  });
 
- return (
-  <section className="font-roboto bg-white text-gray-800 overflow-x-hidden md:snap-y md:snap-mandatory">
-    {advantages.map((adv, index) => {
-      const middleImage = adv.id === 3 ? mid3 : adv.id === 4 ? mid4 : index % 2 === 1 ? mid2 : mid1;
-      const isEven = index % 2 === 0;
+  return (
+    <section className="font-roboto bg-white text-gray-800 overflow-x-hidden md:snap-y md:snap-mandatory">
+      {advantages.map((adv, index) => {
+        const middleImage =
+          adv.id === 3 ? mid3 : adv.id === 4 ? mid4 : index % 2 === 1 ? mid2 : mid1;
+        const isEven = index % 2 === 0;
 
-      return (
-        <motion.div
-          key={adv.id}
-          className="min-h-fit py-16 md:py-24 md:snap-start flex flex-col justify-center px-6 md:px-20"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
-          variants={fadeIn}
-        >
+        const Content = (
           <div className="grid md:grid-cols-3 gap-10 items-center max-w-7xl mx-auto">
             {isEven ? (
               <>
-                <motion.div
-                  className="flex flex-col items-center order-1"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
-                  variants={sideFade("left")}
-                >
+                <div className="flex flex-col items-center order-1">
                   <img src={adv.numImg} alt={`num${adv.id}`} className="w-40 md:w-60 h-auto" />
-                </motion.div>
-
-                <motion.div
-                  className="flex justify-center order-2"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
-                  variants={fadeIn}
-                >
-                  <img
-                    src={middleImage}
-                    alt="middle visual"
-                    className="rounded-2xl w-[280px] md:w-[400px] h-auto"
-                  />
-                </motion.div>
-
-                <motion.div
-                  className="text-sm md:text-base text-justify order-3"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
-                  variants={sideFade("right")}
-                >
-                  {adv.desc}
-                </motion.div>
+                </div>
+                <div className="flex justify-center order-2">
+                  <img src={middleImage} alt="middle visual" className="rounded-2xl w-[280px] md:w-[400px] h-auto" />
+                </div>
+                <div className="text-sm md:text-base text-justify order-3">{adv.desc}</div>
               </>
             ) : (
               <>
-                <motion.div
-                  className="flex flex-col items-center order-1 md:order-3"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
-                  variants={sideFade("right")}
-                >
+                <div className="flex flex-col items-center order-1 md:order-3">
                   <img src={adv.numImg} alt={`num${adv.id}`} className="w-40 md:w-60 h-auto" />
-                </motion.div>
-
-                <motion.div
-                  className="flex justify-center order-2 md:order-2"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
-                  variants={fadeIn}
-                >
-                  <img
-                    src={middleImage}
-                    alt="middle visual"
-                    className="rounded-2xl w-[280px] md:w-[400px] h-auto"
-                  />
-                </motion.div>
-
-                <motion.div
-                  className="text-sm md:text-base text-justify order-3 md:order-1"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
-                  variants={sideFade("left")}
-                >
-                  {adv.desc}
-                </motion.div>
+                </div>
+                <div className="flex justify-center order-2 md:order-2">
+                  <img src={middleImage} alt="middle visual" className="rounded-2xl w-[280px] md:w-[400px] h-auto" />
+                </div>
+                <div className="text-sm md:text-base text-justify order-3 md:order-1">{adv.desc}</div>
               </>
             )}
           </div>
-        </motion.div>
-      );
-    })}
+        );
 
-    {/* CTA Section */}
-    <div className="min-h-screen md:snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
-      {/* Mobile Version */}
-      <div className="block md:hidden space-y-4">
-        <div className="text-xl font-semibold text-gray-700">
-          Battle-tested Service You<br />Can Count On
-        </div>
-        <div className="flex items-center justify-center gap-2">
-          <img src={google} alt="Google" className="w-20 h-auto" />
-          <span className="text-lg font-semibold">4.8</span>
-          <span className="text-yellow-500 text-base">★★★★★</span>
-        </div>
-        <p className="text-base max-w-md mx-auto text-gray-700">
-          Global Assist is consistently ranked as one of the best talent-as-a-service providers on all leading B2B review sites.
-        </p>
-        <motion.img
-          src={mobile}
-          alt="App"
-          className="w-[260px] mt-4 mx-auto"
-          style={{ height: "500px", objectFit: "cover" }}
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 3 }}
-        />
-      </div>
+        return isMobile ? (
+          <div key={adv.id} className="min-h-fit py-16 md:py-24 flex flex-col justify-center px-6 md:px-20">
+            {Content}
+          </div>
+        ) : (
+          <motion.div
+            key={adv.id}
+            className="min-h-fit py-16 md:py-24 md:snap-start flex flex-col justify-center px-6 md:px-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            variants={fadeIn}
+          >
+            <div className="grid md:grid-cols-3 gap-10 items-center max-w-7xl mx-auto">
+              {isEven ? (
+                <>
+                  <motion.div
+                    className="flex flex-col items-center order-1"
+                    variants={sideFade("left")}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
+                    <img src={adv.numImg} alt={`num${adv.id}`} className="w-40 md:w-60 h-auto" />
+                  </motion.div>
+                  <motion.div
+                    className="flex justify-center order-2"
+                    variants={fadeIn}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
+                    <img src={middleImage} alt="middle visual" className="rounded-2xl w-[280px] md:w-[400px] h-auto" />
+                  </motion.div>
+                  <motion.div
+                    className="text-sm md:text-base text-justify order-3"
+                    variants={sideFade("right")}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
+                    {adv.desc}
+                  </motion.div>
+                </>
+              ) : (
+                <>
+                  <motion.div
+                    className="flex flex-col items-center order-1 md:order-3"
+                    variants={sideFade("right")}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
+                    <img src={adv.numImg} alt={`num${adv.id}`} className="w-40 md:w-60 h-auto" />
+                  </motion.div>
+                  <motion.div
+                    className="flex justify-center order-2 md:order-2"
+                    variants={fadeIn}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
+                    <img src={middleImage} alt="middle visual" className="rounded-2xl w-[280px] md:w-[400px] h-auto" />
+                  </motion.div>
+                  <motion.div
+                    className="text-sm md:text-base text-justify order-3 md:order-1"
+                    variants={sideFade("left")}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
+                    {adv.desc}
+                  </motion.div>
+                </>
+              )}
+            </div>
+          </motion.div>
+        );
+      })}
 
-      {/* Desktop Version */}
-      <div className="hidden md:flex flex-row items-end gap-34 max-w-[100vw] overflow-hidden">
-        <img
-          src={left}
-          alt="left"
-          className="w-[240px] md:w-[300px] h-[560px] rounded-2xl object-cover"
-        />
-        <div className="relative flex flex-col items-center w-[300px] md:w-[320px]">
-          <img src={google} alt="rating" className="w-52 h-auto z-10 mb-4" />
-          <motion.img
+      {/* CTA Section */}
+      <div className="min-h-screen md:snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
+        {/* Mobile Version (No Animation) */}
+        <div className="block md:hidden space-y-4">
+          <div className="text-xl font-semibold text-gray-700">
+            Battle-tested Service You<br />Can Count On
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <img src={google} alt="Google" className="w-20 h-auto" />
+            <span className="text-lg font-semibold">4.8</span>
+            <span className="text-yellow-500 text-base">★★★★★</span>
+          </div>
+          <p className="text-base max-w-md mx-auto text-gray-700">
+            Global Assist is consistently ranked as one of the best talent-as-a-service providers on all leading B2B review sites.
+          </p>
+          <img
             src={mobile}
             alt="App"
-            className="z-20 relative w-[280px]"
-            style={{ height: "440px", objectFit: "cover" }}
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.5 }}
-            transition={{ duration: 5 }}
+            className="w-[260px] mt-4 mx-auto"
+            style={{ height: "500px", objectFit: "cover" }}
           />
-          <p className="absolute top-28 text-xl font-normal px-2 z-0 leading-snug text-gray-700">
-            Global Assist is consistently ranked as one of the top virtual
-            assistant services, trusted by small to large businesses worldwide.
-          </p>
         </div>
-        <img
-          src={rigth}
-          alt="right"
-          className="w-[240px] md:w-[300px] h-[560px] rounded-2xl object-cover"
-        />
+
+        {/* Desktop Version (Animation enabled) */}
+        <div className="hidden md:flex flex-row items-end gap-34 max-w-[100vw] overflow-hidden">
+          <img src={left} alt="left" className="w-[240px] md:w-[300px] h-[560px] rounded-2xl object-cover" />
+          <div className="relative flex flex-col items-center w-[300px] md:w-[320px]">
+            <img src={google} alt="rating" className="w-52 h-auto z-10 mb-4" />
+            <motion.img
+              src={mobile}
+              alt="App"
+              className="z-20 relative w-[280px]"
+              style={{ height: "440px", objectFit: "cover" }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 5 }}
+            />
+            <p className="absolute top-28 text-xl font-normal px-2 z-0 leading-snug text-gray-700">
+              Global Assist is consistently ranked as one of the top virtual assistant services, trusted by small to large businesses worldwide.
+            </p>
+          </div>
+          <img src={rigth} alt="right" className="w-[240px] md:w-[300px] h-[560px] rounded-2xl object-cover" />
+        </div>
       </div>
-    </div>
-  </section>
-);
-
-
+    </section>
+  );
 }

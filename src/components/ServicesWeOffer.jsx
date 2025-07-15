@@ -157,7 +157,7 @@ const ServicesWeOffer = () => {
 
             <div className="w-[600px] md:w-[800px] h-full" />
 
-            <div className="md:w-1/3 self-end md:-mb-32 -mb-8 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
+            <div className="md:w-1/3 self-end md:-mb-32 -mb-4 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
               {/* ✅ Show description on mobile */}
               <p className="block md:hidden text-center px-4 text-base">{titles[index].desc}</p>
               <div className="flex md:block justify-center md:justify-start mt-4 md:-mt-40">
