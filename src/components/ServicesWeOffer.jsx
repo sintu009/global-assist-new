@@ -156,13 +156,13 @@ const ServicesWeOffer = () => {
 
             <div className="w-[600px] md:w-[800px] h-full" />
 
-            <div className="md:w-1/3 self-end -mb-20 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
+            <div className="md:w-1/3 self-end -mb-16 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
               {/* ✅ Show description on mobile */}
               <p className="block md:hidden text-center px-4 text-base">{titles[index].desc}</p>
               <div className="flex md:block justify-center md:justify-start mt-8 md:-mt-40">
                 <NavLink
                   to={titles[index].path}
-                  className="bg-[#2a2a3c] text-white text-lg px-8 py-4 rounded hover:bg-[#3a3a50] transition inline-block mx-auto md:mx-0"
+                  className="bg-[#2a2a3c] text-white text-lg px-6 py-4 sm:py-4 rounded hover:bg-[#3a3a50] transition inline-block mx-auto md:mx-0"
                 >
                   Explore More →
                 </NavLink>
