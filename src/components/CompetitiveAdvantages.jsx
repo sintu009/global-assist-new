@@ -61,20 +61,18 @@ export default function CompetitiveAdvantages() {
   return (
   <section className="font-roboto bg-white text-gray-800 overflow-x-hidden md:snap-y md:snap-mandatory">
     {advantages.map((adv, index) => {
-      let middleImage = mid1;
-      if (adv.id === 3) middleImage = mid3;
-      else if (adv.id === 4) middleImage = mid4;
-      else if (index % 2 === 1) middleImage = mid2;
+      const middleImage =
+        adv.id === 3 ? mid3 : adv.id === 4 ? mid4 : index % 2 === 1 ? mid2 : mid1;
 
       const isEven = index % 2 === 0;
 
       return (
         <motion.div
           key={adv.id}
-          className="min-h-fit py-16 md:py-24 md:snap-start flex flex-col justify-center px-6 md:px-20"
+          className="py-16 md:py-24 md:min-h-screen md:snap-start flex flex-col justify-center px-6 md:px-20"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={fadeIn}
         >
           <div className="grid md:grid-cols-3 gap-10 items-center max-w-7xl mx-auto">
@@ -82,34 +80,28 @@ export default function CompetitiveAdvantages() {
               <>
                 <motion.div
                   className="flex flex-col items-center order-1"
+                  variants={sideFade("left")}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={sideFade("left")}
+                  viewport={{ once: true, amount: 0.1 }}
                 >
-                  <img src={adv.numImg} alt={`num${adv.id}`} className="w-40 md:w-60 h-auto" />
+                  <img src={adv.numImg} alt="" className="w-40 md:w-60 h-auto" />
                 </motion.div>
-
                 <motion.div
                   className="flex justify-center order-2"
+                  variants={fadeIn}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeIn}
+                  viewport={{ once: true, amount: 0.1 }}
                 >
-                  <img
-                    src={middleImage}
-                    alt="middle visual"
-                    className="rounded-2xl w-[280px] md:w-[400px] h-auto"
-                  />
+                  <img src={middleImage} alt="" className="rounded-2xl w-[280px] md:w-[400px]" />
                 </motion.div>
-
                 <motion.div
                   className="text-sm md:text-base text-justify order-3"
+                  variants={sideFade("right")}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={sideFade("right")}
+                  viewport={{ once: true, amount: 0.1 }}
                 >
                   {adv.desc}
                 </motion.div>
@@ -118,34 +110,28 @@ export default function CompetitiveAdvantages() {
               <>
                 <motion.div
                   className="flex flex-col items-center order-1 md:order-3"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
                   variants={sideFade("right")}
-                >
-                  <img src={adv.numImg} alt={`num${adv.id}`} className="w-40 md:w-60 h-auto" />
-                </motion.div>
-
-                <motion.div
-                  className="flex justify-center order-2 md:order-2"
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeIn}
+                  viewport={{ once: true, amount: 0.1 }}
                 >
-                  <img
-                    src={middleImage}
-                    alt="middle visual"
-                    className="rounded-2xl w-[280px] md:w-[400px] h-auto"
-                  />
+                  <img src={adv.numImg} alt="" className="w-40 md:w-60 h-auto" />
                 </motion.div>
-
+                <motion.div
+                  className="flex justify-center order-2"
+                  variants={fadeIn}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.1 }}
+                >
+                  <img src={middleImage} alt="" className="rounded-2xl w-[280px] md:w-[400px]" />
+                </motion.div>
                 <motion.div
                   className="text-sm md:text-base text-justify order-3 md:order-1"
+                  variants={sideFade("left")}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={sideFade("left")}
+                  viewport={{ once: true, amount: 0.1 }}
                 >
                   {adv.desc}
                 </motion.div>
@@ -157,14 +143,14 @@ export default function CompetitiveAdvantages() {
     })}
 
     {/* CTA Section */}
-    <div className="min-h-screen md:snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
-      {/* Mobile */}
+    <div className="py-20 md:min-h-screen md:snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
+      {/* Mobile CTA */}
       <div className="block md:hidden space-y-4">
         <div className="text-xl font-semibold text-gray-700">
           Battle-tested Service You<br />Can Count On
         </div>
         <div className="flex items-center justify-center gap-2">
-          <img src={google} alt="Google" className="w-20 h-auto" />
+          <img src={google} alt="Google" className="w-20" />
           <span className="text-lg font-semibold">4.8</span>
           <span className="text-yellow-500 text-base">★★★★★</span>
         </div>
@@ -183,14 +169,10 @@ export default function CompetitiveAdvantages() {
         />
       </div>
 
-      {/* Desktop */}
+      {/* Desktop CTA */}
       <div className="hidden md:flex flex-row items-end gap-34 max-w-[100vw] overflow-hidden">
-        <img
-          src={left}
-          alt="left"
-          className="w-[240px] md:w-[300px] h-[560px] rounded-2xl object-cover"
-        />
-        <div className="relative flex flex-col items-center w-[300px] md:w-[320px]">
+        <img src={left} alt="left" className="w-[300px] h-[560px] rounded-2xl object-cover" />
+        <div className="relative flex flex-col items-center w-[320px]">
           <img src={google} alt="rating" className="w-52 h-auto z-10 mb-4" />
           <motion.img
             src={mobile}
@@ -203,15 +185,10 @@ export default function CompetitiveAdvantages() {
             transition={{ duration: 10 }}
           />
           <p className="absolute top-28 text-xl font-normal px-2 z-0 leading-snug text-gray-700">
-            Global Assist is consistently ranked as one of the top virtual
-            assistant services, trusted by small to large businesses worldwide.
+            Global Assist is consistently ranked as one of the top virtual assistant services, trusted by small to large businesses worldwide.
           </p>
         </div>
-        <img
-          src={rigth}
-          alt="right"
-          className="w-[240px] md:w-[300px] h-[560px] rounded-2xl object-cover"
-        />
+        <img src={rigth} alt="right" className="w-[300px] h-[560px] rounded-2xl object-cover" />
       </div>
     </div>
   </section>
