@@ -77,7 +77,7 @@ export default function SpectraPlanners() {
 
         {/* Topic 01 */}
         <div className="relative max-w-7xl mx-auto">
-          <button onClick={() => scroll(topic1ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full">←</button>
+          <button onClick={() => scroll(topic1ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">←</button>
           <div ref={topic1ScrollRef} className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible scrollbar-hide scroll-smooth">
             {topic1Items.map((item, index) => (
               <div key={index} className="bg-white rounded-[32px] p-8 transition duration-300 min-w-[100vw] sm:min-w-0">
@@ -88,7 +88,7 @@ export default function SpectraPlanners() {
               </div>
             ))}
           </div>
-          <button onClick={() => scroll(topic1ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full">→</button>
+          <button onClick={() => scroll(topic1ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">→</button>
         </div>
       </div>
 
@@ -112,7 +112,7 @@ export default function SpectraPlanners() {
 
       {/* Topic 03 */}
       <div className="relative bg-white py-8 px-4">
-        <button onClick={() => scroll(topic3ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full">←</button>
+        <button onClick={() => scroll(topic3ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">←</button>
         <div ref={topic3ScrollRef} className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible scrollbar-hide scroll-smooth max-w-7xl mx-auto">
           {topic3Items.map((item, index) => (
             <div key={index} className="bg-white rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
@@ -128,12 +128,12 @@ export default function SpectraPlanners() {
             </div>
           ))}
         </div>
-        <button onClick={() => scroll(topic3ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full">→</button>
+        <button onClick={() => scroll(topic3ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">→</button>
       </div>
 
       {/* Topic 04 */}
       <div className="relative bg-[#444444] py-8 px-4 text-white">
-        <button onClick={() => scroll(topic4ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full">←</button>
+        <button onClick={() => scroll(topic4ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">←</button>
         <div ref={topic4ScrollRef} className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible scrollbar-hide scroll-smooth max-w-7xl mx-auto">
           {topic4Items.map((item, index) => (
             <div key={index} className="bg-[#444444] rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
@@ -143,12 +143,12 @@ export default function SpectraPlanners() {
             </div>
           ))}
         </div>
-        <button onClick={() => scroll(topic4ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full">→</button>
+        <button onClick={() => scroll(topic4ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">→</button>
       </div>
 
       {/* Topic 05 */}
       <div className="relative bg-white py-8 px-4">
-        <button onClick={() => scroll(topic5ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full">←</button>
+        <button onClick={() => scroll(topic5ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">←</button>
         <div ref={topic5ScrollRef} className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible scrollbar-hide scroll-smooth max-w-7xl mx-auto">
           {topic5Items.map((item, index) => (
             <div key={index} className="bg-white rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
@@ -158,7 +158,7 @@ export default function SpectraPlanners() {
             </div>
           ))}
         </div>
-        <button onClick={() => scroll(topic5ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full">→</button>
+        <button onClick={() => scroll(topic5ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">→</button>
       </div>
 
       {/* Appreciation Moments */}
