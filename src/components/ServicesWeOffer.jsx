@@ -93,17 +93,18 @@ const ServicesWeOffer = () => {
   return (
     <section className="relative bg-[#0f0e1b] text-white pt-8 pb-56 px-6 overflow-hidden min-h-[90vh] font-['Roboto']">
       <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]"
-      >
-        ←
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]"
-      >
-        →
-      </button>
+  onClick={prevSlide}
+  className="absolute left-4 top-[75%] md:top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]"
+>
+  ←
+</button>
+<button
+  onClick={nextSlide}
+  className="absolute right-4 top-[75%] md:top-1/2 z-30 transform -translate-y-1/2 bg-[#2a2a3c] text-white p-3 rounded-full hover:bg-[#3a3a50]"
+>
+  →
+</button>
+
 
       <div className="absolute w-full left-0 text-center z-0" style={{ top: "4rem" }}>
         <p className="text-xl md:text-3xl text-gray-300 font-normal">The service we offer</p>
@@ -156,7 +157,7 @@ const ServicesWeOffer = () => {
 
             <div className="w-[600px] md:w-[800px] h-full" />
 
-            <div className="md:w-1/3 self-end md:-mb-32 -mb-12 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
+            <div className="md:w-1/3 self-end md:-mb-32 -mb-8 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
               {/* ✅ Show description on mobile */}
               <p className="block md:hidden text-center px-4 text-base">{titles[index].desc}</p>
               <div className="flex md:block justify-center md:justify-start mt-4 md:-mt-40">
