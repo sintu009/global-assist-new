@@ -55,7 +55,7 @@ const titles = [
   {
     big: "CUSTOMIZED CRM SOFTWARE",
     //sub: "Customized CRM Software",
-    desc: "Transform your vision into powerful mobile apps with our expert app development service. Get started today!",
+    desc: "Experience the power of tailored CRM solutions, designed to propel your business forward. Seamlessly integrate our CRM software into your existing systems.",
     path: "/customized-crm-software",
   },
   {
@@ -134,7 +134,7 @@ const ServicesWeOffer = () => {
 
           </div>
 
-         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[220px] md:w-[450px] pointer-events-none hidden md:block">
+         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[220px] md:w-[450px] pointer-events-none  md:block">
     <img
         src={adminImage}
         alt={titles[index].big}
