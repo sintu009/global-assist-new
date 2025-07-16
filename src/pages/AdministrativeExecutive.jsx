@@ -67,7 +67,7 @@ export default function AdministrativeExecutive() {
             Executive Assistant
           </h1>
           <p className="text-sm text-[#797979] font-inter mb-6 max-w-md">
-            In the fast-paced world of business, having a reliable Administrative &amp;
+            In the fast-paced world of business, having a reliable Administrative &
             Executive Assistant is like having a trusted ally by your side. Here’s why:
           </p>
         </motion.div>
@@ -88,14 +88,18 @@ export default function AdministrativeExecutive() {
         <img src={rightDeco} alt="right decoration" className="absolute top-0 right-0 w-32 md:w-40 pointer-events-none" />
         <motion.div
           variants={fadeUp}
-          className="max-w-xl mx-auto bg-white rounded-xl shadow-md px-6 md:px-14 py-16 relative text-center z-10"
+          // --- MODIFICATION START ---
+          // Added 'h-[250px]' for fixed height and 'flex flex-col justify-between' for content distribution
+          className="max-w-xl mx-auto bg-white rounded-xl shadow-md px-6 md:px-14 py-16 relative text-center z-10 h-[250px] flex flex-col justify-between"
         >
           <h3 className="text-2xl font-roboto font-semibold text-[#0A0D14] mb-4">
             {featureCards[currentIndex].title}
           </h3>
-          <p className="text-sm md:text-base font-roboto text-[#0F172A]">
+          {/* Added 'flex-grow overflow-hidden' to the paragraph for consistent height and potential truncation */}
+          <p className="text-sm md:text-base font-roboto text-[#0F172A] flex-grow overflow-hidden">
             {featureCards[currentIndex].description}
           </p>
+          {/* --- MODIFICATION END --- */}
           <button onClick={handlePrev} className="absolute left-4 top-full mt-4 w-9 h-9 bg-white shadow rounded-full flex items-center justify-center text-gray-500 hover:text-[#7A4DD7] md:left-[-45px] md:top-1/2 md:mt-0 md:transform md:-translate-y-1/2">
             <FiChevronLeft size={20} />
           </button>

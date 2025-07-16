@@ -30,7 +30,7 @@ const faqData = [
   {
     question: "Where is your office?",
     answer:
-      "Our office is located in Canada. We are situated in 15165 Queen Mary Rd - GR-2 Unit #101 Montreal, QC H3W 1X7l. if you need specific directions or further information on how to reach us, feel free to contact +1 514-700-7280 let me know. Our other offices are in the USA, Philippines, India and Venezuela. We also hire local Canadians.",
+      "Our office is located in Canada. We are situated in 5165 Queen Mary Rd GR-2 Unit #101 Montreal, QC H3W 1X7. If you need specific directions or further information on how to reach us, feel free to contact +1 514-700-7280 let me know. Our other offices are in the USA, Philippines, India and Venezuela. We also hire local Canadians.",
   },
   {
     question: "What hours will my assistant work?",

@@ -187,7 +187,7 @@ const GetInTouch = () => {
               type="submit"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold py-3 w-full rounded-md hover:opacity-90 transition"
             >
-              Send it to the moon 🚀
+              Submit
             </button>
           </form>
         </motion.div>
