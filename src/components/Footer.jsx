@@ -45,7 +45,7 @@ export default function Footer() {
       <div className="max-w-screen-2xl w-full mx-auto grid md:grid-cols-3 gap-8 items-start">
         {/* Column 1: Logo & Navigation */}
         <div>
-          <img src="/assets/logo.png" alt="Global Assist" className="mb-4 w-28" />
+          <img src="/assets/logo2.png" alt="Global Assist" className="mb-4 w-42" />
 
           {/* Social Icons */}
           <div className="flex gap-4 mb-6">
