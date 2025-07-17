@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import HeroSection from "./HeroSection";
 import ServicesWeOffer from "./ServicesWeOffer";
 import CompetitiveAdvantages from "./CompetitiveAdvantages";
@@ -8,13 +9,21 @@ import IniniteLogoSlider from "./InfiniteLogoSlider";
 
 const HomePage = () => {
   return (
-    <main className="">
+    <main>
+      <Helmet>
+        <title>Best Virtual Assistant Services for Small Businesses | Global Assist Inc</title>
+        <meta
+          name="description"
+          content="Looking for reliable and affordable virtual assistant services? Global Assist Inc provides expert support to help businesses streamline tasks and improve efficiency."
+        />
+      </Helmet>
+
       <HeroSection />
       <ServicesWeOffer />
-        <CompetitiveAdvantages />/
-       <IniniteLogoSlider/>
-       <StatsAndReviews/>
-       <GetInTouch />
+      <CompetitiveAdvantages />
+      <IniniteLogoSlider />
+      <StatsAndReviews />
+      <GetInTouch />
     </main>
   );
 };

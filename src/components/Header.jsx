@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const serviceDropdown = [
-  { name: 'ADMINISTRATIVE EXECUTIVE', path: '/administrative-executive' },
+  { name: 'ADMINISTRATIVE EXECUTIVE SUPPPORT', path: '/administrative-executive' },
   { name: 'MEDICAL VIRTUAL ASSISTANCE', path: '/medical-virtual-assistance' },
   { name: 'VIDEO EDITING', path: '/video-editing' },
   { name: 'ACCOUNTING & BOOKKEEPING', path: '/accounting-bookkeeping' },

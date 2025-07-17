@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import smm2 from '../assets/smm2.png';
@@ -28,7 +29,12 @@ const AnimatedSection = ({ children }) => {
 
 export default function BusinessDevelopment () {
   return (
-    <div className="font-['Roboto'] text-[#0f0e1b] bg-white font-roboto">
+    <>
+      <Helmet>
+        <title>Virtual Assistant Business Development Services | Growth Support</title>
+        <meta name="description" content="Drive business growth with expert virtual assistants. Global Assist Inc provides strategic support to help businesses expand and achieve their goals." />
+      </Helmet>
+      <div className="font-['Roboto'] text-[#0f0e1b] bg-white font-roboto">
       
       {/* HERO SECTION */}
       <motion.section
@@ -114,7 +120,7 @@ export default function BusinessDevelopment () {
 
   {/* Heading */}
   <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-    Project We Have Done
+    Projects We Have Completed
   </h2>
 
   {/* Subtext */}
@@ -141,5 +147,6 @@ export default function BusinessDevelopment () {
       <div className="mt-24" />
       <GetInTouch />
     </div>
+    </>
   );
 }

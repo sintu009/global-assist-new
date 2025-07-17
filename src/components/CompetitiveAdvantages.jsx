@@ -17,7 +17,7 @@ const advantages = [
   {
     id: 1,
     numImg: num1,
-    desc: `In today's business world, diversification is essential for survival and growth. At Global Assist, we offer a diverse team of virtual assistants from around the world, including India, the Philippines, Canada, and the Central America. Each VA brings unique skills, ensuring a perfect match for your needs. Whether it's admin, creative, or technical support, our team seamlessly integrates into your operations, offering fresh perspectives and tailored solutions. Continuously expanding our talent pool, we stay agile to meet evolving business demands. With diverse skills and cultural insights, we provide flexibility to tackle any challenge, keeping your operations competitive and agile.`,
+    desc: `In today's business world, diversification is essential for survival and growth. At Global Assist, we offer a diverse team of virtual assistants from around the world, including India, the Philippines, Canada, and Central America. Each VA brings unique skills, ensuring a perfect match for your needs. Whether it's admin, creative, or technical support, our team seamlessly integrates into your operations, offering fresh perspectives and tailored solutions. Continuously expanding our talent pool, we stay agile to meet evolving business demands. With diverse skills and cultural insights, we provide flexibility to tackle any challenge, keeping your operations competitive and agile.`,
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const advantages = [
   {
     id: 4,
     numImg: num4,
-    desc: `At Global Assist, we ensure impactful results. Our rigorously trained virtual assistants elevate efficiency, customer satisfaction, and overall productivity, backed by a proven track record. Clients consistently report significant improvements, empowering them to focus on business growth. Our commitment to excellence is evident in numerous success stories, spanning small businesses to enterprises. By partnering with us, you access a dedicated team capable of driving measurable results and overcoming challenges, enhancing your strategic goals. Entrust us with your virtual assistant needs, and experience the difference in your bottom line and business success.`,
+    desc: `At Global Assist, we ensure impactful results. Our rigorously trained virtual assistants elevate efficiency, customer satisfaction, and overall productivity, backed by a proven track record. Clients consistently report significant improvements, empowering them to focus on business growth. Our commitment to excellence is evident in numerous success stories, spanning small businesses to enterprises. By partnering with us, you gain access to a dedicated team capable of driving measurable results and overcoming challenges, enhancing your strategic goals. Entrust us with your virtual assistant needs, and experience the difference in your bottom line and business success.`,
   },
 ];
 

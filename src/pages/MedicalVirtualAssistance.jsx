@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import vmabg from "../assets/vmabg.png"; // <-- use this image for hero section
 import mva2 from "../assets/mva2.png";
@@ -40,9 +41,14 @@ const fadeUp = {
   },
 };
 
-export default function MedicalVirtualAssistant() {
+function MedicalVirtualAssistance() {
   return (
-    <div className="font-sans text-[#222]">
+    <>
+      <Helmet>
+        <title>Medical Virtual Assistant Services for Healthcare Professionals</title>
+        <meta name="description" content="Enhance efficiency with remote medical office assistants. Global Assist Inc offers reliable virtual assistant services for healthcare professionals and medical practices." />
+      </Helmet>
+      <div className="font-sans text-[#222]">
       {/* HERO SECTION - Heading Left, Image Right */}
       <motion.div
         variants={fadeUp}
@@ -124,5 +130,8 @@ export default function MedicalVirtualAssistant() {
         <GetInTouch />
       </motion.div>
     </div>
+    </> 
   );
 }
+
+export default MedicalVirtualAssistance;

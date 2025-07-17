@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import dm1 from "../assets/dm1.png";
 import dm2 from "../assets/dm2.png";
@@ -29,7 +30,12 @@ const slideInRight = {
 
 const DigitalMarketing = () => {
   return (
-    <section className="font-['Roboto'] text-[#0A0D17] overflow-x-hidden">
+    <>
+      <Helmet>
+        <title>Virtual Assistant Digital Marketing Services | SEO & Online Marketing Support</title>
+        <meta name="description" content="Enhance your online presence with expert digital marketing virtual assistants. Global Assist Inc offers SEO, social media, and marketing support to grow your business." />
+      </Helmet>
+      <section className="font-['Roboto'] text-[#0A0D17] overflow-x-hidden">
       {/* Hero Section */}
       <div
         className="mt-0 md:-mt-14 pb-2 px-6 md:px-12 bg-white relative overflow-hidden"
@@ -160,7 +166,7 @@ const DigitalMarketing = () => {
  
    {/* Heading */}
    <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-     Project We Have Done
+     Projects We Have Completed
    </h2>
  
    {/* Subtext */}
@@ -199,6 +205,7 @@ const DigitalMarketing = () => {
       <div className="mt-24" />
       <GetInTouch />
     </section>
+    </>
   );
 };
 

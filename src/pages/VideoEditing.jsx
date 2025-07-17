@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ve1 from '../assets/ve1.png';
@@ -37,7 +38,12 @@ const VideoEditing = () => {
   }, []);
 
   return (
-    <section className="font-['Roboto'] text-[#0A0D17]">
+    <>
+      <Helmet>
+        <title>Virtual Assistant Video Editing Services | Professional Video Editors</title>
+        <meta name="description" content="Get high-quality video editing with expert virtual assistants. Global Assist Inc provides professional video editing services to enhance your content efficiently." />
+      </Helmet>
+      <section className="font-['Roboto'] text-[#0A0D17]">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -129,7 +135,7 @@ const VideoEditing = () => {
 
   {/* Heading */}
   <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-    Project We Have Done
+    Projects We Have Completed
   </h2>
 
   {/* Subtext */}
@@ -158,7 +164,7 @@ const VideoEditing = () => {
       <div className="mt-24" />
       <GetInTouch />
     </section>
+    </>
   );
-};
-
+}
 export default VideoEditing;

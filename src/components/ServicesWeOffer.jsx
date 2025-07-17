@@ -25,13 +25,13 @@ const titles = [
   {
     big: "ACCOUNTING & BOOKKEEPING",
     //sub: "Accounting & Bookkeeping",
-    desc: "Achieve Financial Mastery: Optimize Your Business with Professional Accounting and Bookkeeping Services. Contact Us for Expert Guidance",
+    desc: "Achieve Financial Mastery: Optimize your business with professional Accounting and Bookkeeping services. Contact us for expert guidance",
     path: "/accounting-bookkeeping",
   },
   {
     big: "SOCIAL MEDIA MANAGEMENT",
     //sub: "Social Media Management",
-    desc: "Maximize Your Digital Presence with Tailored Marketing Solutions.",
+    desc: "Maximize your digital presence with tailored marketing solutions.",
     path: "/social-media-management",
   },
   {
@@ -43,7 +43,7 @@ const titles = [
   {
     big: "DIGITAL MARKETING",
     //sub: "Digital Marketing",
-    desc: "Maximize Your Digital Presence with Tailored Marketing Solutions.",
+    desc: "Maximize your digital presence with tailored marketing solutions.",
     path: "/digital-marketing",
   },
   {

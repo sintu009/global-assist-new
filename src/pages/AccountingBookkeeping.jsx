@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import heroImage from "../assets/bookkeepinghero.png";
 import complianceImg from "../assets/compliance.png";
 import financialAnalysisImg from "../assets/financial-analysis.png";
@@ -26,6 +27,10 @@ const fadeFrom = (direction) => ({
 export default function AccountingBookkeeping() {
   return (
     <>
+      <Helmet>
+        <title>Virtual Assistant Bookkeeping Services | Online Accounting Support</title>
+        <meta name="description" content="Streamline your finances with affordable bookkeeping virtual assistants. Global Assist Inc provides reliable online accounting support for businesses of all sizes." />
+      </Helmet>
       <section className="py-18 mx-auto font-sans overflow-x-hidden">
 
         {/* Hero Section */}
@@ -187,7 +192,7 @@ export default function AccountingBookkeeping() {
             Our Projects
           </span>
           <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-            Project We Have Done
+            Projects We Have Completed
           </h2>
           <p className="text-gray-600 max-w-3xl mb-10 text-sm md:text-base text-left">
           </p>

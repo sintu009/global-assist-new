@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import crmbg1 from "../assets/crmbg1.png";
 import crmbg2 from "../assets/crmbg2.png";
@@ -27,7 +28,12 @@ const fadeUp = {
 
 export default function CustomizedCRMSoftware() {
   return (
-    <div className="font-['Roboto']">
+    <>
+      <Helmet>
+        <title>Virtual Assistant CRM Management Services | Custom CRM Support</title>
+        <meta name="description" content="Optimize your workflow with CRM automation virtual assistants. Global Assist Inc offers expert support for custom CRM software management and data organization." />
+      </Helmet>
+      <div className="font-['Roboto']">
       {/* HERO SECTION */}
       <motion.section
         className="relative overflow-hidden bg-white py-24"
@@ -144,7 +150,7 @@ export default function CustomizedCRMSoftware() {
 
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-          Project We Have Done
+          Projects We Have Completed
         </h2>
 
         {/* Subtext */}
@@ -181,5 +187,6 @@ export default function CustomizedCRMSoftware() {
       <div className="mt-24" />
       <GetInTouch />
     </div>
+    </>
   );
 }

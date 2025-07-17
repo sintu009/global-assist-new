@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import adminHero from "../assets/adminHero.png";
 import leftDeco from "../assets/leftDeco.png";
@@ -12,7 +13,7 @@ const featureCards = [
   {
     title: "Streamlined Operations",
     description:
-      "Admin assistants ensure smooth operations. They manage schedules, coordinate meetings, allowing executives to focus on priorities.",
+      "Admin assistants ensure smooth operations. They manage, schedules and coordinate meetings, allowing executives to focus on priorities.",
   },
   {
     title: "Effective Communication",
@@ -49,7 +50,12 @@ export default function AdministrativeExecutive() {
   };
 
   return (
-    <div className="font-sans text-[#222]">
+    <>
+      <Helmet>
+        <title>Best Virtual Assistant Services for Administrative & Executive Support</title>
+        <meta name="description" content="Get professional admin support with top executive virtual assistant services. Global Assist Inc helps businesses manage tasks efficiently and stay organized." />
+      </Helmet>
+      <div className="font-sans text-[#222]">
       {/* Hero Section */}
       <motion.section
         variants={fadeUp}
@@ -62,13 +68,12 @@ export default function AdministrativeExecutive() {
             ADMINISTRATIVE EXECUTIVE
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-[#2F327D] mb-6 leading-snug font-[Nunito_Sans,sans-serif]">
-            Unlocking Efficiency - <br />
+            Unlocking Efficiency : <br />
             Administrative & <br />
             Executive Assistant
           </h1>
           <p className="text-sm text-[#797979] font-inter mb-6 max-w-md">
-            In the fast-paced world of business, having a reliable Administrative &
-            Executive Assistant is like having a trusted ally by your side. Here’s why:
+            In the fast-paced world of business, having a reliable Administrative or Executive Assistant is like having a trusted ally by your side. Here’s why:
           </p>
         </motion.div>
         <motion.div className="flex-1" variants={fadeUp}>
@@ -128,7 +133,7 @@ export default function AdministrativeExecutive() {
           </motion.div>
           <motion.div variants={fadeUp}>
             <h4 className="font-semibold text-lg text-[#2F327D] mb-2">Tech-Savvy</h4>
-            <p className="text-sm text-gray-700">Proficient in the latest productivity tools like Google Workspace, Notion, Slack, and more.</p>
+            <p className="text-sm text-gray-700">Proficient in the latest productivity tools such as Google Workspace, Notion, Slack, and more.</p>
           </motion.div>
           <motion.div variants={fadeUp}>
             <h4 className="font-semibold text-lg text-[#2F327D] mb-2">Confidential & Reliable</h4>
@@ -148,7 +153,7 @@ export default function AdministrativeExecutive() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-[#2F327D] mb-4">Client Success Story</h2>
           <p className="text-sm md:text-base text-gray-600 mb-6 italic">
-            "Hiring a virtual administrative assistant through Global Assist was a game changer. It freed up 10+ hours a week for me to focus on scaling my business."
+            "Hiring a virtual administrative assistant through Global Assist was a game changer. It freed up more than 10 hours a week for me to focus on scaling my business."
           </p>
           <p className="font-semibold text-[#2F327D]">— Victoria Segovia, Communications Manager, USA</p>
         </div>
@@ -159,7 +164,7 @@ export default function AdministrativeExecutive() {
         <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
           Our Projects
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-6">Project We Have Done</h2>
+        <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-6">Projects We Have Completed</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <a href="https://www.youtube.com/watch?v=T3qH-uY3t-Y" target="_blank" rel="noopener noreferrer">
             <img src={project1} alt="Project 1" className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105" />
@@ -187,5 +192,6 @@ export default function AdministrativeExecutive() {
       {/* Get in Touch Section */}
       <GetInTouch />
     </div>
+    </>
   );
 }

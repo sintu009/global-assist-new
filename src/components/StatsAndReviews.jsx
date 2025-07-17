@@ -13,7 +13,7 @@ const reviews = [
   },
   {
     stars: "★★★★★",
-    text: "We really enjoy having the services as part of our business model. VA is a good communicator, consistent, very organized trustworthy, and reliable. The service has been extremely professional and accessible. We definitely think every business should try it.",
+    text: "We really enjoy having the services as part of our business model. VA is a good communicator, consistent, very organized, trustworthy, and reliable.”. The service has been extremely professional and accessible. We definitely think every business should try it.",
     name: "Malindi Demery",
     position: "Managing Director, USA",
   },
@@ -25,7 +25,7 @@ const reviews = [
   },
   {
     stars: "★★★★★",
-    text: "The sales Virtual Assistant allotted to me did a very good job on all assignments. He called Potential prospects of my Real Estate business to alert them to a building that was for lease at the beach. He Stirred up great interest with a few clients calling me before I could call them. His Admin work was also very good.",
+    text: "The sales Virtual Assistant allotted to me did a very good job on all assignments. He called Potential prospects of my Real Estate business to alert them to a building that was for lease at the beach. He stirred up great interest with a few clients calling me before I could call them. His administrative work was also very good.",
     name: "David Milstead",
     position: "Managing Senior Director, USA",
   },

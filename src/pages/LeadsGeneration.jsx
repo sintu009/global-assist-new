@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import lgHero from "../assets/lghero.jpg";
 import lg1 from "../assets/lg1.jpg";
@@ -17,7 +18,12 @@ const fadeUp = {
 
 const LeadGeneration = () => {
   return (
-    <div className="overflow-x-hidden">
+    <>
+      <Helmet>
+        <title>Virtual Assistant for Lead Generation | B2B Sales Support Services</title>
+        <meta name="description" content="Boost your sales with expert B2B lead generation virtual assistants. Global Assist Inc provides targeted prospecting and sales support to help businesses grow." />
+      </Helmet>
+      <div className="overflow-x-hidden">
       {/* Hero Section */}
       <motion.section
         className="h-[90vh] bg-cover bg-center flex items-center relative text-white font-roboto"
@@ -115,7 +121,7 @@ const LeadGeneration = () => {
  
    {/* Heading */}
    <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-     Project We Have Done
+     Projects We Have Completed
    </h2>
  
    {/* Subtext */}
@@ -153,6 +159,7 @@ const LeadGeneration = () => {
       <div className="mt-24" />
       <GetInTouch />
     </div>
+    </>
   );
 };
 

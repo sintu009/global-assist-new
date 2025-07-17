@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import smm1 from '../assets/smm1.png';4
@@ -34,7 +35,12 @@ const bubbleFloat = {
 const SocialMediaManagement = () => {
   const navigate = useNavigate();
   return (
-    <div className="font-roboto">
+    <>
+      <Helmet>
+        <title>Virtual Assistant Social Media Management Services | Remote Marketing Support</title>
+        <meta name="description" content="Grow your online presence with expert social media virtual assistants. Global Assist Inc offers remote social media management to help businesses engage and expand their audience." />
+      </Helmet>
+      <div className="font-roboto">
       {/* Hero Section */}
 <motion.section
   className="pt-20 pb-16 px-6 max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12"
@@ -188,7 +194,7 @@ const SocialMediaManagement = () => {
 
   {/* Heading */}
   <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-    Project We Have Done
+    Projects We Have Completed
   </h2>
 
   {/* Subtext */}
@@ -218,7 +224,8 @@ const SocialMediaManagement = () => {
       <div className="mt-24" />
       <GetInTouch />
     </div>
+    </>
   );
-};
+}
 
 export default SocialMediaManagement;

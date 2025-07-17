@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import heroImage from "../assets/callHero.png";
 import icon1 from "../assets/icon1.png";
@@ -21,7 +22,12 @@ const fadeUp = {
 
 export default function CallCenterSupport() {
   return (
-    <div className="text-[#222]">
+    <>
+      <Helmet>
+        <title>Virtual Call Center Support Services | Remote Customer Service Assistants</title>
+        <meta name="description" content="Enhance customer service with professional virtual call center support. Global Assist Inc provides remote assistants for call handling and customer engagement." />
+      </Helmet>
+      <div className="text-[#222]">
 
       {/* Hero Section */}
       <motion.section
@@ -114,7 +120,7 @@ export default function CallCenterSupport() {
 
   {/* Heading */}
   <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-    Project We Have Done
+    Projects We Have Completed
   </h2>
 
   {/* Subtext */}
@@ -152,5 +158,6 @@ export default function CallCenterSupport() {
       <div className="mt-24" />
       <GetInTouch />
     </div>
+    </>
   );
 }
