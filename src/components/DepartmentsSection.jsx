@@ -43,7 +43,7 @@ const DepartmentsSection = () => {
           <span className="text-purple-700">We offer a host</span> of business-critical <br/> services to our clients.
         </h3>
 
-<div className="space-y-4">
+<div className="space-y-0">
   <DepartmentItem
     title="Consulting Firms"
     services="Services we offer - Digital Marketing Support, Live Event Support, Payroll processing, Invoicing Support, File or Document Sorting, Inbox Management, Social Media Management, Calendar Management, B2B Lead Generation."

@@ -35,15 +35,14 @@ const AboutV1Hero = () => {
         {/* Description Text */}
         <div className="mt-20 grid md:grid-cols-2 gap-10 text-gray-800 text-sm md:text-base leading-relaxed">
           <p>
-           At Global Assist Inc., our vision has always been clear: to become the trusted, one-stop solution for businesses across the globe—so they can focus on the big picture while we take care of the details.
-With decades of expertise in outsourcing and strategic support, we specialize in connecting companies with highly trained, cost-effective global talent who act as true extensions of their team. Whether you're scaling operations, improving efficiency, or simply freeing up time to grow your business, our resources are ready to deliver with precision and professionalism.
+           At Global Assist Inc., our goal has always been simple: to be a reliable, all-in-one partner for businesses worldwide—so you can focus on what matters most while we manage the rest. With decades of hands-on experience in outsourcing and business support, we connect you with highly skilled, affordable global talent who work as true members of your team. Whether you're expanding your reach, streamlining how you work, or just reclaiming valuable time, our professionals are here to help. We deliver consistent, high-quality support with efficiency, care, and attention to detail—so your business can move forward, faster and smarter.
+
+
 
           </p>
 
           <p>
-            We don’t just assign assistants—we build tailored support systems. Our model offers a team of three experts at the cost of one, ensuring every task is handled with depth, speed, and accuracy. From workflow optimization to daily operations, our teams proactively anticipate needs, implement global best practices, and drive consistent results.
-With offices in the USA, Canada, India, and the Philippines, and clients around the world, Global Assist is more than a service provider—we’re a partner in your progress.
-Let us handle the work, so you can lead with clarity, confidence, and focus. ) 
+           We don’t just assign assistants—we create customized systems that fit the way you work. Our approach gives you a team of three dedicated experts for the cost of one, making sure tasks are done with speed, precision, and depth. From refining operations to handling day-to-day responsibilities, our teams stay ahead of your needs—bringing structure, clarity, and global best practices. With offices in the USA, Canada, India, and the Philippines, and clients around the world, Global Assist goes beyond outsourcing. We’re a true extension of your business—ready to support your goals so you can lead with clarity and confidence.
 
           </p>
         </div>

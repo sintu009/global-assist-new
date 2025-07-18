@@ -87,6 +87,11 @@ const faqData = [
     answer:
       "By carrying out a comprehensive research on the customer's sector, market segment, competition and unique selling proposition (UsP), marketing specialists customize strategies. It is for this reason that these strategies are designed in such a way that they meet particular company objectives and challenges.",
   },
+  {
+  question: "How can Administrative, CRM, and Operations assistance improve my business efficiency?",
+  answer:
+    "Administrative, CRM, and Operations support helps streamline your daily workflows—handling tasks like data entry, scheduling, CRM updates, email follow-ups, and internal coordination. By managing these repetitive yet essential functions, our virtual assistants free up your time so you can focus on growth, strategy, and client relationships.",
+}
 ];
 
 
