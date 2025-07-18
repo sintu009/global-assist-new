@@ -9,66 +9,77 @@ const titles = [
     sub: "Delegate Smart. Work Less. Achieve More.",
     desc: "Reliable Virtual Assistants for daily admin, scheduling, email handling, and more.",
     path: "/administrative-executive",
+    buttonText: "Explore More",
   },
   {
     big: "MEDICAL VIRTUAL ASSISTANCE",
     sub: "Virtual Medical Assistants You Can Rely On",
     desc: "HIPAA-compliant support for appointment scheduling, patient communication, billing, and admin tasks.",
     path: "/medical-virtual-assistance",
+    buttonText: "Talk to Our Team",
   },
   {
     big: "VIDEO EDITING",
     sub: "Professional Video Editing for Your Brand and Business",
     desc: "From YouTube content to corporate reels — edited for quality, speed, and impact.",
     path: "/video-editing",
+    buttonText: "Get Your Video Edited",
   },
   {
     big: "ACCOUNTING & BOOKKEEPING",
     sub: "Accurate Accounting Support for Stress-Free Finances",
     desc: " Virtual bookkeeping, invoicing, and monthly reports — all handled by experts.",
     path: "/accounting-bookkeeping",
+    buttonText: "Explore More",
   },
   {
     big: "SOCIAL MEDIA MANAGEMENT",
     sub: "Engage and Grow Your Audience on Every Platform",
     desc: " Content creation, ad campaigns, and performance tracking across Instagram, Facebook, and LinkedIn.",
     path: "/social-media-management",
+    buttonText: "Explore More",
   },
   {
     big: "LEADS GENERATION",
     sub: "Targeted Leads That Fuel Your Sales Pipeline",
     desc: "B2B & B2C lead generation using email outreach, data scraping, and CRM integration.",
     path: "/leads-generation",
+    buttonText: "Book a Free Strategy Call",
   },
   {
     big: "DIGITAL MARKETING",
     sub: "Digital Marketing that Delivers Real Results",
     desc: "SEO, content, PPC, and more — data-driven strategies tailored to your business.",
     path: "/digital-marketing",
+    buttonText: "Explore More",
   },
   {
     big: "WEBSITE & APP DEVELOPMENT",
     sub: "Professional Websites that Convert Visitors into Clients",
     desc: "Modern, responsive, and fast-loading websites built for your business goals.",
     path: "/website-app-development",
+    buttonText: "Explore More",
   },
   {
     big: "CUSTOMIZED CRM SOFTWARE",
     sub: "CRM Solutions Customized for Your Business Workflow",
     desc: "Manage leads, sales, and customer interactions with a CRM tailored to your exact needs.",
     path: "/customized-crm-software",
+    buttonText: "Build My CRM",
   },
   {
     big: "BUSINESS DEVELOPMENT",
     sub: "Smart Business Development Support That Drives Growth",
     desc: "We research markets, build strategies, and help you connect with key decision-makers.",
     path: "/business-development",
+    buttonText: "Grow My Business",
   },
   {
     big: "CALL CENTER SUPPORT",
     sub: "24/7 Call Center Support That Builds Customer Trust",
     desc: "Inbound and outbound support services for customer care, lead follow-ups, and technical help.",
     path: "/call-center-support",
+    buttonText: "Outsource Your Calls",
   },
 ];
 
@@ -135,7 +146,7 @@ const ServicesWeOffer = () => {
 
           </div>
 
-         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[220px] md:w-[450px] pointer-events-none  md:block">
+         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[190px] md:w-[450px] pointer-events-none  md:block">
     <img
         src={adminImage}
         alt={titles[index].big}
@@ -172,7 +183,7 @@ const ServicesWeOffer = () => {
                   to={titles[index].path}
                   className="bg-[#2a2a3c] text-white text-lg px-6 py-4 sm:py-4 rounded hover:bg-[#3a3a50] transition inline-block mx-auto md:mx-0"
                 >
-                  Explore More →
+                  {titles[index].buttonText}
                 </NavLink>
               </div>
             </div>
