@@ -12,17 +12,17 @@ const caseStudies = [
     link: "/case-study-1", // ✅ Linked to CaseStudy1.jsx
   },
   {
-    title: "Case Study 2",
+    title: "How Our Virtual Assistant Helped an Insurance Agent",
     image: cs2,
     link: "/case-study-2",
   },
   {
-    title: "Case Study 3",
+    title: "How I Helped Heartland Realty Build a Modern Marketing System That Converts",
     image: cs3,
     link: "/case-study-3",
   },
   {
-    title: "Case Study 4",
+    title: "Elevating RER & LVI: A Digital Makeover for Aleya Bhaloo’s Luxury Brands",
     image: cs4,
     link: "/case-study-4",
   },
