@@ -6,68 +6,68 @@ import adminImage from "../assets/contact-image.png";
 const titles = [
   {
     big: "ADMINISTRATIVE",
-    //sub: "Administrative & Executive Assistant",
-    desc: "In the fast-paced world of business, having a reliable Administrative & Executive Assistant is like having a trusted ally by your side.",
+    sub: "Delegate Smart. Work Less. Achieve More.",
+    desc: "Reliable Virtual Assistants for daily admin, scheduling, email handling, and more.",
     path: "/administrative-executive",
   },
   {
     big: "MEDICAL VIRTUAL ASSISTANCE",
-    //sub: "Medical Virtual Assistance",
-    desc: "Let us handle the paperwork while you focus on providing exceptional patient care. Welcome to a new era of efficiency with Global Assist.",
+    sub: "Virtual Medical Assistants You Can Rely On",
+    desc: "HIPAA-compliant support for appointment scheduling, patient communication, billing, and admin tasks.",
     path: "/medical-virtual-assistance",
   },
   {
     big: "VIDEO EDITING",
-    //sub: "Video Editing",
-    desc: "Dont let mediocre editing hold you back. Join the ranks of satisfied clients who have experienced the transformative power of Global Assist.",
+    sub: "Professional Video Editing for Your Brand and Business",
+    desc: "From YouTube content to corporate reels — edited for quality, speed, and impact.",
     path: "/video-editing",
   },
   {
     big: "ACCOUNTING & BOOKKEEPING",
-    //sub: "Accounting & Bookkeeping",
-    desc: "Achieve Financial Mastery: Optimize your business with professional Accounting and Bookkeeping services. Contact us for expert guidance",
+    sub: "Accurate Accounting Support for Stress-Free Finances",
+    desc: " Virtual bookkeeping, invoicing, and monthly reports — all handled by experts.",
     path: "/accounting-bookkeeping",
   },
   {
     big: "SOCIAL MEDIA MANAGEMENT",
-    //sub: "Social Media Management",
-    desc: "Maximize your digital presence with tailored marketing solutions.",
+    sub: "Engage and Grow Your Audience on Every Platform",
+    desc: " Content creation, ad campaigns, and performance tracking across Instagram, Facebook, and LinkedIn.",
     path: "/social-media-management",
   },
   {
     big: "LEADS GENERATION",
-    //sub: "Leads Generation",
-    desc: "Don't let a lack of leads hold your business back. Partner with us to take your lead generation efforts to the next level and fuel your growth.",
+    sub: "Targeted Leads That Fuel Your Sales Pipeline",
+    desc: "B2B & B2C lead generation using email outreach, data scraping, and CRM integration.",
     path: "/leads-generation",
   },
   {
     big: "DIGITAL MARKETING",
-    //sub: "Digital Marketing",
-    desc: "Maximize your digital presence with tailored marketing solutions.",
+    sub: "Digital Marketing that Delivers Real Results",
+    desc: "SEO, content, PPC, and more — data-driven strategies tailored to your business.",
     path: "/digital-marketing",
   },
   {
     big: "WEBSITE & APP DEVELOPMENT",
-    //sub: "Website & App Development",
-    desc: "Transform your vision into powerful mobile apps with our expert app development service. Get started today!",
+    sub: "Professional Websites that Convert Visitors into Clients",
+    desc: "Modern, responsive, and fast-loading websites built for your business goals.",
     path: "/website-app-development",
   },
   {
     big: "CUSTOMIZED CRM SOFTWARE",
-    //sub: "Customized CRM Software",
-    desc: "Experience the power of tailored CRM solutions, designed to propel your business forward. Seamlessly integrate our CRM software into your existing systems.",
+    sub: "CRM Solutions Customized for Your Business Workflow",
+    desc: "Manage leads, sales, and customer interactions with a CRM tailored to your exact needs.",
     path: "/customized-crm-software",
   },
   {
     big: "BUSINESS DEVELOPMENT",
-    //sub: "Business Development",
-    desc: "Strategize and scale your business with targeted growth plans and execution.",
+    sub: "Smart Business Development Support That Drives Growth",
+    desc: "We research markets, build strategies, and help you connect with key decision-makers.",
     path: "/business-development",
   },
   {
     big: "CALL CENTER SUPPORT",
-    //sub: "Call Center Support",
-    desc: "With our Call Centre Support, you can elevate your customer service standards, cultivate loyalty, and drive business growth.",
+    sub: "24/7 Call Center Support That Builds Customer Trust",
+    desc: "Inbound and outbound support services for customer care, lead follow-ups, and technical help.",
     path: "/call-center-support",
   },
 ];
@@ -145,21 +145,28 @@ const ServicesWeOffer = () => {
 </div>
 
 
-          <div className="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between gap-16 h-[700px] mt-[-12rem]">
-            <div className="md:w-1/3 text-left space-y-6 pb-12 mt-0 -mb-6">
+          <div className="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row  justify-between gap-16 h-[700px] mt-[-12rem]">
+            <div className="md:w-1/3 text-left space-y-6 mt-60 md:mt-115">
               <p className="text-2xl md:text-4xl font-semibold text-white whitespace-nowrap"></p>
-              <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug">
+              <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-white leading-snug">
                 {titles[index].sub}
               </h3>
               {/* ✅ Show description on desktop */}
-              <p className="hidden md:block text-2xl text-gray-300">{titles[index].desc}</p>
+              <p className="hidden md:block text-xl text-gray-300">{titles[index].desc}</p>
             </div>
 
             <div className="w-[600px] md:w-[800px] h-full" />
 
-            <div className="md:w-1/3 self-end md:-mb-32 -mb-4 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12">
+            <div className="md:w-1/3 self-end md:-mb-32 -mb-4 space-y-12 text-left text-gray-300 text-lg md:text-2xl pb-12 mt-20 md:mt-0">
               {/* ✅ Show description on mobile */}
-              <p className="block md:hidden text-center px-4 text-base">{titles[index].desc}</p>
+              {/* ✅ Subheading on mobile */}
+<h3 className="block md:hidden text-xl font-bold text-white text-center px-4">
+  {titles[index].sub}
+</h3>
+
+{/* ✅ Description on mobile */}
+<p className="block md:hidden text-center px-4 text-base">{titles[index].desc}</p>
+
               <div className="flex md:block justify-center md:justify-start mt-4 md:-mt-40">
                 <NavLink
                   to={titles[index].path}
