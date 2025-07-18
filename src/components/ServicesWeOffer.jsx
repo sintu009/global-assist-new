@@ -150,7 +150,7 @@ const ServicesWeOffer = () => {
     <img
         src={adminImage}
         alt={titles[index].big}
-        className="w-full object-contain"
+        className="hidden md:block w-full object-contain"
         style={{ height: "auto", maxHeight: "700px" }}
     />
 </div>
