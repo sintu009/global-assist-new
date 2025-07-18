@@ -183,7 +183,7 @@ const ServicesWeOffer = () => {
                   to={titles[index].path}
                   className="bg-[#2a2a3c] text-white text-lg px-6 py-4 sm:py-4 rounded hover:bg-[#3a3a50] transition inline-block mx-auto md:mx-0"
                 >
-                  {titles[index].buttonText}
+                  {titles[index].buttonText}→
                 </NavLink>
               </div>
             </div>
