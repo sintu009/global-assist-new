@@ -2,6 +2,17 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import adminImage from "../assets/contact-image.png";
+import adminvideo from "../assets/adminvideo.png";
+import adminadmin from "../assets/adminadmin.png";
+import adminbuss from "../assets/adminbuss.png";
+import adminwebdev from "../assets/adminwebdev.png";
+import adminsocial from "../assets/adminsocial.png";
+import adminacc from "../assets/adminacc.png";
+import admincall from "../assets/admincall.png";
+import admincrm from "../assets/admincrm.png";
+import adminmedical from "../assets/adminmedical.png";
+import admindigital from "../assets/admindigital.png";
+import adminlead from "../assets/adminlead.png";
 
 const titles = [
   {
@@ -10,6 +21,8 @@ const titles = [
     desc: "Reliable Virtual Assistants for daily admin, scheduling, email handling, and more.",
     path: "/administrative-executive",
     buttonText: "Explore More",
+    image: adminadmin,
+    style: { height: "auto", maxHeight: "700px" },
   },
   {
     big: "MEDICAL VIRTUAL ASSISTANCE",
@@ -17,6 +30,8 @@ const titles = [
     desc: "HIPAA-compliant support for appointment scheduling, patient communication, billing, and admin tasks.",
     path: "/medical-virtual-assistance",
     buttonText: "Talk to Our Team",
+    image: adminmedical,
+    style: { height: "auto", maxHeight: "700px" },
   },
   {
     big: "VIDEO EDITING",
@@ -24,20 +39,26 @@ const titles = [
     desc: "From YouTube content to corporate reels — edited for quality, speed, and impact.",
     path: "/video-editing",
     buttonText: "Get Your Video Edited",
+    image: adminvideo,
+    style: { height: "400px", maxHeight: "800px" },
   },
   {
     big: "ACCOUNTING & BOOKKEEPING",
     sub: "Accurate Accounting Support for Stress-Free Finances",
-    desc: " Virtual bookkeeping, invoicing, and monthly reports — all handled by experts.",
+    desc: "Virtual bookkeeping, invoicing, and monthly reports — all handled by experts.",
     path: "/accounting-bookkeeping",
     buttonText: "Explore More",
+    image: adminacc,
+    style: { height: "auto", maxHeight: "700px" },
   },
   {
     big: "SOCIAL MEDIA MANAGEMENT",
     sub: "Engage and Grow Your Audience on Every Platform",
-    desc: " Content creation, ad campaigns, and performance tracking across Instagram, Facebook, and LinkedIn.",
+    desc: "Content creation, ad campaigns, and performance tracking across Instagram, Facebook, and LinkedIn.",
     path: "/social-media-management",
     buttonText: "Explore More",
+    image: adminsocial,
+    style: { height: "auto", maxHeight: "700px" },
   },
   {
     big: "LEADS GENERATION",
@@ -45,6 +66,8 @@ const titles = [
     desc: "B2B & B2C lead generation using email outreach, data scraping, and CRM integration.",
     path: "/leads-generation",
     buttonText: "Book a Free Strategy Call",
+    image: adminlead,
+    style: { height: "auto", maxHeight: "700px" },
   },
   {
     big: "DIGITAL MARKETING",
@@ -52,6 +75,8 @@ const titles = [
     desc: "SEO, content, PPC, and more — data-driven strategies tailored to your business.",
     path: "/digital-marketing",
     buttonText: "Explore More",
+    image: admindigital,
+    style: { height: "auto", maxHeight: "700px" },
   },
   {
     big: "WEBSITE & APP DEVELOPMENT",
@@ -59,6 +84,8 @@ const titles = [
     desc: "Modern, responsive, and fast-loading websites built for your business goals.",
     path: "/website-app-development",
     buttonText: "Explore More",
+    image: adminwebdev,
+    style: { height: "auto", maxHeight: "700px" },
   },
   {
     big: "CUSTOMIZED CRM SOFTWARE",
@@ -66,6 +93,8 @@ const titles = [
     desc: "Manage leads, sales, and customer interactions with a CRM tailored to your exact needs.",
     path: "/customized-crm-software",
     buttonText: "Build My CRM",
+    image: admincrm,
+    style: { height: "auto", maxHeight: "700px" },
   },
   {
     big: "BUSINESS DEVELOPMENT",
@@ -73,6 +102,8 @@ const titles = [
     desc: "We research markets, build strategies, and help you connect with key decision-makers.",
     path: "/business-development",
     buttonText: "Grow My Business",
+    image: adminbuss,
+    style: { height: "auto", maxHeight: "700px" },
   },
   {
     big: "CALL CENTER SUPPORT",
@@ -80,8 +111,11 @@ const titles = [
     desc: "Inbound and outbound support services for customer care, lead follow-ups, and technical help.",
     path: "/call-center-support",
     buttonText: "Outsource Your Calls",
+    image: admincall,
+    style: { height: "auto", maxHeight: "700px" },
   },
 ];
+
 
 const ServicesWeOffer = () => {
   const [index, setIndex] = useState(0);
@@ -147,12 +181,12 @@ const ServicesWeOffer = () => {
           </div>
 
          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[190px] md:w-[450px] pointer-events-none  md:block">
-    <img
-        src={adminImage}
-        alt={titles[index].big}
-        className="hidden md:block w-full object-contain"
-        style={{ height: "auto", maxHeight: "700px" }}
-    />
+   <img
+  src={titles[index].image}
+  alt={titles[index].big}
+  className="hidden md:block w-full object-contain"
+  style={titles[index].style}
+/>
 </div>
 
 

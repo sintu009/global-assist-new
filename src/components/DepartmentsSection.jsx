@@ -39,7 +39,7 @@ const DepartmentsSection = () => {
           DEPARTMENTS
         </h2>
         {/* Main heading: Not bold for the whole line, "We offer a host" is purple */}
-        <h3 className="text-3xl md:text-4xl text-gray-900 mb-12 leading-tight"> {/* Removed font-bold from h3 */}
+        <h3 className="text-3xl md:text-4xl text-gray-900 mb-0 leading-tight"> {/* Removed font-bold from h3 */}
           <span className="text-purple-700">We offer a host</span> of business-critical <br/> services to our clients.
         </h3>
 
