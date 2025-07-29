@@ -5,32 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Assist Company</title>
 
+    <!-- ✅ SEO & Metadata -->
+    <meta name="author" content="Global Assist INC." />
+    <meta name="DC.title" content="Global Assist INC." />
+    <meta name="geo.region" content="CA-QC" />
+    <meta name="geo.placename" content="Montreal" />
+    <meta name="geo.position" content="45.503182;-73.569806" />
+    <meta name="ICBM" content="45.503182, -73.569806" />
+    <meta name="Publisher" content="Global Assist INC." />
+    <meta name="Robots" content="index,follow" />
+    <meta name="YahooSeeker" content="index,follow" />
+    <meta name="msnbot" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="allow-search" content="yes" />
+    <meta name="Rating" content="General" />
+
+    <!-- ✅ Open Graph for Social Media Sharing -->
+    <meta property="og:image" content="https://theglobalassist.com/assets/logo.png" />
+    <meta property="og:url" content="https://theglobalassist.com/" />
+    <meta property="fb:admins" content="GlobalAssist123" />
+
     <!-- ✅ Favicon & Web App Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- ✅ Montserrat font from Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ✅ Poppins font from Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ✅ Nunito Sans font from Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- ✅ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- ✅ Google reCAPTCHA v2 script -->
+    <!-- ✅ Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- ✅ Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HQDLVV90X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-3HQDLVV90X');
+    </script>
   </head>
+
   <body class="font-montserrat">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
