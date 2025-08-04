@@ -71,16 +71,16 @@
           <Route path="/terms-conditions" element={<TermsConditions />} />
 
           <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/case-study-1" element={<CaseStudy1 />} />
-          <Route path="/case-study-2" element={<CaseStudy2 />} />
-          <Route path="/case-study-3" element={<CaseStudy3 />} />
-          <Route path="/case-study-4" element={<CaseStudy4 />} />
+          <Route path="/digital-revamp-myrenewhome-dan" element={<CaseStudy1 />} />
+          <Route path="/virtual-assistant-insurance-agent-success" element={<CaseStudy2 />} />
+          <Route path="/heartland-realty-modern-marketing-system" element={<CaseStudy3 />} />
+          <Route path="/digital-makeover-rer-lvi-aleya-bhaloo" element={<CaseStudy4 />} />
 
           <Route path="/blog" element={<Blog />} />
-        <Route path="/blog-social-media-virtual-assistant" element={<Blog1 />} />
-        <Route path="/blog-virtual-assistant-bookkeeping" element={<Blog2 />} />
-        <Route path="/blog-affordable-virtual-assistants-for-small-business" element={<Blog3 />} />
-        <Route path="/blog-local-seo-for-business-2025" element={<Blog4 />} />
+        <Route path="/social-media-virtual-assistant" element={<Blog1 />} />
+        <Route path="/virtual-assistant-bookkeeping" element={<Blog2 />} />
+        <Route path="/affordable-virtual-assistants-for-small-business" element={<Blog3 />} />
+        <Route path="/local-seo-for-business-2025" element={<Blog4 />} />
 
           <Route path="*" element={<Error404 />} />
         </Routes>

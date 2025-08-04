@@ -9,22 +9,22 @@ const blogs = [
   {
     title: "Need Help? Hire a Social Media Virtual Assistant",
     image: cs1,
-    link: "/blog-social-media-virtual-assistant",
+    link: "/social-media-virtual-assistant",
   },
   {
     title: "Virtual Assistant Bookkeeping for Small Businesses",
     image: cs2,
-    link: "/blog-virtual-assistant-bookkeeping",
+    link: "/virtual-assistant-bookkeeping",
   },
   {
     title: "Why Small Businesses Are Turning to Affordable Virtual Assistants",
     image: cs3,
-    link: "/blog-affordable-virtual-assistants-for-small-business",
+    link: "/affordable-virtual-assistants-for-small-business",
   },
   {
     title: "Why Your Business Needs Local SEO in 2025",
     image: cs4,
-    link: "/blog-local-seo-for-business-2025",
+    link: "/local-seo-for-business-2025",
   },
 ];
 

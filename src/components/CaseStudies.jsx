@@ -9,22 +9,22 @@ const caseStudies = [
   {
     title: "Digital Revamp for MyRenewHome by Dan",
     image: cs1,
-    link: "/case-study-1", // ✅ Linked to CaseStudy1.jsx
+    link: "/digital-revamp-myrenewhome-dan", // ✅ Linked to CaseStudy1.jsx
   },
   {
     title: "How Our Virtual Assistant Helped an Insurance Agent",
     image: cs2,
-    link: "/case-study-2",
+    link: "/virtual-assistant-insurance-agent-success",
   },
   {
     title: "How I Helped Heartland Realty Build a Modern Marketing System That Converts",
     image: cs3,
-    link: "/case-study-3",
+    link: "/heartland-realty-modern-marketing-system",
   },
   {
     title: "Elevating RER & LVI: A Digital Makeover for Aleya Bhaloo’s Luxury Brands",
     image: cs4,
-    link: "/case-study-4",
+    link: "/digital-makeover-rer-lvi-aleya-bhaloo",
   },
 ];
 
