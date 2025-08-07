@@ -56,7 +56,7 @@ export default function CompetitiveAdvantages() {
   });
 
   return (
-    <section className="font-roboto bg-white text-gray-800 overflow-x-hidden md:snap-y md:snap-mandatory">
+    <section className="font-roboto bg-white text-gray-800 overflow-x-hidden snap-none md:snap-y md:snap-mandatory">
       {advantages.map((adv, index) => {
         const middleImage =
           adv.id === 3
