@@ -56,7 +56,7 @@ export default function CompetitiveAdvantages() {
   });
 
   return (
-    <section className="font-roboto bg-white text-gray-800 overflow-x-hidden snap-none md:snap-y md:snap-mandatory">
+    <section className="font-roboto bg-white text-gray-800 overflow-x-hidden md:snap-y md:snap-mandatory">
       {advantages.map((adv, index) => {
         const middleImage =
           adv.id === 3
@@ -165,7 +165,7 @@ export default function CompetitiveAdvantages() {
       })}
 
       {/* CTA Section */}
-      <div className="min-h-screen md:snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
+      <div className="min-h-fit py-16 md:py-24 md:snap-start flex flex-col items-center justify-center px-6 text-center space-y-6">
         {/* Mobile Version */}
         <div className="block md:hidden space-y-4">
           <div className="text-xl font-semibold text-gray-700">
