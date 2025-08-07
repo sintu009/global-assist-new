@@ -180,7 +180,7 @@ const ServicesWeOffer = () => {
 
           </div>
 
-         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[190px] md:w-[450px] pointer-events-none  md:block">
+         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[190px] md:w-[435px] pointer-events-none  md:block">
    <img
   src={titles[index].image}
   alt={titles[index].big}
