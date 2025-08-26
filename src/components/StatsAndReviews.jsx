@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import CountUp from "react-countup";
 import statsImage from "../assets/stat2.png";
 
@@ -44,6 +44,8 @@ const reviews = [
 ];
 
 const StatsAndReviews = () => {
+  const controls = useAnimation();
+
   return (
     <section className="bg-white text-[#0A0D17] py-20 px-6 md:px-12 lg:px-24 overflow-hidden">
       {/* Title */}
@@ -60,7 +62,7 @@ const StatsAndReviews = () => {
           <p className="text-sm text-gray-400 mt-1">Trusted by users</p>
         </div>
 
-      <div className="w-64 h-56 sm:w-72 sm:h-56 bg-pink-100 rounded-3xl p-5 flex flex-col justify-end">
+        <div className="w-64 h-56 sm:w-72 sm:h-56 bg-pink-100 rounded-3xl p-5 flex flex-col justify-end">
           <h3 className="text-3xl font-semibold text-black">
             <CountUp end={4} duration={3} enableScrollSpy /> Rewards
           </h3>
@@ -83,15 +85,21 @@ const StatsAndReviews = () => {
           <p className="text-gray-600 mb-8 font-roboto">
             Stories that inspire. See the happiness our solutions generate.
           </p>
-
         </div>
 
         {/* Right Side: Auto Scrolling Reviews */}
         <div className="relative h-72 overflow-hidden">
           <motion.div
             className="flex flex-col gap-6"
-            animate={{ y: ["0%", "-100%"] }}
-            transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+            animate={controls}
+            onHoverStart={() => controls.stop()}   // ⏸ stop on hover
+            onHoverEnd={() =>
+              controls.start({
+                y: ["0%", "-100%"],
+                transition: { duration: 30, ease: "linear", repeat: Infinity },
+              })
+            } // ▶️ restart on unhover
+            initial={{ y: "0%" }}
           >
             {[...reviews, ...reviews].map((review, index) => (
               <div

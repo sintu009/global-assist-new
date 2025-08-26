@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 
-
 const serviceDropdown = [
   { name: 'ADMINISTRATIVE EXECUTIVE', path: '/administrative-executive' },
   { name: 'MEDICAL VIRTUAL ASSISTANCE', path: '/medical-virtual-assistance' },
@@ -41,13 +40,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-purple-300 px-5 pt-10 pb-6 border-t">
-      <div className="max-w-screen-2xl w-full mx-auto grid md:grid-cols-3 gap-8 items-start">
-        {/* Column 1: Logo & Navigation */}
+    <footer className="bg-white px-5 pt-10 pb-6 border-t">
+      {/* MODIFIED: Changed to lg:grid-cols-6, reduced gap, and updated column span for flags */}
+      <div className="max-w-screen-2xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
+        {/* Column 1: Logo & Social Icons */}
         <div>
-          <img src="/assets/logo2.png" alt="Global Assist" className="mb-4 w-42" />
-
-          {/* Social Icons */}
+          <img src="/assets/logo.png" alt="Global Assist" className="mb-4 w-42" />
           <div className="flex gap-4 mb-6">
             <a href="https://www.facebook.com/GlobalAssist123" target="_blank" rel="noopener noreferrer">
               <Facebook className="w-6 h-6 text-[#1877F2] hover:scale-110 transition-transform duration-300" />
@@ -59,7 +57,10 @@ export default function Footer() {
               <Linkedin className="w-6 h-6 text-[#0A66C2] hover:scale-110 transition-transform duration-300" />
             </a>
           </div>
+        </div>
 
+        {/* Column 2: Navigation */}
+        <div>
           <h4 className="font-semibold mb-2">NAVIGATION</h4>
           <ul className="space-y-1 text-sm">
             {navLinks.map(({ name, path }) =>
@@ -81,7 +82,7 @@ export default function Footer() {
                     </svg>
                   </button>
                   {servicesOpen && (
-                    <div className="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded shadow-lg z-50">
+                    <div className="absolute left-0 bottom-full mb-2 w-64 bg-white border border-gray-200 rounded shadow-lg z-50">
                       {serviceDropdown.map((service) => (
                         <Link
                           key={service.name}
@@ -109,8 +110,8 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Column 2: Others */}
-        <div className="lg:ml-[-200px]">
+        {/* Column 3: Others */}
+        <div>
           <h4 className="font-semibold mb-2">OTHERS</h4>
           <ul className="space-y-1 text-sm">
             <li><Link to="/blog" className="hover:underline">Blog</Link></li>
@@ -118,14 +119,13 @@ export default function Footer() {
             <li><Link to="/case-studies" className="hover:underline">Case Studies</Link></li>
             <li><a href="/terms-conditions" className="hover:underline">Terms & Conditions</a></li>
             <li className="mt-14 font-bold flex items-center gap-2">
-  <Phone className="w-4 h-4 text-black" />
-  +1 514-700-7280
-</li>
-<li className="mt-4 font-bold flex items-center gap-2">
-  <Phone className="w-4 h-4 text-black" />
-  866-450-1441 (Toll Free)
-</li>
-
+              <Phone className="w-4 h-4 text-black" />
+              +1 514-700-7280
+            </li>
+            <li className="mt-4 font-bold flex items-center gap-2">
+              <Phone className="w-4 h-4 text-black" />
+              866-450-1441 (Toll Free)
+            </li>
             <li className="mt-4 font-bold flex items-center gap-2">
               <Mail className="w-4 h-4" />
               info@theglobalassist.com
@@ -133,9 +133,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Column 3: Flag Grid & Contact */}
-        <div className="lg:ml-[-400px]">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-[14px] text-black font-medium leading-relaxed text-center">
+        {/* Column 4, 5 & 6: Flag Grid & Contact */}
+        <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1 text-[14px] text-black font-medium leading-relaxed text-center">
             <div>
               <img src="/assets/flag-canada.png" alt="Canada" className="w-18 h-12 mx-auto mb-2" />
               <p className="max-w-[180px] mx-auto">

@@ -4,12 +4,16 @@ import DiverseTeamSection from '../components/DiverseTeamSection';
 import DepartmentsSection from '../components/DepartmentsSection';
 import OurTeamSection from '../components/OurTeamSection';
 import GetInTouch from '../components/GetInTouch';
+import MissionVision from '../components/MissionVision';
+import Timeline from '../components/Timeline';
 
 const AboutPage = () => {
   return (
     <div className="overflow-hidden"> 
       <AboutV1Hero />
       <DiverseTeamSection />
+      <MissionVision />
+      <Timeline />
       <OurTeamSection/>
       <DepartmentsSection />
       <GetInTouch/>

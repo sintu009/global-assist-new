@@ -6,6 +6,8 @@ import CompetitiveAdvantages from "./CompetitiveAdvantages";
 import GetInTouch from "./GetInTouch";
 import StatsAndReviews from "./StatsAndReviews";
 import IniniteLogoSlider from "./InfiniteLogoSlider";
+import HeroHome from "./HeroHome";
+import CompetitiveAdvantagesNew from "./CompetitiveAdvantagesNew";
 
 const HomePage = () => {
   return (
@@ -19,7 +21,9 @@ const HomePage = () => {
       </Helmet>
 
       <HeroSection />
+      <HeroHome />
       <ServicesWeOffer />
+      <CompetitiveAdvantagesNew />
       <CompetitiveAdvantages />
       <IniniteLogoSlider />
       <StatsAndReviews />

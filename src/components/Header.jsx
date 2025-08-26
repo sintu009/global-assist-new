@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Briefcase, LayoutGrid, Headset, Globe, Lightbulb, Code, PiggyBank, BarChart2 } from 'lucide-react';
 
 const serviceDropdown = [
   { name: 'ADMINISTRATIVE EXECUTIVE SUPPPORT', path: '/administrative-executive' },
@@ -15,6 +15,44 @@ const serviceDropdown = [
   { name: 'BUSINESS DEVELOPMENT', path: '/business-development' },
   { name: 'CALL CENTER SUPPORT', path: '/call-center-support' },
 ];
+
+const servicesByCategory = {
+  'Administrative Tasks': [
+    { name: 'ADMINISTRATIVE EXECUTIVE SUPPPORT', path: '/administrative-executive' },
+    { name: 'MEDICAL VIRTUAL ASSISTANCE', path: '/medical-virtual-assistance' },
+  ],
+  'Digital Marketing Services': [
+    { name: 'SOCIAL MEDIA MANAGEMENT', path: '/social-media-management' },
+    { name: 'LEADS GENERATION', path: '/leads-generation' },
+    { name: 'DIGITAL MARKETING', path: '/digital-marketing' },
+  ],
+  'Customer Support & Experience': [
+    { name: 'CALL CENTER SUPPORT', path: '/call-center-support' },
+  ],
+  'Business Growth & Strategy': [
+    { name: 'BUSINESS DEVELOPMENT', path: '/business-development' },
+  ],
+  'Creative Services': [
+    { name: 'VIDEO EDITING', path: '/video-editing' },
+  ],
+  'Software & App Development': [
+    { name: 'WEBSITE & APP DEVELOPMENT', path: '/website-app-development' },
+    { name: 'CUSTOMIZED CRM SOFTWARE', path: '/customized-crm-software' },
+  ],
+  'Finance & Accounting': [
+    { name: 'ACCOUNTING & BOOKKEEPING', path: '/accounting-bookkeeping' },
+  ],
+};
+
+const categoryIcons = {
+  'Administrative Tasks': <Briefcase />,
+  'Digital Marketing Services': <LayoutGrid />,
+  'Customer Support & Experience': <Headset />,
+  'Business Growth & Strategy': <BarChart2 />,
+  'Creative Services': <Lightbulb />,
+  'Software & App Development': <Code />,
+  'Finance & Accounting': <PiggyBank />,
+};
 
 export default function Header() {
   const navigate = useNavigate();
@@ -71,10 +109,15 @@ export default function Header() {
                 {name}
               </Link>
             ) : name === 'Services' ? (
-              <div className="relative" key={name} ref={dropdownRef}>
+              <div
+                className="relative"
+                key={name}
+                ref={dropdownRef}
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
                 <button
                   className={`font-medium transition hover:text-purple-300 flex items-center gap-1 ${serviceDropdown.some(s => currentPath.startsWith(s.path)) ? 'text-purple-700' : ''}`}
-                  onClick={() => setServicesOpen((v) => !v)}
                   type="button"
                 >
                   Services
@@ -83,17 +126,30 @@ export default function Header() {
                   </svg>
                 </button>
                 {servicesOpen && (
-                  <div className="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded shadow-lg z-50">
-                    {serviceDropdown.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.path}
-                        className="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition"
-                        onClick={() => setServicesOpen(false)}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
+                  <div className="absolute left-1/2 -translate-x-1/2 p-8 w-[900px] max-w-7xl bg-white border border-gray-200 rounded-2xl shadow-xl z-50">
+                    <div className="grid grid-cols-4 gap-x-8 gap-y-6">
+                      {Object.entries(servicesByCategory).map(([category, services]) => (
+                        <div key={category} className="p-4 transition hover:bg-gray-50 rounded-lg">
+                          <div className="flex items-center space-x-2 text-purple-700 mb-2">
+                            {categoryIcons[category]}
+                            <h3 className="font-semibold text-sm">{category}</h3>
+                          </div>
+                          <ul className="space-y-1">
+                            {services.map((service) => (
+                              <li key={service.name}>
+                                <Link
+                                  to={service.path}
+                                  className="block text-gray-600 hover:text-purple-700 transition font-normal"
+                                  onClick={() => setServicesOpen(false)}
+                                >
+                                  {service.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
