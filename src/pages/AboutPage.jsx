@@ -6,7 +6,7 @@ import OurTeamSection from '../components/OurTeamSection';
 import GetInTouch from '../components/GetInTouch';
 import MissionVision from '../components/MissionVision';
 import Timeline from '../components/Timeline';
-
+import FooterNew from '../components/FooterNew';
 const AboutPage = () => {
   return (
     <div className="overflow-hidden"> 
@@ -17,7 +17,7 @@ const AboutPage = () => {
       <OurTeamSection/>
       <DepartmentsSection />
       <GetInTouch/>
-     
+      <FooterNew/>
     </div>
   );
 };

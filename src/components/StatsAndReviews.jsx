@@ -1,10 +1,10 @@
-import React from "react";
+// 1. Import useEffect and useRef from React
+import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import CountUp from "react-countup";
-import statsImage from "../assets/stat2.png";
-
 
 const reviews = [
+  // ... (your reviews array remains the same)
   {
     stars: "★★★★★",
     text: "Our VA is consistent and hard-working and has proved to be an asset. I am pleased with the services we have received from Global Assist",
@@ -43,13 +43,38 @@ const reviews = [
   },
 ];
 
+
+// 2. Move the animation definition OUTSIDE the component.
+// This prevents it from being redefined on every render.
+const scrollAnimation = {
+  y: ["0%", "-100%"],
+  transition: {
+    duration: 30,
+    ease: "linear",
+    repeat: Infinity,
+  },
+};
+
 const StatsAndReviews = () => {
   const controls = useAnimation();
+  // 3. Create a ref to track if the animation has started.
+  const hasAnimationStarted = useRef(false);
+
+  // 4. Use useEffect to start the animation ONCE.
+  useEffect(() => {
+    // Check the ref's value. If the animation hasn't started, start it.
+    if (!hasAnimationStarted.current) {
+      controls.start(scrollAnimation);
+      // Set the ref's value to true so this block doesn't run again.
+      hasAnimationStarted.current = true;
+    }
+  }, [controls]); // Dependency array
 
   return (
     <section className="bg-white text-[#0A0D17] py-20 px-6 md:px-12 lg:px-24 overflow-hidden">
-      {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
+      {/* ... (The Stats Cards JSX is unchanged) ... */}
+       {/* Title */}
+       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
         Numbers That Speak
       </h2>
 
@@ -77,7 +102,6 @@ const StatsAndReviews = () => {
         </div>
       </div>
 
-      {/* Reviews Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left Side */}
         <div>
@@ -92,14 +116,9 @@ const StatsAndReviews = () => {
           <motion.div
             className="flex flex-col gap-6"
             animate={controls}
-            onHoverStart={() => controls.stop()}   // ⏸ stop on hover
-            onHoverEnd={() =>
-              controls.start({
-                y: ["0%", "-100%"],
-                transition: { duration: 30, ease: "linear", repeat: Infinity },
-              })
-            } // ▶️ restart on unhover
-            initial={{ y: "0%" }}
+            // 5. These handlers now work correctly
+            onHoverStart={() => controls.stop()}
+            onHoverEnd={() => controls.start(scrollAnimation)}
           >
             {[...reviews, ...reviews].map((review, index) => (
               <div

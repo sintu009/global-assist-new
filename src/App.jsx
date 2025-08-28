@@ -3,6 +3,7 @@
   import Header from "./components/Header";
   import Footer from "./components/Footer";
   import ScrollToTop from "./components/ScrollToTop"; // ✅ Added scroll restoration
+  import FooterNew from "./components/FooterNew";
 
   import HomePage from "./components/HomePage";
   import Contact from "./components/Contact";
@@ -84,7 +85,7 @@
 
           <Route path="*" element={<Error404 />} />
         </Routes>
-        <Footer />
+        <FooterNew />
       </Router>
     );
   }

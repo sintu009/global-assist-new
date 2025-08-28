@@ -167,22 +167,28 @@ export default function Header() {
 
         {/* CTA Buttons - Desktop */}
         <div className="hidden md:flex gap-3">
-          <a
-            href="https://heyzine.com/flip-book/49ed8d081d.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-[#6A10E1] text-purple-700 px-5 py-2 rounded-full text-sm hover:bg-purple-300 transition"
-          >
-            Flip Book
-          </a>
-          <a
-            href="https://calendly.com/mina-36"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-[#6A10E1] text-purple-700 px-5 py-2 rounded-full text-sm hover:bg-purple-300 transition text-center"
-          >
-            Book a Call
-          </a>
+          <div className="relative group">
+            <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"></div>
+            <a
+              href="https://heyzine.com/flip-book/49ed8d081d.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative px-5 py-2 rounded-full text-sm bg-white text-gray-800 border border-transparent group-hover:border-transparent transition"
+            >
+              Flip Book
+            </a>
+          </div>
+          <div className="relative group">
+            <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"></div>
+            <a
+              href="https://calendly.com/mina-36"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative px-5 py-2 rounded-full text-sm bg-white text-gray-800 border border-transparent group-hover:border-transparent transition"
+            >
+              Book a Call
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -255,22 +261,28 @@ export default function Header() {
 
           {/* CTA Buttons - Mobile */}
           <div className="flex flex-col gap-3 pt-2">
-            <a
-              href="https://heyzine.com/flip-book/49ed8d081d.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-[#6A10E1] text-purple-700 px-5 py-2 rounded-full text-sm text-center hover:bg-purple-300 transition"
-            >
-              Flip Book
-            </a>
-            <a
-              href="https://calendly.com/mina-36"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-[#6A10E1] text-purple-700 px-5 py-2 rounded-full text-sm hover:bg-purple-300 transition text-center"
-            >
-              Book a Call
-            </a>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"></div>
+              <a
+                href="https://heyzine.com/flip-book/49ed8d081d.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative w-full block text-center px-5 py-2 rounded-full text-sm bg-white text-gray-800 border border-transparent group-hover:border-transparent transition"
+              >
+                Flip Book
+              </a>
+            </div>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"></div>
+              <a
+                href="https://calendly.com/mina-36"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative w-full block text-center px-5 py-2 rounded-full text-sm bg-white text-gray-800 border border-transparent group-hover:border-transparent transition"
+              >
+                Book a Call
+              </a>
+            </div>
           </div>
         </div>
       )}

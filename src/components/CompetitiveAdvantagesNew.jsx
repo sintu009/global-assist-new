@@ -73,9 +73,12 @@ export default function CompetitiveAdvantagesNew() {
                 Our Competitive Advantages
               </h2>
 
-              <p className="text-4xl mb-2">
-                <span className="text-sky-400">{pages[currentPage].step}</span>
-              </p>
+             <p className="text-4xl mb-2">
+  <span className="bg-gradient-to-r from-blue-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
+    {pages[currentPage].step}
+  </span>
+</p>
+
               <h3 className="text-4xl font-semibold mb-4 text-gray-900">
                 {pages[currentPage].title}
               </h3>

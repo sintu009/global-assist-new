@@ -68,7 +68,7 @@ const HeroHome = () => {
   return (
     <section className="relative w-full min-h-screen lg:min-h-[130vh] bg-white overflow-hidden">
       {/* Right image pinned to the edge (desktop only) */}
-      <div className="hidden md:block absolute bottom-0 right-0 w-[110%] max-w-[2000px] z-10 pointer-events-none">
+  <div className="hidden md:block absolute bottom-0 right-0 w-[110%] max-w-[2000px] z-40 pointer-events-none">
         <img
           src={womenhome}
           alt="Virtual Assistant"
@@ -77,7 +77,7 @@ const HeroHome = () => {
       </div>
 
       {/* Centered animated headline */}
-      <div className="absolute top-2 left-1/2 -translate-x-1/2 text-center z-30 pointer-events-none select-none">
+  <div className="absolute top-2 left-1/2 -translate-x-1/2 text-center z-10 pointer-events-none select-none">
         {/* UPDATED: Added ref, removed style prop */}
         <h1 ref={h1LeftRef} className="text-5xl sm:text-6xl md:text-7xl lg:text-[11rem] font- leading-tight whitespace-nowrap">
           <span className="bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">
@@ -112,7 +112,7 @@ const HeroHome = () => {
               
               <div className="relative inline-block mt-5 group">
                 {/* UPDATED: Increased inset for a thicker, more visible border */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 via-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"></div>
                 <button
                   className="relative px-6 py-3 bg-white rounded-full text-sm font-medium text-gray-800 border border-gray-800 group-hover:border-transparent transition"
                   onClick={() => navigate("/contact")}
