@@ -71,12 +71,7 @@ export default function Timeline() {
 
       {/* Section 2: aboutbg2 with timeline + content */}
 <div className="relative w-full">
-  <img 
-  src={aboutbg2} 
-  alt="About Background 2" 
-  className="w-full h-auto md:h-[70vh] object-cover" 
-/>
-
+  <img src={aboutbg2} alt="About Background 2" className="w-full h-[80vh] object-cover" />
   <div className="absolute inset-0 bg-black/40"></div>
 
   <div className="absolute inset-0 z-10 text-white px-6 py-10 flex flex-col">
