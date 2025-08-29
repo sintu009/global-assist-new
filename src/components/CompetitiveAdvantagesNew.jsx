@@ -59,14 +59,15 @@ export default function CompetitiveAdvantagesNew() {
       <div className="max-w-6xl mx-auto relative">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
-            key={currentPage}
-            custom={direction}
-            initial={{ x: direction === 1 ? 300 : -300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: direction === 1 ? -300 : 300, opacity: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
-          >
+  key={currentPage}
+  custom={direction}
+  initial={{ x: direction === 1 ? 300 : -300, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  exit={{ x: direction === 1 ? -300 : 300, opacity: 0 }}
+  transition={{ duration: 0.5, ease: "easeInOut" }}
+  className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center min-h-[600px]"
+>
+
             {/* Left Content */}
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8">

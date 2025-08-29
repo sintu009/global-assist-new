@@ -8,6 +8,12 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/adminproject.png";
 import GetInTouch from '../components/GetInTouch';
+import email from "../assets/email.png";
+import calendar from "../assets/calender.png";
+import work from "../assets/work.png";
+import files from "../assets/files.png";
+import travel from "../assets/travel.png";
+import meet from "../assets/meet.png";
 
 const featureCards = [
   {
@@ -39,6 +45,41 @@ const fadeUp = {
 };
 
 export default function AdministrativeExecutive() {
+
+    const services = [
+    {
+      img: email,
+      title: "Email Management",
+      desc: "We declutter, organize, and manage your inbox.",
+    },
+    {
+      img: calendar,
+      title: "Calendar Management",
+      desc: "Never miss a meeting or deadline.",
+    },
+    {
+      img: work,
+      title: "Data Entry Management",
+      desc: "Keep your information accurate and accessible.",
+    },
+    {
+      img: files,
+      title: "Filing & Documentation",
+      desc: "We create, organize, and store your essential files.",
+    },
+    {
+      img: travel,
+      title: "Travel Arrangements",
+      desc: "Plan and book stress-free business travel.",
+    },
+    {
+      img: meet,
+      title: "Project Management",
+      desc: "Keep projects on track and under control.",
+    },
+    // repeat if you want 12 blocks total
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -114,80 +155,45 @@ export default function AdministrativeExecutive() {
         </motion.div>
       </motion.section>
 
-      {/* Additional Benefits Section */}
-      <motion.section
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        className="bg-white py-24 px-4 text-center"
-      >
-        <h2 className="text-2xl md:text-3xl font-bold text-[#2F327D] mb-6">Why Choose Our Admin Assistants?</h2>
-        <p className="max-w-2xl mx-auto text-gray-600 mb-10 text-sm md:text-base">
-          At Global Assist, our virtual administrative assistants are handpicked for their expertise, professionalism, and adaptability. Here’s what sets them apart:
+
+          <section className="px-6 md:px-12 lg:px-20 py-16 bg-white">
+      {/* Heading */}
+      <div className="text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            Let Us Organize Your Day
+          </span>
+        </h2>
+      </div>
+
+      {/* Intro text */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-52 mb-12">
+        <p className="text-lg font-semibold text-gray-800 leading-relaxed">
+          From managing schedules to automating follow-ups, we handle the
+          following tasks so you can focus on the big picture.
         </p>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
-          <motion.div variants={fadeUp}>
-            <h4 className="font-semibold text-lg text-[#2F327D] mb-2">Highly Trained</h4>
-            <p className="text-sm text-gray-700">All our VAs undergo rigorous onboarding and regular skill enhancement workshops.</p>
-          </motion.div>
-          <motion.div variants={fadeUp}>
-            <h4 className="font-semibold text-lg text-[#2F327D] mb-2">Tech-Savvy</h4>
-            <p className="text-sm text-gray-700">Proficient in the latest productivity tools such as Google Workspace, Notion, Slack, and more.</p>
-          </motion.div>
-          <motion.div variants={fadeUp}>
-            <h4 className="font-semibold text-lg text-[#2F327D] mb-2">Confidential & Reliable</h4>
-            <p className="text-sm text-gray-700">Your data is safe with us. Our team operates with integrity and strict confidentiality.</p>
-          </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Testimonial Section */}
-      <motion.section
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        className="bg-[#F9F5FF] py-24 px-4 text-center"
-      >
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#2F327D] mb-4">Client Success Story</h2>
-          <p className="text-sm md:text-base text-gray-600 mb-6 italic">
-            "Hiring a virtual administrative assistant through Global Assist was a game changer. It freed up more than 10 hours a week for me to focus on scaling my business."
-          </p>
-          <p className="font-semibold text-[#2F327D]">— Victoria Segovia, Communications Manager, USA</p>
-        </div>
-      </motion.section>
-
-      {/* Projects Section */}
-      <section className="px-4 max-w-7xl mx-auto py-16">
-        <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
-          Our Projects
-        </span>
-        <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-6">Projects We Have Completed</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a href="https://www.youtube.com/watch?v=T3qH-uY3t-Y" target="_blank" rel="noopener noreferrer">
-            <img src={project1} alt="Project 1" className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105" />
-          </a>
-          <a href="https://www.youtube.com/watch?v=FTuOS8E1LZk" target="_blank" rel="noopener noreferrer">
-            <img src={project2} alt="Project 2" className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105" />
-          </a>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <motion.section
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        className="bg-[#7A4DD7] text-white py-24 text-center px-4"
-      >
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Delegate Like a Pro?</h2>
-        <p className="max-w-xl mx-auto text-sm md:text-base mb-6">
-          Let our skilled virtual administrative assistants handle your routine tasks, so you can lead with focus and clarity.
+        <p className="text-gray-600 leading-relaxed">
+          Our Admin Support team takes care of time-consuming tasks so you can
+          focus on growth. From calendar and email management to travel planning
+          and CRM updates, we ensure your operations run like clockwork.
         </p>
-      </motion.section>
+      </div>
+
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {services.map((service, idx) => (
+          <div key={idx} className="flex flex-col items-center text-center">
+            <img
+              src={service.img}
+              alt={service.title}
+              className="w-full h-full object-cover rounded-xl shadow-md"
+            />
+            <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
+            <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
 
       {/* Get in Touch Section */}
       <GetInTouch />

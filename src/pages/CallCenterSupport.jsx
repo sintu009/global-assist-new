@@ -6,7 +6,12 @@ import icon1 from "../assets/icon1.png";
 import icon2 from "../assets/icon2.png";
 import icon3 from "../assets/icon3.png";
 import icon4 from "../assets/icon4.png";
-
+import email from "../assets/email.png";
+import calendar from "../assets/calender.png";
+import work from "../assets/work.png";
+import files from "../assets/files.png";
+import travel from "../assets/travel.png";
+import meet from "../assets/meet.png";
 import GetInTouch from '../components/GetInTouch';
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png"; 
@@ -21,6 +26,41 @@ const fadeUp = {
 };
 
 export default function CallCenterSupport() {
+
+  const services = [
+        {
+          img: email,
+          title: "Email Management",
+          desc: "We declutter, organize, and manage your inbox.",
+        },
+        {
+          img: calendar,
+          title: "Calendar Management",
+          desc: "Never miss a meeting or deadline.",
+        },
+        {
+          img: work,
+          title: "Data Entry Management",
+          desc: "Keep your information accurate and accessible.",
+        },
+        {
+          img: files,
+          title: "Filing & Documentation",
+          desc: "We create, organize, and store your essential files.",
+        },
+        {
+          img: travel,
+          title: "Travel Arrangements",
+          desc: "Plan and book stress-free business travel.",
+        },
+        {
+          img: meet,
+          title: "Project Management",
+          desc: "Keep projects on track and under control.",
+        },
+        // repeat if you want 12 blocks total
+      ];  
+
   return (
     <>
       <Helmet>
@@ -111,49 +151,44 @@ export default function CallCenterSupport() {
         </div>
       </section>
 
-{/* Projects Section */}
-<section className="px-4 max-w-7xl mx-auto py-1">
-  {/* Label */}
-  <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
-    Our Projects
-  </span>
+       <section className="px-6 md:px-12 lg:px-20 py-16 bg-white">
+      {/* Heading */}
+      <div className="text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            Let Us Organize Your Day
+          </span>
+        </h2>
+      </div>
 
-  {/* Heading */}
-  <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-    Projects We Have Completed
-  </h2>
+      {/* Intro text */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-52 mb-12">
+        <p className="text-lg font-semibold text-gray-800 leading-relaxed">
+          From managing schedules to automating follow-ups, we handle the
+          following tasks so you can focus on the big picture.
+        </p>
+        <p className="text-gray-600 leading-relaxed">
+          Our Admin Support team takes care of time-consuming tasks so you can
+          focus on growth. From calendar and email management to travel planning
+          and CRM updates, we ensure your operations run like clockwork.
+        </p>
+      </div>
 
-  {/* Subtext */}
-  <p className="text-gray-600 max-w-3xl mb-10 text-sm md:text-base text-left">
-    
-  </p>
-
-  {/* Image Row */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <a
-      href="https://www.youtube.com/watch?v=a0u6YPDFOnU"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
-        src={project2}
-        alt="Project 1"
-        className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
-      />
-    </a>
-    <a
-      href="https://www.youtube.com/watch?v=YggaoyFhNbw"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
-        src={project1}
-        alt="Project 2"
-        className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
-      />
-    </a>
-  </div>
-</section>
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {services.map((service, idx) => (
+          <div key={idx} className="flex flex-col items-center text-center">
+            <img
+              src={service.img}
+              alt={service.title}
+              className="w-full h-full object-cover rounded-xl shadow-md"
+            />
+            <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
+            <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
 
       <div className="mt-24" />
       <GetInTouch />
