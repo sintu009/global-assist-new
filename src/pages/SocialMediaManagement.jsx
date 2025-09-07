@@ -19,8 +19,17 @@ import work from "../assets/work.png";
 import files from "../assets/files.png";
 import travel from "../assets/travel.png";
 import meet from "../assets/meet.png";
-
-import GetInTouch from '../components/GetInTouch';
+import HelloSection from '../components/HelloSection';
+import media1 from '../assets/media1.png';
+import media2 from '../assets/media2.png';
+import media3 from '../assets/media3.png';
+import media4 from '../assets/media4.png';
+import media5 from '../assets/media5.png';
+import media6 from '../assets/media6.png';
+import media7 from '../assets/media7.png';
+import media8 from '../assets/media8.png';
+import media9 from '../assets/media9.png';
+// import GetInTouch from '../components/GetInTouch';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -38,39 +47,117 @@ const bubbleFloat = {
   }
 };
 
- const services = [
-      {
-        img: email,
-        title: "Email Management",
-        desc: "We declutter, organize, and manage your inbox.",
-      },
-      {
-        img: calendar,
-        title: "Calendar Management",
-        desc: "Never miss a meeting or deadline.",
-      },
-      {
-        img: work,
-        title: "Data Entry Management",
-        desc: "Keep your information accurate and accessible.",
-      },
-      {
-        img: files,
-        title: "Filing & Documentation",
-        desc: "We create, organize, and store your essential files.",
-      },
-      {
-        img: travel,
-        title: "Travel Arrangements",
-        desc: "Plan and book stress-free business travel.",
-      },
-      {
-        img: meet,
-        title: "Project Management",
-        desc: "Keep projects on track and under control.",
-      },
-      // repeat if you want 12 blocks total
-    ];  
+const services = [
+  {
+    img: media1,
+    title: "Graphic Designing",
+    desc: (
+      <div className="text-left">
+        Visuals that make your brand unforgettable. <br />
+        - Design stunning assets <br />
+        - Align with brand style <br />
+        - Optimize for all platforms
+      </div>
+    ),
+  },
+  {
+    img: media2,
+    title: "Copywriting",
+    desc: (
+      <div className="text-left">
+        Words that sell, engage, and resonate. <br />
+        - Write clear, persuasive copy <br />
+        - Match your brand voice <br />
+        - Craft CTAs that convert
+      </div>
+    ),
+  },
+  {
+    img: media3,
+    title: "Logo Design",
+    desc: (
+      <div className="text-left">
+        Your brand’s identity, brilliantly captured. <br />
+        - Concept to final design <br />
+        - Reflect brand personality <br />
+        - Deliver all formats
+      </div>
+    ),
+  },
+  {
+    img: media4,
+    title: "Infographics Creation",
+    desc: (
+      <div className="text-left">
+        Simplify complex info with great design. <br />
+        - Visual data storytelling <br />
+        - Branded infographic layouts <br />
+        - Designed for easy sharing
+      </div>
+    ),
+  },
+  {
+    img: media5,
+    title: "Brochures, Flyers & Posters",
+    desc: (
+      <div className="text-left">
+        Printed pieces that demand attention. <br />
+        - Design print-ready layouts <br />
+        - Highlight key messages <br />
+        - Customize for any format
+      </div>
+    ),
+  },
+  {
+    img: media6,
+    title: "Developing Marketing Material",
+    desc: (
+      <div className="text-left">
+        Tools that support your sales goals. <br />
+        - Design branded assets <br />
+        - Create consistent themes <br />
+        - Adapt for print/digital
+      </div>
+    ),
+  },
+  {
+    img: media7,
+    title: "Animation & Motion Graphics",
+    desc: (
+      <div className="text-left">
+        Bring your message to life with motion. <br />
+        - Animate text & visuals <br />
+        - Add branding & sound <br />
+        - Create explainer videos
+      </div>
+    ),
+  },
+  {
+    img: media8,
+    title: "Voiceover Services",
+    desc: (
+      <div className="text-left">
+        Professional voices to match your brand tone. <br />
+        - Provide male/female voices <br />
+        - Record in studio quality <br />
+        - Sync with video/audio
+      </div>
+    ),
+  },
+  {
+    img: media9,
+    title: "Web Animation Design",
+    desc: (
+      <div className="text-left">
+        Make your website interactive and alive. <br />
+        - Animate buttons & banners <br />
+        - Add visual effects <br />
+        - Enhance user engagement
+      </div>
+    ),
+  },
+];
+
 
 const SocialMediaManagement = () => {
   const navigate = useNavigate();
@@ -225,48 +312,15 @@ const SocialMediaManagement = () => {
         </motion.div>
       </motion.section>
       
-{/* Projects Section */}
-<section className="px-4 max-w-7xl mx-auto py-1">
-  {/* Label */}
-  <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
-    Our Projects
-  </span>
 
-  {/* Heading */}
-  <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-    Projects We Have Completed
-  </h2>
-
-  {/* Subtext */}
-  <p className="text-gray-600 max-w-3xl mb-10 text-sm md:text-base text-left">
-    
-  </p>
-
-  {/* Image Row */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <a href="https://drive.google.com/drive/folders/1q_JkJ3V1nK6gGMzfABsN5NZQMC2JCpGx" target="_blank" rel="noopener noreferrer">
-      <img
-        src={smmproject1}
-        alt="Project 1"
-        className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] cursor-pointer hover:opacity-80 transition"
-      />
-    </a>
-    <a href="https://drive.google.com/drive/folders/1q_JkJ3V1nK6gGMzfABsN5NZQMC2JCpGx" target="_blank" rel="noopener noreferrer">
-      <img
-        src={smmproject2}
-        alt="Project 2"
-        className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] cursor-pointer hover:opacity-80 transition"
-      />
-    </a>
-  </div>
-</section>
 
    <section className="px-6 md:px-12 lg:px-20 py-16 bg-white">
       {/* Heading */}
       <div className="text-center mb-10">
         <h2 className="text-2xl md:text-3xl font-bold">
           <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Let Us Organize Your Day
+            Creative that connects, converts, and captivates.
+
           </span>
         </h2>
       </div>
@@ -274,13 +328,12 @@ const SocialMediaManagement = () => {
       {/* Intro text */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-52 mb-12">
         <p className="text-lg font-semibold text-gray-800 leading-relaxed">
-          From managing schedules to automating follow-ups, we handle the
-          following tasks so you can focus on the big picture.
+          Our Creative Services bring your brand to life through powerful visuals, compelling words, and meaningful storytelling.
+
         </p>
         <p className="text-gray-600 leading-relaxed">
-          Our Admin Support team takes care of time-consuming tasks so you can
-          focus on growth. From calendar and email management to travel planning
-          and CRM updates, we ensure your operations run like clockwork.
+          Whether you need a logo, a campaign, or an animated video—we craft standout content that inspires action and leaves a lasting impression.
+
         </p>
       </div>
 
@@ -294,14 +347,14 @@ const SocialMediaManagement = () => {
               className="w-full h-full object-cover rounded-xl shadow-md"
             />
             <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
-            <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
+            <p className="text-black text-sm mt-2">{service.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
       <div className="mt-24" />
-      <GetInTouch />
+      <HelloSection />
     </div>
     </>
   );

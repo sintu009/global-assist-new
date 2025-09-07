@@ -24,7 +24,7 @@ const HomePage = () => {
       <HeroHome />
       <ServicesWeOffer />
       <CompetitiveAdvantagesNew />
-      <CompetitiveAdvantages />
+      
       <IniniteLogoSlider />
       <StatsAndReviews />
       <GetInTouch />

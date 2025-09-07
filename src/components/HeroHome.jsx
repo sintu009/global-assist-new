@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import womenhome from "../assets/womenhome.png";
-import peephome from "../assets/peephome.png";
+import womenhome from "../assets/womenhome2.png";
+import peephome from "../assets/peephome2.png";
 
 const HeroHome = () => {
   const navigate = useNavigate();

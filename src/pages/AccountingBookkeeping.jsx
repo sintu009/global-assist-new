@@ -17,6 +17,18 @@ import files from "../assets/files.png";
 import travel from "../assets/travel.png";
 import meet from "../assets/meet.png";
 
+import finance1 from "../assets/finance1.png";
+import finance2 from "../assets/finance2.png";
+import finance3 from "../assets/finance3.png";
+import finance4 from "../assets/finance4.png";
+import finance5 from "../assets/finance5.png";
+import finance6 from "../assets/finance6.png";  
+import finance7 from "../assets/finance7.png";  
+import finance8 from "../assets/finance8.png";
+import finance9 from "../assets/finance9.png";
+
+import HelloSection from "../components/HelloSection";
+
 const fadeFrom = (direction) => ({
   hidden: { opacity: 0, x: direction === "left" ? -60 : 60 },
   visible: {
@@ -29,39 +41,117 @@ const fadeFrom = (direction) => ({
 
 export default function AccountingBookkeeping() {
 
-      const services = [
-      {
-        img: email,
-        title: "Email Management",
-        desc: "We declutter, organize, and manage your inbox.",
-      },
-      {
-        img: calendar,
-        title: "Calendar Management",
-        desc: "Never miss a meeting or deadline.",
-      },
-      {
-        img: work,
-        title: "Data Entry Management",
-        desc: "Keep your information accurate and accessible.",
-      },
-      {
-        img: files,
-        title: "Filing & Documentation",
-        desc: "We create, organize, and store your essential files.",
-      },
-      {
-        img: travel,
-        title: "Travel Arrangements",
-        desc: "Plan and book stress-free business travel.",
-      },
-      {
-        img: meet,
-        title: "Project Management",
-        desc: "Keep projects on track and under control.",
-      },
-      // repeat if you want 12 blocks total
-    ];  
+    const services = [
+  {
+    img: finance1,
+    title: "Bookkeeping",
+    desc: (
+      <div className="text-left">
+        Stay organized with up-to-date records <br />
+        - Record daily transactions <br />
+        - Maintain ledgers & journals <br />
+        - Categorize expenses & income
+      </div>
+    ),
+  },
+  {
+    img: finance2,
+    title: "Financial Reporting",
+    desc: (
+      <div className="text-left">
+        Get a clear picture of your finances <br />
+        - Generate monthly reports <br />
+        - Share performance insights <br />
+        - Create custom financial summaries
+      </div>
+    ),
+  },
+  {
+    img: finance3,
+    title: "Invoices Management",
+    desc: (
+      <div className="text-left">
+        Ensure timely billing and payments <br />
+        - Create & send invoices <br />
+        - Track paid/unpaid bills <br />
+        - Follow up on payments
+      </div>
+    ),
+  },
+  {
+    img: finance4,
+    title: "Bank Reconciliation",
+    desc: (
+      <div className="text-left">
+        Align your books with your bank <br />
+        - Match transactions <br />
+        - Resolve discrepancies <br />
+        - Maintain financial accuracy
+      </div>
+    ),
+  },
+  {
+    img: finance5,
+    title: "Profit & Loss Statements",
+    desc: (
+      <div className="text-left">
+        Understand what’s driving profit <br />
+        - Compile revenue & costs <br />
+        - Analyze net gains/losses <br />
+        - Deliver easy-to-read reports
+      </div>
+    ),
+  },
+  {
+    img: finance6,
+    title: "Financial Forecasting",
+    desc: (
+      <div className="text-left">
+        Plan your growth with confidence <br />
+        - Predict future cash flow <br />
+        - Analyze revenue trends <br />
+        - Guide strategic decisions
+      </div>
+    ),
+  },
+  {
+    img: finance7,
+    title: "Payroll Processing",
+    desc: (
+      <div className="text-left">
+        Pay your team on time, every time <br />
+        - Calculate wages & taxes <br />
+        - Process direct deposits <br />
+        - Handle deductions & compliance
+      </div>
+    ),
+  },
+  {
+    img: finance8,
+    title: "Tax Filing",
+    desc: (
+      <div className="text-left">
+        Stay compliant and stress-free <br />
+        - Prepare necessary forms <br />
+        - File federal/state returns <br />
+        - Maximize deductions legally
+      </div>
+    ),
+  },
+  {
+    img: finance9,
+    title: "Budgeting & Financial Planning",
+    desc: (
+      <div className="text-left">
+        Control your spending, grow with purpose <br />
+        - Set financial goals <br />
+        - Build actionable budgets <br />
+        - Monitor plan vs. actuals
+      </div>
+    ),
+  },
+];
+
 
   return (
     <>
@@ -266,7 +356,7 @@ export default function AccountingBookkeeping() {
       <div className="text-center mb-10">
         <h2 className="text-2xl md:text-3xl font-bold">
           <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Let Us Organize Your Day
+            Smart accounting. Stronger business.
           </span>
         </h2>
       </div>
@@ -274,13 +364,11 @@ export default function AccountingBookkeeping() {
       {/* Intro text */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-52 mb-12">
         <p className="text-lg font-semibold text-gray-800 leading-relaxed">
-          From managing schedules to automating follow-ups, we handle the
-          following tasks so you can focus on the big picture.
+          Precision-driven finance support for smarter business decisions. We handle the numbers so you can focus on growth. 
+
         </p>
         <p className="text-gray-600 leading-relaxed">
-          Our Admin Support team takes care of time-consuming tasks so you can
-          focus on growth. From calendar and email management to travel planning
-          and CRM updates, we ensure your operations run like clockwork.
+          From daily bookkeeping and payroll to forecasting and compliance, our financial experts bring clarity, accuracy, and structure to your operations—helping you stay compliant, profitable, and prepared.
         </p>
       </div>
 
@@ -301,7 +389,7 @@ export default function AccountingBookkeeping() {
     </section>
 
       <div className="mt-24" />
-      <GetInTouch />
+      <HelloSection />
     </>
   );
 }

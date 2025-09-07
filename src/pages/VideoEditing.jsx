@@ -15,56 +15,84 @@ import work from "../assets/work.png";
 import files from "../assets/files.png";
 import travel from "../assets/travel.png";
 import meet from "../assets/meet.png";
+import HelloSection from '../components/HelloSection';
+import video1 from '../assets/video1.png';
+import video2 from '../assets/video2.png';
+import video3 from '../assets/video3.png';
+import video4 from '../assets/video4.png';
+import video5 from '../assets/video5.png';
+import video6 from '../assets/video6.png';
 
+const services = [
+  {
+    img: video1,
+    title: "Basic Video Editing",
+    desc: (
+      <div className="text-left">
+        - Cutting, trimming & merging clips <br />
+        - Adding transitions & smooth flow <br />
+        - Color correction & color grading
+      </div>
+    ),
+  },
+  {
+    img: video2,
+    title: "Creative Enhancements",
+    desc: (
+      <div className="text-left">
+        - Adding titles, subtitles, & captions <br />
+        - Custom intros & outros <br />
+        - Motion graphics & lower thirds
+      </div>
+    ),
+  },
+  {
+    img: video3,
+    title: "Social Media Video Editing",
+    desc: (
+      <div className="text-left">
+        - Reels & TikTok edits (vertical format, trending cuts, music sync) <br />
+        - YouTube shorts & long-form content optimization <br />
+        - Social media ad editing (Facebook, Instagram, LinkedIn, etc.)
+      </div>
+    ),
+  },
+  {
+    img: video4,
+    title: "Branding & Design",
+    desc: (
+      <div className="text-left">
+        - Adding logos, watermarks & brand elements <br />
+        - Branded templates for consistency <br />
+        - Thumbnail creation for YouTube & social media
+      </div>
+    ),
+  },
+  {
+    img: video5,
+    title: "Content-Specific Editing",
+    desc: (
+      <div className="text-left">
+        - Corporate & training videos <br />
+        - Real estate walk-through videos <br />
+        - Event highlights (weddings, parties, conferences) <br />
+        - Podcasts (audio + video edits)
+      </div>
+    ),
+  },
+  {
+    img: video6,
+    title: "Advanced Editing & Production",
+    desc: (
+      <div className="text-left">
+        - Multi-camera editing <br />
+        - Green screen keying <br />
+        - Adding stock footage & music
+      </div>
+    ),
+  },
+];
 
- const services = [
-      {
-        img: email,
-        title: "Email Management",
-        desc: "We declutter, organize, and manage your inbox.",
-      },
-      {
-        img: calendar,
-        title: "Calendar Management",
-        desc: "Never miss a meeting or deadline.",
-      },
-      {
-        img: work,
-        title: "Data Entry Management",
-        desc: "Keep your information accurate and accessible.",
-      },
-      {
-        img: files,
-        title: "Filing & Documentation",
-        desc: "We create, organize, and store your essential files.",
-      },
-      {
-        img: travel,
-        title: "Travel Arrangements",
-        desc: "Plan and book stress-free business travel.",
-      },
-      {
-        img: meet,
-        title: "Project Management",
-        desc: "Keep projects on track and under control.",
-      },
-      {
-        img: files,
-        title: "Filing & Documentation",
-        desc: "We create, organize, and store your essential files.",
-      },
-      {
-        img: travel,
-        title: "Travel Arrangements",
-        desc: "Plan and book stress-free business travel.",
-      },
-      {
-        img: meet,
-        title: "Project Management",
-        desc: "Keep projects on track and under control.",
-      },
-      // repeat if you want 12 blocks total
-    ];  
 
 
 const fadeUpVariant = {
@@ -183,41 +211,7 @@ const VideoEditing = () => {
 </div>
 
 <div className='mt-24'/>
-{/* Projects Section */}
-<section className="px-4 max-w-7xl mx-auto py-1">
-  {/* Label */}
-  <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
-    Our Projects
-  </span>
 
-  {/* Heading */}
-  <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-    Projects We Have Completed
-  </h2>
-
-  {/* Subtext */}
-  <p className="text-gray-600 max-w-3xl mb-10 text-sm md:text-base text-left">
-    
-  </p>
-
-  {/* Image Row */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <a href="https://drive.google.com/drive/folders/1q_JkJ3V1nK6gGMzfABsN5NZQMC2JCpGx" target="_blank" rel="noopener noreferrer">
-      <img
-        src={veproject2}
-        alt="Project 1"
-        className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
-      />
-    </a>
-    <a href="https://drive.google.com/drive/folders/1q_JkJ3V1nK6gGMzfABsN5NZQMC2JCpGx" target="_blank" rel="noopener noreferrer">
-      <img
-        src={veproject1}
-        alt="Project 2"
-        className="rounded-2xl object-cover w-full h-[250px] md:h-[320px] transition hover:scale-105"
-      />
-    </a>
-  </div>
-</section>
 
    <section className="px-6 md:px-12 lg:px-20 py-16 bg-white">
       {/* Heading */}
@@ -252,14 +246,14 @@ const VideoEditing = () => {
               className="w-full h-full object-cover rounded-xl shadow-md"
             />
             <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
-            <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
+            <p className="text-black text-sm mt-2">{service.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
       <div className="mt-24" />
-      <GetInTouch />
+      <HelloSection/>
     </section>
     </>
   );

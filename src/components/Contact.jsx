@@ -4,6 +4,14 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 import contactImage from "../assets/contact-image.png";
 import formBgImage from "../assets/form-bg-new2.jpg";
+import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+
+// ✅ Flag images
+import flagCanada from "../assets/flag-canada.png";
+import flagUSA from "../assets/flag-usa.png";
+import flagPhilippines from "../assets/flag-philippines.png";
+import flagIndia from "../assets/flag-india.png";
+import flagVenezuela from "../assets/flag-venezuela.png";
 
 const Contact = () => {
   const formRef = useRef();
@@ -21,10 +29,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_crrbtt8",      // ✅ EmailJS Service ID
-        "template_ft76liq",     // ✅ EmailJS Template ID
+        "service_crrbtt8", // ✅ Your EmailJS Service ID
+        "template_ft76liq", // ✅ Your EmailJS Template ID
         formRef.current,
-        "JGwllsXmyKjSd6jWG"     // ✅ Public Key
+        "JGwllsXmyKjSd6jWG" // ✅ Your EmailJS Public Key
       )
       .then(() => {
         alert("Message sent successfully!");
@@ -51,21 +59,62 @@ const Contact = () => {
         <div className="absolute inset-0 bg-black opacity-40 z-0 hidden md:block" />
 
         <div className="relative z-10 w-full max-w-md md:max-w-none md:-mt-80 md:ml-20">
-          <p className="text-lg tracking-widest uppercase mb-4 md:text-xl">CONTACT</p>
+          <p className="text-lg tracking-widest uppercase mb-4 md:text-xl">
+            CONTACT
+          </p>
           <h2 className="text-4xl font-bold mb-4 leading-tight md:text-5xl">
             Tell us your requirement.
           </h2>
-          <p className="text-4xl text-gray-200 md:text-3xl mb-0 md:mb-0">
+          <p className="text-4xl text-gray-200 md:text-3xl mb-6">
             We respond within 24 hours
+          </p>
+
+          {/* FLAGS + INFO (Desktop) */}
+          <div className="hidden md:block space-y-4 mt-6">
+            <div className="flex gap-3">
+              <img src={flagCanada} alt="Canada" className="w-25 h-15" />
+              <img src={flagUSA} alt="USA" className="w-25 h-15" />
+              <img src={flagPhilippines} alt="Philippines" className="w-25 h-15" />
+              <img src={flagIndia} alt="India" className="w-25 h-15" />
+              <img src={flagVenezuela} alt="Venezuela" className="w-25 h-15" />
+            </div>
+            <p className="text-xl text-gray-300 flex items-center gap-2">
+              <FaMapMarkerAlt className="inline-block text-pink-400 text-2xl" />
+              5165 Queen Mary Rd – GR-2Unit #101 Montreal, QC H3W 1X7
+            </p>
+            <p className="text-xl text-gray-300 flex items-center gap-2">
+              <FaPhoneAlt className="inline-block text-cyan-400 text-xl" />
+              +1 514-700-7280
+            </p>
+          </div>
+        </div>
+
+        {/* FLAGS + INFO (Mobile) */}
+        <div className="block md:hidden relative z-10 mt-6 space-y-4">
+          <div className="flex gap-3">
+            <img src={flagCanada} alt="Canada" className="w-14 h-9" />
+            <img src={flagUSA} alt="USA" className="w-14 h-9" />
+            <img src={flagPhilippines} alt="Philippines" className="w-14 h-9" />
+            <img src={flagIndia} alt="India" className="w-14 h-9" />
+            <img src={flagVenezuela} alt="Venezuela" className="w-14 h-9" />
+          </div>
+          <p className="text-xl text-gray-300 flex items-center gap-2">
+            <FaMapMarkerAlt className="inline-block text-pink-400 text-2xl" />
+            5165 Queen Mary Rd - GR-2Unit #101 Montreal, QC H3W 1X7
+          </p>
+          <p className="text-xl text-gray-300 flex items-center gap-2">
+            <FaPhoneAlt className="inline-block text-cyan-400 text-xl" />
+            +1 514-700-7280
           </p>
         </div>
       </div>
 
-      {/* RIGHT */}
+      {/* RIGHT (Form) */}
       <div
         className="w-full relative px-6 pt-10 pb-12 flex flex-col items-start justify-start md:items-center md:justify-center md:w-5/12 md:p-10 md:bg-transparent"
         style={{
-          background: "linear-gradient(252.54deg, #6A10E1 -9.68%, #081420 54.48%)",
+          background:
+            "linear-gradient(252.54deg, #6A10E1 -9.68%, #081420 54.48%)",
         }}
       >
         <div
@@ -116,15 +165,27 @@ const Contact = () => {
             required
           >
             <option value="">What service do you need?</option>
-            <option value="Administrative Executive">Administrative Executive</option>
-            <option value="Medical Virtual Assistance">Medical Virtual Assistance</option>
+            <option value="Administrative Executive">
+              Administrative Executive
+            </option>
+            <option value="Medical Virtual Assistance">
+              Medical Virtual Assistance
+            </option>
             <option value="Video Editing">Video Editing</option>
-            <option value="Accounting & Bookkeeping">Accounting & Bookkeeping</option>
-            <option value="Social Media Management">Social Media Management</option>
+            <option value="Accounting & Bookkeeping">
+              Accounting & Bookkeeping
+            </option>
+            <option value="Social Media Management">
+              Social Media Management
+            </option>
             <option value="Leads Generation">Leads Generation</option>
             <option value="Digital Marketing">Digital Marketing</option>
-            <option value="Website & App Development">Website & App Development</option>
-            <option value="Customized CRM Software">Customized CRM Software</option>
+            <option value="Website & App Development">
+              Website & App Development
+            </option>
+            <option value="Customized CRM Software">
+              Customized CRM Software
+            </option>
             <option value="Business Development">Business Development</option>
             <option value="Call Center Support">Call Center Support</option>
             <option value="Others">Others</option>
@@ -159,16 +220,17 @@ const Contact = () => {
             <label className="flex items-start gap-2">
               <input type="checkbox" name="sms_consent" className="mt-1" required />
               <span>
-                I Consent to Receive SMS Notifications, Alerts from Global Assist Inc. Message
-                frequency varies. Message & data rates may apply. Text HELP to (438) 408-6799
-                for assistance. You can reply STOP to unsubscribe at any time.
+                I Consent to Receive SMS Notifications, Alerts from Global Assist
+                Inc. Message frequency varies. Message & data rates may apply. Text
+                HELP to (438) 408-6799 for assistance. You can reply STOP to
+                unsubscribe at any time.
               </span>
             </label>
             <label className="flex items-start gap-2">
               <input type="checkbox" name="marketing_consent" className="mt-1" required />
               <span>
-                By checking this box I agree to receive occasional marketing messages from
-                Global Assist Inc.
+                By checking this box I agree to receive occasional marketing
+                messages from Global Assist Inc.
               </span>
             </label>
 

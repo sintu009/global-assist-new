@@ -13,6 +13,16 @@ import smm4 from "../assets/website3.png";
 import smm5 from "../assets/website4.png";
 import GetInTouch from "../components/GetInTouch";
 import bgLines from "../assets/bg-lines.png";
+import web1 from "../assets/web1.png";
+import web2 from "../assets/web2.png";
+import web3 from "../assets/web3.png";
+import web4 from "../assets/web4.png";
+import web5 from "../assets/web5.png";
+import web6 from "../assets/web6.png";
+import web7 from "../assets/web7.png";
+import web8 from "../assets/web8.png";
+import web9 from "../assets/web9.png";
+import HelloSection from "../components/HelloSection";
 
 // Animation wrapper
 const FadeInSection = ({ children }) => {
@@ -30,6 +40,117 @@ const FadeInSection = ({ children }) => {
 };
 
 const WebsiteAppDevelopment = () => {
+  const services = [
+  {
+    img: web1,
+    title: "Website Maintenance",
+    desc: (
+      <div className="text-left">
+        Keep your site secure, smooth, and updated. <br />
+        - Monitor & fix bugs <br />
+        - Update plugins/themes <br />
+        - Perform regular backups
+      </div>
+    ),
+  },
+  {
+    img: web2,
+    title: "Redesigning Website",
+    desc: (
+      <div className="text-left">
+        Modern design with conversion in mind. <br />
+        - Revamp outdated UI/UX <br />
+        - Align with brand identity <br />
+        - Improve user navigation
+      </div>
+    ),
+  },
+  {
+    img: web3,
+    title: "Content Update & Optimization",
+    desc: (
+      <div className="text-left">
+        Keep your site fresh and search-ready. <br />
+        - Update outdated info <br />
+        - Improve keyword placement <br />
+        - Optimize readability & flow
+      </div>
+    ),
+  },
+  {
+    img: web4,
+    title: "Blog Writing",
+    desc: (
+      <div className="text-left">
+        Drive traffic with valuable content. <br />
+        - Write SEO-optimized blogs <br />
+        - Target audience-specific topics <br />
+        - Maintain brand tone & voice
+      </div>
+    ),
+  },
+  {
+    img: web5,
+    title: "Product Listings",
+    desc: (
+      <div className="text-left">
+        Showcase your offerings effectively. <br />
+        - Add/update product details <br />
+        - Optimize titles & descriptions <br />
+        - Upload images & pricing
+      </div>
+    ),
+  },
+  {
+    img: web6,
+    title: "E-Commerce Integration & Optimization",
+    desc: (
+      <div className="text-left">
+        Boost store performance & user flow. <br />
+        - Connect payment gateways <br />
+        - Improve checkout experience <br />
+        - Sync inventory & logistics
+      </div>
+    ),
+  },
+  {
+    img: web7,
+    title: "Content Management System (CMS)",
+    desc: (
+      <div className="text-left">
+        Manage content without the tech hassle. <br />
+        - Set up or update CMS <br />
+        - Organize site structure <br />
+        - Provide content access control
+      </div>
+    ),
+  },
+  {
+    img: web8,
+    title: "SEO Optimization",
+    desc: (
+      <div className="text-left">
+        Make your site Google’s favorite. <br />
+        - Fix on-page SEO issues <br />
+        - Improve metadata & tags <br />
+        - Speed up load times
+      </div>
+    ),
+  },
+  {
+    img: web9,
+    title: "Custom Web Development",
+    desc: (
+      <div className="text-left">
+        Tailored features to match your vision. <br />
+        - Build unique site elements <br />
+        - Add custom functionality <br />
+        - Ensure mobile responsiveness
+      </div>
+    ),
+  },
+];
+
   return (
     <div className="font-roboto text-[#0f0e1b] bg-white">
 
@@ -139,27 +260,7 @@ const WebsiteAppDevelopment = () => {
 
       {/* PORTFOLIO */}
       <FadeInSection>
-        <section className="bg-white py-20 px-6 text-[#0f0e1b] max-w-[1280px] mx-auto font-['Roboto']">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-snug">
-                OUR WEBSITE DEVELOPMENT <br /> SERVICES PORTFOLIO
-              </h2>
-              <p className="mb-4 text-[17px] text-[#797979] leading-relaxed">
-                Over the years, we've partnered with diverse industries, crafting impactful websites that boost online presence. Here are some standout projects:
-              </p>
-              <ul className="list-disc pl-5 space-y-2 text-[17px] text-gray-800 leading-relaxed">
-                <li><strong>Fashion Brand E-Commerce:</strong>Our visually stunning site integrates secure payments, offering easy browsing and purchasing.</li>
-                <li><strong>Consulting Firm Redesign:</strong>We revamped a dated site with a professional design, enhancing UX and service display.</li>
-                <li><strong>Restaurant Website:</strong>Our responsive design includes menus, reservations, and social integration for seamless access and ordering.</li>
-                <li><strong>Portfolio Showcase:</strong>We created a sleek showcase of our projects, highlighting diverse design and functionality expertise.</li>
-              </ul>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <img src={portfolio} alt="Portfolio" className="w-full max-w-[500px]" />
-            </div>
-          </div>
-        </section>
+  {/* Projects/Portfolio section removed as requested */}
       </FadeInSection>
 
       {/* GET STARTED */}
@@ -183,91 +284,47 @@ const WebsiteAppDevelopment = () => {
         </section>
       </FadeInSection>
 
-      {/* OUR PROJECTS */}
-<section className="px-4 max-w-7xl mx-auto py-1">
-  <span className="text-xs font-semibold text-[#7A4DD7] bg-[#F1EBFF] px-4 py-1 rounded-full inline-block mb-4">
-    Our Projects
-  </span>
-  <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#0A0D17] mb-4">
-    Projects We Have Done
-  </h2>
-  <p className="text-gray-600 max-w-3xl mb-10 text-sm md:text-base text-left">
-    Our work spans industries and continents — from high-end fashion to investment platforms.
-  </p>
-
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-    {/* Project 1 */}
-    <a
-      href="https://btipartners.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative group overflow-hidden rounded-2xl"
-    >
-      <img
-        src={smm5}
-        alt="BTI Partners"
-        className="object-cover w-full h-full"
-      />
-      <div className="absolute inset-0 backdrop-blur-sm bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center text-white text-sm px-3 text-center">
-        BTI Partners – Real estate investment & development firm
+      
+<section className="px-6 md:px-12 lg:px-20 py-16 bg-white">
+      {/* Heading */}
+      <div className="text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            We transform outdated, slow, or underperforming websites into<br/>modern, high-converting digital experiences.
+          </span>
+        </h2>
       </div>
-    </a>
 
-    {/* Project 2 */}
-    <a
-      href="https://melrosecapital.ae/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative group overflow-hidden rounded-2xl"
-    >
-      <img
-        src={smm4}
-        alt="Melrose Capital"
-        className="object-cover w-full h-full"
-      />
-      <div className="absolute inset-0 backdrop-blur-sm bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center text-white text-sm px-3 text-center">
-        Melrose Capital – Investment advisory and wealth management
-      </div>
-    </a>
+      {/* Intro text */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-52 mb-12">
+        <p className="text-lg font-semibold text-gray-800 leading-relaxed">
+          From live chat to helpdesk management, we handle every query with professionalism and empathy.
 
-    {/* Project 3 */}
-    <a
-      href="https://www.rhone.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative group overflow-hidden rounded-2xl"
-    >
-      <img
-        src={smm3}
-        alt="Rhone Apparel"
-        className="object-cover w-full h-full"
-      />
-      <div className="absolute inset-0 backdrop-blur-sm bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center text-white text-sm px-3 text-center">
-        Rhone – Premium men’s performance clothing brand
-      </div>
-    </a>
+        </p>
+        <p className="text-gray-600 leading-relaxed">
+          From redesign and mobile optimization to SEO, integrations, and maintenance—we ensure your site works beautifully, looks sharp, and drives results.
 
-    {/* Project 4 */}
-    <a
-      href="https://www.chezly-paris.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative group overflow-hidden rounded-2xl"
-    >
-      <img
-        src={smm2}
-        alt="Chezly Paris"
-        className="object-cover w-full h-full"
-      />
-      <div className="absolute inset-0 backdrop-blur-sm bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center text-white text-sm px-3 text-center">
-        Chezly Paris – French luxury fashion and lifestyle brand
+        </p>
       </div>
-    </a>
-  </div>
-</section>
+
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {services.map((service, idx) => (
+          <div key={idx} className="flex flex-col items-center text-center">
+            <img
+              src={service.img}
+              alt={service.title}
+              className="w-full h-full object-cover rounded-xl shadow-md"
+            />
+            <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
+            <p className="text-black text-sm mt-2">{service.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
 
       <div className="mt-24" />
-      <GetInTouch />
+      <HelloSection />
     </div>
   );
 };

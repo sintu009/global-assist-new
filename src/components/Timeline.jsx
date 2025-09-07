@@ -4,46 +4,46 @@ import aboutbg2 from "../assets/aboutbg2.png";
 
 const timelineData = [
   {
-    year: 2007,
-    title: "Foundation",
+    year: 2012,
+    title: "The Beginning",
     subtitle: "The Journey Begins",
     description:
-      "Global Assist was founded with the vision of transforming the way businesses access virtual assistance worldwide.",
-  },
-  {
-    year: 2009,
-    title: "To Be the World's Most Trusted Virtual Assistant Partner",
-    subtitle: "",
-    description:
-      "At Global Assist, our mission is to be the most trusted global brand in virtual assistance, delivering high-quality, cost-effective business solutions. We empower businesses of all sizes to scale smarter through expertly trained virtual assistants and our 360° support model.",
-  },
-  {
-    year: 2012,
-    title: "Expansion",
-    subtitle: "Global Presence Strengthened",
-    description:
-      "We expanded our operations internationally, providing multilingual support and round-the-clock availability to clients worldwide.",
-  },
-  {
-    year: 2013,
-    title: "Innovation",
-    subtitle: "Tech-driven Growth",
-    description:
-      "Introduced AI-driven tools and advanced project management systems to streamline operations and boost productivity.",
+      "Our story started in 2012 with a vision to provide reliable and efficient virtual assistant services to businesses of all sizes. What began as a small team with big aspirations quickly transformed into a trusted partner for entrepreneurs and growing companies worldwide.",
   },
   {
     year: 2015,
-    title: "Scaling Enterprises",
-    subtitle: "Trusted by Large Organizations",
+    title: "Expanding Horizons",
+    subtitle: "",
     description:
-      "Became the go-to virtual assistance partner for enterprises, managing large-scale projects with tailored support models.",
+      " By 2015, our dedication and proven results opened doors to international markets. We proudly expanded our services to clients in the United States, United Kingdom, and Australia, establishing ourselves as a global virtual assistance provider committed to delivering excellence across borders.",
   },
   {
-    year: 2017,
-    title: "Recognition",
-    subtitle: "Industry Leader",
+    year: 2019,
+    title: "Driving Social Impact",
+    subtitle: "",
     description:
-      "Recognized as one of the leading global providers of virtual assistant services, setting benchmarks for excellence.",
+      "In 2019, we were honored to join Immigrant Women in Business, an initiative that highlights leadership, resilience, and community impact. This milestone reinforced our belief in empowering not just businesses, but also people—especially women—by creating opportunities with meaningful social impact.",
+  },
+  {
+    year: 2021,
+    title: "Trusted by Big Clients",
+    subtitle: "",
+    description:
+      " With years of consistent performance, 2021 marked a turning point as we acquired various big clients under our umbrella. This recognition was not only a testament to our expertise but also to the trust that global brands placed in our team to handle their critical operations.",
+  },
+  {
+    year: 2023,
+    title: "Building Stronger Teams",
+    subtitle: "",
+    description:
+      "By 2023, our growth reached new heights with an employee strength of 80+ highly skilled Virtual Assistants offering round-the-clock support. With a diverse team working across time zones, we ensured our clients received uninterrupted service and seamless operations.",
+  },
+  {
+    year: 2025,
+    title: "Global Recognition",
+    subtitle: "",
+    description:
+      "Today, in 2025, our journey has earned us global recognition. Being featured in Digital Journal is not just an achievement but a reflection of the value we bring to our clients and the impact we continue to create in the virtual assistance industry.",
   },
 ];
 

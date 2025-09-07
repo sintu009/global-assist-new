@@ -6,8 +6,18 @@ import dm2 from "../assets/dm2.png";
 import dm3 from "../assets/dm3.png";
 import dm4 from "../assets/dm4.png";
 import dm5 from "../assets/dm5.png";
-import dmproject1 from "../assets/dmproject1.png";
-import dmproject2 from "../assets/dmproject2.png";
+import dm01 from "../assets/dm01.png";
+import dm02 from "../assets/dm02.png";
+import dm03 from "../assets/dm03.png";
+import dm04 from "../assets/dm04.png";
+import dm05 from "../assets/dm05.png";
+import dm06 from "../assets/dm06.png";
+import dm07 from "../assets/dm07.png";
+import dm08 from "../assets/dm08.png";
+import dm09 from "../assets/dm09.png";
+import dm10 from "../assets/dm10.png";
+import dm11 from "../assets/dm11.png";
+import dm12 from "../assets/dm12.png";
 import GetInTouch from "../components/GetInTouch";
 import { CalendarDays, Mail } from "lucide-react";
 import dmBg from "../assets/dm-bg.png";
@@ -17,6 +27,8 @@ import work from "../assets/work.png";
 import files from "../assets/files.png";
 import travel from "../assets/travel.png";
 import meet from "../assets/meet.png";
+import HelloSection from "../components/HelloSection";
+
 
 // Animation variants
 const fadeUp = {
@@ -36,39 +48,153 @@ const slideInRight = {
 
 const DigitalMarketing = () => {
 
-  const services = [
-        {
-          img: email,
-          title: "Email Management",
-          desc: "We declutter, organize, and manage your inbox.",
-        },
-        {
-          img: calendar,
-          title: "Calendar Management",
-          desc: "Never miss a meeting or deadline.",
-        },
-        {
-          img: work,
-          title: "Data Entry Management",
-          desc: "Keep your information accurate and accessible.",
-        },
-        {
-          img: files,
-          title: "Filing & Documentation",
-          desc: "We create, organize, and store your essential files.",
-        },
-        {
-          img: travel,
-          title: "Travel Arrangements",
-          desc: "Plan and book stress-free business travel.",
-        },
-        {
-          img: meet,
-          title: "Project Management",
-          desc: "Keep projects on track and under control.",
-        },
-        // repeat if you want 12 blocks total
-      ];  
+const services = [
+  {
+    img: dm01,
+    title: "Social Media Management",
+    desc: (
+      <div className="text-left">
+        We grow your presence, engagement & brand identity. <br />
+        - Schedule & publish content <br />
+        - Manage comments & DMs <br />
+        - Analyze performance metrics
+      </div>
+    ),
+  },
+  {
+    img: dm02,
+    title: "Graphics, Video & Content Creation",
+    desc: (
+      <div className="text-left">
+        Visuals that inspire, inform & convert. <br />
+        - Design scroll-stopping graphics <br />
+        - Edit brand-driven videos <br />
+        - Create compelling content
+      </div>
+    ),
+  },
+  {
+    img: dm03,
+    title: "Facebook Marketplace",
+    desc: (
+      <div className="text-left">
+        Sell more through a highly active platform. <br />
+        - Post and optimize listings <br />
+        - Respond to buyer inquiries <br />
+        - Track conversions & interest
+      </div>
+    ),
+  },
+  {
+    img: dm04,
+    title: "Instagram Business",
+    desc: (
+      <div className="text-left">
+        Turn your feed into a sales funnel. <br />
+        - Set up & optimize profile <br />
+        - Create & schedule posts/stories <br />
+        - Analyze engagement data
+      </div>
+    ),
+  },
+  {
+    img: dm05,
+    title: "Social Media Advertising",
+    desc: (
+      <div className="text-left">
+        Targeted ads that drive real ROI. <br />
+        - Build ad creatives <br />
+        - Set audience targeting <br />
+        - Optimize for performance
+      </div>
+    ),
+  },
+  {
+    img: dm06,
+    title: "Influencer Outreach & Collaboration",
+    desc: (
+      <div className="text-left">
+        Partner with the voices your audience trusts. <br />
+        - Identify aligned influencers <br />
+        - Pitch & negotiate deals <br />
+        - Track engagement & reach
+      </div>
+    ),
+  },
+  {
+    img: dm07,
+    title: "SEO",
+    desc: (
+      <div className="text-left">
+        Rank higher, get found faster. <br />
+        - On-page SEO optimization <br />
+        - Technical SEO audits <br />
+        - Backlink & authority building
+      </div>
+    ),
+  },
+  {
+    img: dm08,
+    title: "Email Marketing",
+    desc: (
+      <div className="text-left">
+        Engaging emails that convert and retain. <br />
+        - Design & write campaigns <br />
+        - Segment audience lists <br />
+        - Analyze open & click rates
+      </div>
+    ),
+  },
+  {
+    img: dm09,
+    title: "Automations",
+    desc: (
+      <div className="text-left">
+        Let marketing work while you sleep. <br />
+        - Set up email flows <br />
+        - Create nurture sequences <br />
+        - Trigger smart actions
+      </div>
+    ),
+  },
+  {
+    img: dm10,
+    title: "Paid Ads (Google Ads, PPC)",
+    desc: (
+      <div className="text-left">
+        Maximize traffic, leads & sales. <br />
+        - Set up ad campaigns <br />
+        - Optimize keywords & bids <br />
+        - Monitor ad performance
+      </div>
+    ),
+  },
+  {
+    img: dm11,
+    title: "Lead Magnets",
+    desc: (
+      <div className="text-left">
+        Attract leads with irresistible offers. <br />
+        - Design downloadable assets <br />
+        - Set up delivery funnels <br />
+        - Track downloads & signups
+      </div>
+    ),
+  },
+  {
+    img: dm12,
+    title: "Landing Pages",
+    desc: (
+      <div className="text-left">
+        High-converting pages made to sell. <br />
+        - Design compelling layouts <br />
+        - Write persuasive copy <br />
+        - A/B test for conversions
+      </div>
+    ),
+  },
+];
+
 
   return (
     <>
@@ -203,7 +329,7 @@ const DigitalMarketing = () => {
       <div className="text-center mb-10">
         <h2 className="text-2xl md:text-3xl font-bold">
           <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Let Us Organize Your Day
+            We make growth go viral
           </span>
         </h2>
       </div>
@@ -211,13 +337,10 @@ const DigitalMarketing = () => {
       {/* Intro text */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-52 mb-12">
         <p className="text-lg font-semibold text-gray-800 leading-relaxed">
-          From managing schedules to automating follow-ups, we handle the
-          following tasks so you can focus on the big picture.
+          We craft data-driven digital marketing strategies that <br/>bring your brand to life online.
         </p>
         <p className="text-gray-600 leading-relaxed">
-          Our Admin Support team takes care of time-consuming tasks so you can
-          focus on growth. From calendar and email management to travel planning
-          and CRM updates, we ensure your operations run like clockwork.
+          From SEO and paid ads to social media, content, and funnels—our campaigns are designed to grow your visibility and boost conversions. We don't just get you clicks; we bring you qualified leads. Whether you’re launching or scaling, we’re your creative and analytical partner in digital dominance. Results? We deliver them. Consistently.
         </p>
       </div>
 
@@ -231,7 +354,7 @@ const DigitalMarketing = () => {
               className="w-full h-full object-cover rounded-xl shadow-md"
             />
             <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
-            <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
+            <p className="text-black text-sm mt-2">{service.desc}</p>
           </div>
         ))}
       </div>
@@ -239,7 +362,7 @@ const DigitalMarketing = () => {
 
       {/* Contact Form */}
       <div className="mt-24" />
-      <GetInTouch />
+      <HelloSection/>
     </section>
     </>
   );

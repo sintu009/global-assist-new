@@ -14,6 +14,14 @@ import work from "../assets/work.png";
 import files from "../assets/files.png";
 import travel from "../assets/travel.png";
 import meet from "../assets/meet.png";
+import HelloSection from "../components/HelloSection";
+import as7 from "../assets/as7.png";
+import as8 from "../assets/as8.png";
+import as9 from "../assets/as9.png";
+import as10 from "../assets/as10.png";
+import as11 from "../assets/as11.png";
+import as12 from "../assets/as12.png";
+
 
 const featureCards = [
   {
@@ -46,39 +54,153 @@ const fadeUp = {
 
 export default function AdministrativeExecutive() {
 
-    const services = [
-    {
-      img: email,
-      title: "Email Management",
-      desc: "We declutter, organize, and manage your inbox.",
-    },
-    {
-      img: calendar,
-      title: "Calendar Management",
-      desc: "Never miss a meeting or deadline.",
-    },
-    {
-      img: work,
-      title: "Data Entry Management",
-      desc: "Keep your information accurate and accessible.",
-    },
-    {
-      img: files,
-      title: "Filing & Documentation",
-      desc: "We create, organize, and store your essential files.",
-    },
-    {
-      img: travel,
-      title: "Travel Arrangements",
-      desc: "Plan and book stress-free business travel.",
-    },
-    {
-      img: meet,
-      title: "Project Management",
-      desc: "Keep projects on track and under control.",
-    },
-    // repeat if you want 12 blocks total
-  ];
+const services = [
+  {
+    img: email,
+    title: "Email Management",
+    desc: (
+      <div className="text-left">
+        We declutter, organize, and manage your inbox.<br/>
+        - Sort & prioritize emails <br />
+        - Flag important conversations <br />
+        - Automate responses <br />
+      </div>
+    ),
+  },
+  {
+    img: calendar,
+    title: "Calendar Management",
+    desc: (
+      <div className="text-left">
+        Never miss a meeting or deadline. <br />
+        - Schedule & reschedule events <br />
+        - Set reminders & alerts <br />
+        - Coordinate across time zones
+      </div>
+    ),
+  },
+  {
+    img: work,
+    title: "Data Entry Management",
+    desc: (
+      <div className="text-left">
+        Keep your information accurate and accessible. <br />
+        - Clean & update records <br />
+        - Manage spreadsheets & CRMs <br />
+        - Ensure data accuracy
+      </div>
+    ),
+  },
+  {
+    img: files,
+    title: "Filing & Documentation",
+    desc: (
+      <div className="text-left">
+        We create, organize, and store your essential files. <br />
+        - Draft formal documents <br />
+        - Format & proofread content <br />
+        - Maintain secure archives
+      </div>
+    ),
+  },
+  {
+    img: travel,
+    title: "Travel Arrangements",
+    desc: (
+      <div className="text-left">
+        Plan and book stress-free business travel. <br />
+        - Book flights & hotels <br />
+        - Create travel itineraries <br />
+        - Manage last-minute changes
+      </div>
+    ),
+  },
+  {
+    img: meet,
+    title: "Project Management",
+    desc: (
+      <div className="text-left">
+        Keep projects on track and under control. <br />
+        - Track progress & deadlines <br />
+        - Assign and manage tasks <br />
+        - Coordinate team efforts
+      </div>
+    ),
+  },
+  {
+    img: as7,
+    title: "Research & Reports",
+    desc: (
+      <div className="text-left">
+        Get detailed, data-backed insights quickly. <br />
+        - Market and competitor research <br />
+        - Custom report generation <br />
+        - Summarize complex data
+      </div>
+    ),
+  },
+  {
+    img: as8,
+    title: "CRM Management",
+    desc: (
+      <div className="text-left">
+        Keep your client relationships organized and updated. <br />
+        - Manage contacts & leads <br />
+        - Monitor engagement history <br />
+        - Clean & update records
+      </div>
+    ),
+  },
+  {
+    img: as9,
+    title: "Lead Generation",
+    desc: (
+      <div className="text-left">
+        Identify and deliver quality leads. <br />
+        - Research prospects <br />
+        - Build lead lists <br />
+        - Qualify potential customers
+      </div>
+    ),
+  },
+  {
+    img: as10,
+    title: "Transaction Coordination",
+    desc: (
+      <div className="text-left">
+        Streamline deals and documentation from start to close. <br />
+        - Track paperwork & deadlines <br />
+        - Liaise with all stakeholders <br />
+        - Manage contract logistics
+      </div>
+    ),
+  },
+  {
+    img: as11,
+    title: "Proposal Drafting",
+    desc: (
+      <div className="text-left">
+        Craft compelling proposals that win business. <br />
+        - Write & format proposals <br />
+        - Tailor content to client <br />
+        - Ensure timely delivery
+      </div>
+    ),
+  },
+  {
+    img: as12,
+    title: "Minutes of the Meeting",
+    desc: (
+      <div className="text-left">
+        Accurate meeting summaries for clear communication. <br />
+        - Record key discussion points <br />
+        - Highlight action items <br />
+        - Distribute final minutes
+      </div>
+    ),
+  },
+];
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -174,7 +296,7 @@ export default function AdministrativeExecutive() {
         </p>
         <p className="text-gray-600 leading-relaxed">
           Our Admin Support team takes care of time-consuming tasks so you can
-          focus on growth. From calendar and email management to travel planning
+          focus on growth.<br/>From calendar and email management to travel planning
           and CRM updates, we ensure your operations run like clockwork.
         </p>
       </div>
@@ -189,14 +311,15 @@ export default function AdministrativeExecutive() {
               className="w-full h-full object-cover rounded-xl shadow-md"
             />
             <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
-            <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
+            <p className="text-black text-sm mt-2">{service.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
       {/* Get in Touch Section */}
-      <GetInTouch />
+
+      <HelloSection />
     </div>
     </>
   );

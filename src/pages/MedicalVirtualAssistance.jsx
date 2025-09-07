@@ -14,7 +14,13 @@ import work from "../assets/work.png";
 import files from "../assets/files.png";
 import travel from "../assets/travel.png";
 import meet from "../assets/meet.png";
-
+import HelloSection from "../components/HelloSection";
+import medical1 from "../assets/medical1.png";
+import medical2 from "../assets/medical2.png";
+import medical3 from "../assets/medical3.png";
+import medical4 from "../assets/medical4.png";
+import medical5 from "../assets/medical5.png";
+import medical6 from "../assets/medical6.png";
 
 const features = [
   {
@@ -39,39 +45,75 @@ const features = [
   },
 ];
 
- const services = [
-      {
-        img: email,
-        title: "Email Management",
-        desc: "We declutter, organize, and manage your inbox.",
-      },
-      {
-        img: calendar,
-        title: "Calendar Management",
-        desc: "Never miss a meeting or deadline.",
-      },
-      {
-        img: work,
-        title: "Data Entry Management",
-        desc: "Keep your information accurate and accessible.",
-      },
-      {
-        img: files,
-        title: "Filing & Documentation",
-        desc: "We create, organize, and store your essential files.",
-      },
-      {
-        img: travel,
-        title: "Travel Arrangements",
-        desc: "Plan and book stress-free business travel.",
-      },
-      {
-        img: meet,
-        title: "Project Management",
-        desc: "Keep projects on track and under control.",
-      },
-      // repeat if you want 12 blocks total
-    ];  
+const services = [
+  {
+    img: medical1,
+    title: "Administrative & Scheduling Support",
+    desc: (
+      <div className="text-left">
+        Appointment scheduling & rescheduling <br />
+        - Calendar management for doctors and staff <br />
+        - Patient reminder calls, texts, or emails
+      </div>
+    ),
+  },
+  {
+    img: medical2,
+    title: "Patient Communication & Front Desk Support",
+    desc: (
+      <div className="text-left">
+        Answering patient calls and emails <br />
+        - Managing live chat or portal inquiries <br />
+        - Patient intake & onboarding
+      </div>
+    ),
+  },
+  {
+    img: medical3,
+    title: "Medical Documentation",
+    desc: (
+      <div className="text-left">
+        Medical transcription (doctor’s dictations, notes, reports) <br />
+        - Updating Electronic Health Records (EHR/EMR) <br />
+        - Preparing discharge summaries & referral letters
+      </div>
+    ),
+  },
+  {
+    img: medical4,
+    title: "Billing & Insurance Support",
+    desc: (
+      <div className="text-left">
+        Medical billing & coding support (CPT/ICD codes) <br />
+        - Claims submission & follow-ups with insurance companies <br />
+        - Verifying insurance eligibility
+      </div>
+    ),
+  },
+  {
+    img: medical5,
+    title: "Back-Office & Data Management",
+    desc: (
+      <div className="text-left">
+        Data entry for patient records & medical forms <br />
+        - Managing lab reports and test results <br />
+        - Organizing medical documentation & compliance records
+      </div>
+    ),
+  },
+  {
+    img: medical6,
+    title: "Telehealth Assistance",
+    desc: (
+      <div className="text-left">
+        Setting up telemedicine appointments <br />
+        - Assisting patients with video consultations <br />
+        - Troubleshooting patient login/tech issues
+      </div>
+    ),
+  },
+];
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -174,7 +216,7 @@ function MedicalVirtualAssistance() {
       <div className="text-center mb-10">
         <h2 className="text-2xl md:text-3xl font-bold">
           <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Let Us Organize Your Day
+            Your Virtual Partner in Patient-Centered Care
           </span>
         </h2>
       </div>
@@ -202,12 +244,12 @@ function MedicalVirtualAssistance() {
               className="w-full h-full object-cover rounded-xl shadow-md"
             />
             <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
-            <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
+            <p className="text-black text-sm mt-2">{service.desc}</p>
           </div>
         ))}
       </div>
     </section>
-        <GetInTouch />
+        <HelloSection/>
       </motion.div>
     </div>
     </> 

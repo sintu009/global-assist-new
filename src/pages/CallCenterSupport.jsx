@@ -6,15 +6,14 @@ import icon1 from "../assets/icon1.png";
 import icon2 from "../assets/icon2.png";
 import icon3 from "../assets/icon3.png";
 import icon4 from "../assets/icon4.png";
-import email from "../assets/email.png";
-import calendar from "../assets/calender.png";
-import work from "../assets/work.png";
-import files from "../assets/files.png";
-import travel from "../assets/travel.png";
-import meet from "../assets/meet.png";
+import HelloSection from "../components/HelloSection";
 import GetInTouch from '../components/GetInTouch';
-import project1 from "../assets/project1.png";
-import project2 from "../assets/project2.png"; 
+import ccs1 from "../assets/ccs1.png";
+import ccs2 from "../assets/ccs2.png";
+import ccs3 from "../assets/ccs3.png";
+import ccs4 from "../assets/ccs4.png";
+import ccs5 from "../assets/ccs5.png";
+import ccs6 from "../assets/ccs6.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -27,39 +26,81 @@ const fadeUp = {
 
 export default function CallCenterSupport() {
 
-  const services = [
-        {
-          img: email,
-          title: "Email Management",
-          desc: "We declutter, organize, and manage your inbox.",
-        },
-        {
-          img: calendar,
-          title: "Calendar Management",
-          desc: "Never miss a meeting or deadline.",
-        },
-        {
-          img: work,
-          title: "Data Entry Management",
-          desc: "Keep your information accurate and accessible.",
-        },
-        {
-          img: files,
-          title: "Filing & Documentation",
-          desc: "We create, organize, and store your essential files.",
-        },
-        {
-          img: travel,
-          title: "Travel Arrangements",
-          desc: "Plan and book stress-free business travel.",
-        },
-        {
-          img: meet,
-          title: "Project Management",
-          desc: "Keep projects on track and under control.",
-        },
-        // repeat if you want 12 blocks total
-      ];  
+const services = [
+  {
+    img: ccs1,
+    title: "Answer & Route Calls",
+    desc: (
+      <div className="text-left">
+        We manage your call flow with professionalism. <br />
+        - Make customer follow-ups <br />
+        - Track call performance <br />
+        - Inbound & Outbound Call Support
+      </div>
+    ),
+  },
+  {
+    img: ccs2,
+    title: "Real-time Chat Handling",
+    desc: (
+      <div className="text-left">
+        Instant answers, better conversions. <br />
+        - Respond to customer queries <br />
+        - Offer 24/7 assistance <br />
+        - Live Chat Support
+      </div>
+    ),
+  },
+  {
+    img: ccs3,
+    title: "Answering Phone Calls",
+    desc: (
+      <div className="text-left">
+        Greet customers warmly. <br />
+        - Resolve basic inquiries <br />
+        - Forward important calls <br />
+        - Friendly, fast, and brand-aligned service
+      </div>
+    ),
+  },
+  {
+    img: ccs4,
+    title: "Appointment Setting",
+    desc: (
+      <div className="text-left">
+        Let us handle your bookings and scheduling. <br />
+        - Confirm appointments <br />
+        - Send reminders & follow-ups <br />
+        - Manage calendar slots
+      </div>
+    ),
+  },
+  {
+    img: ccs5,
+    title: "Database Maintenance",
+    desc: (
+      <div className="text-left">
+        Keep customer data accurate and clean. <br />
+        - Update contact records <br />
+        - Remove duplicates <br />
+        - Organize segmented lists
+      </div>
+    ),
+  },
+  {
+    img: ccs6,
+    title: "Lead Nurturing",
+    desc: (
+      <div className="text-left">
+        Turn prospects into loyal customers. <br />
+        - Follow-up via email/call <br />
+        - Share helpful content <br />
+        - Build trust over time
+      </div>
+    ),
+  },
+];
+
 
   return (
     <>
@@ -156,7 +197,7 @@ export default function CallCenterSupport() {
       <div className="text-center mb-10">
         <h2 className="text-2xl md:text-3xl font-bold">
           <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Let Us Organize Your Day
+            Talk to Our Expert
           </span>
         </h2>
       </div>
@@ -164,13 +205,12 @@ export default function CallCenterSupport() {
       {/* Intro text */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-52 mb-12">
         <p className="text-lg font-semibold text-gray-800 leading-relaxed">
-          From managing schedules to automating follow-ups, we handle the
-          following tasks so you can focus on the big picture.
+          From live chat to helpdesk management, we handle every query with professionalism and empathy.
+
         </p>
         <p className="text-gray-600 leading-relaxed">
-          Our Admin Support team takes care of time-consuming tasks so you can
-          focus on growth. From calendar and email management to travel planning
-          and CRM updates, we ensure your operations run like clockwork.
+          We represent your brand with care, speed, and precision. Customer service isn’t a department—it’s your brand promise. We help you<br/>keep it.
+
         </p>
       </div>
 
@@ -184,14 +224,14 @@ export default function CallCenterSupport() {
               className="w-full h-full object-cover rounded-xl shadow-md"
             />
             <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
-            <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
+            <p className="text-black text-sm mt-2">{service.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
       <div className="mt-24" />
-      <GetInTouch />
+      <HelloSection />
     </div>
     </>
   );

@@ -166,7 +166,7 @@ const ServicesWeOffer = () => {
   return (
     <div className="bg-white text-black font-['Roboto']">
       <div className="text-center pt-24 pb-12">
-        <p className="text-xl md:text-3xl text-gray-800 font-normal">
+        <p className="text-3xl md:text-6xl text-gray-800 font-bold">
           The services we offer
         </p>
       </div>
