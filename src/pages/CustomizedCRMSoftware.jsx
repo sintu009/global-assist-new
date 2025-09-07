@@ -17,6 +17,7 @@ import meet from "../assets/meet.png";
 import GetInTouch from "../components/GetInTouch";
 import project1 from "../assets/CRMproject1.png";
 import project2 from "../assets/CRMproject2.png";
+import HelloSection from "../components/HelloSection";
 
 // Animation variant
 const fadeUp = {
@@ -177,47 +178,10 @@ export default function CustomizedCRMSoftware() {
 </section>
 
 
-       <section className="px-6 md:px-12 lg:px-20 py-16 bg-white">
-      {/* Heading */}
-      <div className="text-center mb-10">
-        <h2 className="text-2xl md:text-3xl font-bold">
-          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Let Us Organize Your Day
-          </span>
-        </h2>
-      </div>
-
-      {/* Intro text */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-52 mb-12">
-        <p className="text-lg font-semibold text-gray-800 leading-relaxed">
-          From managing schedules to automating follow-ups, we handle the
-          following tasks so you can focus on the big picture.
-        </p>
-        <p className="text-gray-600 leading-relaxed">
-          Our Admin Support team takes care of time-consuming tasks so you can
-          focus on growth. From calendar and email management to travel planning
-          and CRM updates, we ensure your operations run like clockwork.
-        </p>
-      </div>
-
-      {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {services.map((service, idx) => (
-          <div key={idx} className="flex flex-col items-center text-center">
-            <img
-              src={service.img}
-              alt={service.title}
-              className="w-full h-full object-cover rounded-xl shadow-md"
-            />
-            <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
-            <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+      
 
       <div className="mt-24" />
-      <GetInTouch />
+      <HelloSection />
     </div>
     </>
   );

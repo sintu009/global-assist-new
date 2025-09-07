@@ -243,7 +243,7 @@ const VideoEditing = () => {
             <img
               src={service.img}
               alt={service.title}
-              className="w-full h-full object-cover rounded-xl shadow-md"
+              className="w-full h-78 object-cover rounded-xl shadow-md"
             />
             <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
             <p className="text-black text-sm mt-2">{service.desc}</p>
