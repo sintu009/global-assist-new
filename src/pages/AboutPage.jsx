@@ -8,6 +8,7 @@ import MissionVision from '../components/MissionVision';
 import Timeline from '../components/Timeline';
 import FooterNew from '../components/FooterNew';
 import Founder from '../components/Founder';
+import TeamSection from '../components/TeamSection';
 
 const AboutPage = () => {
   return (
@@ -18,9 +19,10 @@ const AboutPage = () => {
       <MissionVision />
       <Timeline />
       
-      <OurTeamSection/>
+      {/* <OurTeamSection/> */}
       <DepartmentsSection />
-      <GetInTouch/>
+      {/* <GetInTouch/> */}
+      <TeamSection/>
       
     </div>
   );

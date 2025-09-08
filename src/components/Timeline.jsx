@@ -57,13 +57,13 @@ export default function Timeline() {
         <img src={aboutbg1} alt="About Background 1" className="w-full h-[40vh] md:h-screen object-cover" />
        <div className="absolute inset-0 flex flex-col items-center 
                 justify-center md:justify-start 
-                md:pt-[20vh] lg:pt-[30vh] text-black">
-  <h2 className="text-7xl lg:text-9xl lg:mb-70 sm:mb-10 drop-shadow-lg">
-    TIMELINE
+                md:pt-[20vh] lg:pt-[15vh] text-black z-10">
+  <h2 className="text-6xl lg:text-9xl lg:mb-70 font- text-center sm:mb-10 drop-shadow-lg">
+    JOURNEY OF<br/>GLOBAL ASSIST
   </h2>
   <p className="text-3xl lg:text-5xl drop-shadow-md">
-    <span className="text-purple-500">Milestones </span>
-    <span className="text-sky-400">That Made Us</span>
+    <span className="gradient-shine">Milestones That Made Us </span>
+    
   </p>
 </div>
 
@@ -99,8 +99,8 @@ export default function Timeline() {
       >
         {/* Year */}
         <p
-          className={`mb-3 text-sm font-medium ${
-            index === activeIndex ? "text-white" : "text-gray-400"
+          className={`mb-3 text-sm font-medium gradient-shine ${
+            index === activeIndex ? "" : "text-gray-400"
           }`}
         >
           {item.year}
@@ -130,7 +130,7 @@ export default function Timeline() {
       <div className="mt-16 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left side */}
         <div>
-          <h3 className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+          <h3 className="text-5xl font-bold gradient-shine bg-clip-text text-transparent">
             {timelineData[activeIndex].year}
           </h3>
           <h4 className="text-3xl font-semibold mt-4">

@@ -36,7 +36,7 @@ const DepartmentsSection = () => {
     <section className="font-roboto w-full bg-white py-16 px-4 md:px-20">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-xl font-semibold text-gray-500 mb-2 uppercase tracking-wide">
-          DEPARTMENTS
+          <span className="gradient-shine">Departments </span>
         </h2>
         {/* Main heading: Not bold for the whole line, "We offer a host" is purple */}
         <h3 className="text-3xl md:text-4xl text-gray-900 mb-0 leading-tight"> {/* Removed font-bold from h3 */}

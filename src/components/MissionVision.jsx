@@ -7,7 +7,7 @@ const MissionVision = () => {
     <section className="w-full flex flex-col relative overflow-hidden">
       {/* Background Text Behind Image */}
       <h1
-        className="absolute top-10 left-1/2 -translate-x-1/2 text-gray-400 
+        className="absolute top-10 left-1/2 -translate-x-1/2 text-purple-800 
         text-7xl sm:text-8xl md:text-9xl lg:text-[12rem] xl:text-[14rem] 
         font-extrabold tracking-widest z-0 opacity-20 text-center leading-tight"
       >
@@ -31,7 +31,8 @@ const MissionVision = () => {
           whileInView={{ opacity: 1, x: 0 }} // animate to visible & centered
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.3 }}
-          className="w-full md:w-1/2 p-10 md:p-20 bg-[#28B3DB] flex flex-col justify-center text-white rounded-3xl"
+          className="w-full md:w-1/2 p-10 md:p-20 bg-gradient-to-r from-[#E90065] to-[#53389E] flex flex-col justify-center text-white rounded-3xl"
+
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
             Our<br />Mission
@@ -59,7 +60,8 @@ const MissionVision = () => {
           whileInView={{ opacity: 1, x: 0 }} // animate to visible & centered
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.3 }}
-          className="w-full md:w-1/2 p-10 md:p-20 bg-[#E4176C] flex flex-col justify-center text-white rounded-3xl"
+          className="w-full md:w-1/2 p-10 md:p-20 bg-gradient-to-r from-[#E90065] to-[#53389E] flex flex-col justify-center text-white rounded-3xl"
+
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
             Our<br />Vision
