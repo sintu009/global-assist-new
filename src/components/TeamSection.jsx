@@ -22,8 +22,8 @@ export default function TeamSection() {
       {/* Heading Section */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16">
         <div className="text-center lg:text-left">
-          <p className="text-sm font-semibold text-purple-600 uppercase tracking-wider">
-            Our Team
+          <p className="text-sm font-semibold uppercase tracking-wider">
+            <span className="gradient-shine">Our Team</span>
           </p>
           <h2 className="text-4xl md:text-4xl font-bold mt-2 text-gray-900">
             Meet the minds shaping <br />
@@ -52,7 +52,7 @@ export default function TeamSection() {
               <img
                 src={member.img}
                 alt={member.name}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] max-w-[360px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] max-w-[360px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-120"
               />
             </div>
             <div className="mt-6 text-center">

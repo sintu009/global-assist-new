@@ -19,7 +19,7 @@ const HelloSection = () => {
           
           {/* Layer 1: The "HELLO!" text. It's the base layer in the grid. */}
           <h1 className="order-1 text-8xl md:text-[180px] lg:text-[240px] font-extrabold md:col-start-1 md:row-start-1 z-0 md:-translate-y-45">
-            <span className="bg-gradient-to-r from-sky-400 via-purple-500 to-pink-600 bg-clip-text text-transparent leading-none">
+            <span className="gradient-shine">
               HELLO!
             </span>
           </h1>

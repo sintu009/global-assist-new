@@ -17,7 +17,7 @@ const rotatingContainerVariants = {
 
 const AboutV1Hero = () => {
   const numCards = 6;
-  const cardDistance = "340px"; // Adjust this value to change the circle's radius
+  const cardDistance = "400px"; // Adjust this value to change the circle's radius
 
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center justify-center text-center px-4 md:px-20">
