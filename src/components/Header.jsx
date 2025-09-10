@@ -32,7 +32,7 @@ const servicesByCategory = {
   'Business Growth & Strategy': [
     { name: 'BUSINESS DEVELOPMENT', path: '/business-development' },
   ],
-  'Creative Services': [
+  'GA Creatives Labs': [
     { name: 'VIDEO EDITING', path: '/video-editing' },
   ],
   'Software & App Development': [
@@ -49,7 +49,7 @@ const categoryIcons = {
   'Digital Marketing Services': <LayoutGrid />,
   'Customer Support & Experience': <Headset />,
   'Business Growth & Strategy': <BarChart2 />,
-  'Creative Services': <Lightbulb />,
+  'GA Creatives Labs': <Lightbulb />,
   'Software & App Development': <Code />,
   'Finance & Accounting': <PiggyBank />,
 };

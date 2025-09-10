@@ -84,6 +84,10 @@ const Contact = () => {
             </p>
             <p className="text-xl text-gray-300 flex items-center gap-2">
               <FaPhoneAlt className="inline-block text-cyan-400 text-xl" />
+              866-450-1441 (Toll Free)
+            </p>
+            <p className="text-xl text-gray-300 flex items-center gap-2">
+              <FaPhoneAlt className="inline-block text-cyan-400 text-xl" />
               +1 514-700-7280
             </p>
           </div>

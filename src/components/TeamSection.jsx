@@ -32,8 +32,7 @@ export default function TeamSection() {
         </div>
         <div className="text-center lg:text-left">
           <p className="text-lg text-gray-600">
-            Meet the talented members of our Business Development team who help
-            drive our growth and deliver tailored virtual assistant solutions.
+            Meet the talented members of our team who help drive our growth and deliver tailored virtual assistant solutions.
           </p>
         </div>
       </div>

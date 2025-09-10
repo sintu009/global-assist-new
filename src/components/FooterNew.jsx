@@ -32,11 +32,11 @@ const FooterNew = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="text-5xl md:text-8xl font-bold leading-snug"
         >
-          <span className="gradient-shine">Simplify,</span>
+          <span className="gradient-shine">Strategy,</span>
           <br />
-          <span className="gradient-shine">Streamline,</span>
+          <span className="gradient-shine">Structure,</span>
           <br />
-          <span className="gradient-shine">Succeed.</span>
+          <span className="gradient-shine">Support.</span>
         </motion.h1>
 
         {/* Right Text */}
