@@ -1,11 +1,29 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion"; // Import motion
 import helloPeople from "../assets/hello-people.png";
+
+// Animation variant for the fade-in effect
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 1.2, ease: "easeOut" } 
+  },
+};
 
 const HelloSection = () => {
   const navigate = useNavigate();
   return (
-    <section className="bg-white py-16 px-4 sm:px-6">
+    // Converted section to a motion component and added animation props
+    <motion.section 
+      className="bg-white py-16 px-4 sm:px-6"
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="max-w-7xl mx-auto text-center">
         <p className="text-2xl font-medium text-gray-800">
           Ready to evaluate your productivity?
@@ -42,7 +60,7 @@ const HelloSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

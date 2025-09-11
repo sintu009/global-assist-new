@@ -13,6 +13,7 @@ import img2 from "../assets/appre2.jpg";
 import img3 from "../assets/appre3.jpg";
 import img4 from "../assets/appre4.jpg";
 import img5 from "../assets/appre5.jpg";
+import HelloSection from "./HelloSection"; // Imported HelloSection
 
 const topic1Items = [
   { title: "Employee Recognition", videoUrl: "https://www.youtube.com/embed/aS-cWExV-gY" },
@@ -49,11 +50,7 @@ const appreciationImages = [img1, img2, img3, img4, img5];
 
 export default function SpectraPlanners() {
   const appreciationScrollRef = useRef(null);
-  const topic1ScrollRef = useRef(null);
   const topic2ScrollRef = useRef(null);
-  const topic3ScrollRef = useRef(null);
-  const topic4ScrollRef = useRef(null);
-  const topic5ScrollRef = useRef(null);
 
   const scroll = (ref, direction) => {
     if (ref?.current) {
@@ -76,48 +73,82 @@ export default function SpectraPlanners() {
         </div>
 
         {/* Topic 01 */}
-        <div className="relative max-w-7xl mx-auto">
-          <button onClick={() => scroll(topic1ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">←</button>
-          <div ref={topic1ScrollRef} className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible scrollbar-hide scroll-smooth">
-            {topic1Items.map((item, index) => (
-              <div key={index} className="bg-white rounded-[32px] p-8 transition duration-300 min-w-[100vw] sm:min-w-0">
-                <div className="w-full h-[240px] md:w-[360px] mb-6 rounded-[24px] overflow-hidden">
-                  <iframe width="100%" height="100%" src={item.videoUrl} title={item.title} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="rounded-[24px]"></iframe>
-                </div>
-                <h3 className="text-[20px] font-bold mb-2">{item.title}</h3>
+        <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
+          {topic1Items.map((item, index) => (
+            <div key={index} className="bg-white rounded-[32px] p-8 transition duration-300 min-w-[100vw] sm:min-w-0">
+              <div className="w-full h-[240px] md:w-[360px] mb-6 rounded-[24px] overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={item.videoUrl}
+                  title={item.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-[24px]"
+                ></iframe>
               </div>
-            ))}
-          </div>
-          <button onClick={() => scroll(topic1ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">→</button>
+              <h3 className="text-[20px] font-bold mb-2">{item.title}</h3>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Topic 02 */}
-      <div className="bg-[#444444] py-4 px-0 md:px-2 text-white">
+      <div className="bg-gradient-to-r from-[#E90065] to-[#53389E] py-4 px-0 md:px-2 text-white">
         <div className="max-w-7xl mx-auto relative">
-          <button onClick={() => scroll(topic2ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full">←</button>
-          <div ref={topic2ScrollRef} className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-2">
+          {/* Scroll Buttons */}
+          <button
+            onClick={() => scroll(topic2ScrollRef, "left")}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-[#E90065] to-[#53389E] text-white px-3 py-2 rounded-full"
+          >
+            ←
+          </button>
+
+          <div
+            ref={topic2ScrollRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-2"
+          >
             {topic2Items.map((item, index) => (
-              <div key={index} className="flex-shrink-0 bg-[#444444] rounded-[32px] p-8 transition duration-300 min-w-[100vw] sm:min-w-0 md:w-[400px]">
+              <div
+                key={index}
+                className="flex-shrink-0 bg-gradient-to-r from-[#E90065] to-[#53389E] rounded-[32px] p-8 transition duration-300 min-w-[100vw] sm:min-w-0 md:w-[400px]"
+              >
                 <div className="w-full h-[240px] md:w-[360px] mb-6 rounded-[24px] overflow-hidden">
-                  <iframe width="100%" height="100%" src={item.videoUrl} title={item.title} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="rounded-[24px]"></iframe>
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={item.videoUrl}
+                    title={item.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-[24px]"
+                  ></iframe>
                 </div>
-                <h3 className="text-[20px] font-bold mb-2 text-white">{item.title}</h3>
+                <h3 className="text-[20px] font-bold mb-2 text-white">
+                  {item.title}
+                </h3>
               </div>
             ))}
           </div>
-          <button onClick={() => scroll(topic2ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full">→</button>
+
+          <button
+            onClick={() => scroll(topic2ScrollRef, "right")}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-[#E90065] to-[#53389E] text-white px-3 py-2 rounded-full"
+          >
+            →
+          </button>
         </div>
       </div>
 
       {/* Topic 03 */}
-      <div className="relative bg-white py-8 px-4">
-        <button onClick={() => scroll(topic3ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">←</button>
-        <div ref={topic3ScrollRef} className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible scrollbar-hide scroll-smooth max-w-7xl mx-auto">
+      <div className="bg-white py-8 px-4">
+        <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
           {topic3Items.map((item, index) => (
             <div key={index} className="bg-white rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
               {item.type === "video" ? (
-                <video controls className="w-full h-[480px] object-fill rounded-[24px] mb-6">
+                <video controls className="w-full h-[480px] object-fill rounded-[24px] mb-6" poster="">
                   <source src={item.video} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -128,28 +159,25 @@ export default function SpectraPlanners() {
             </div>
           ))}
         </div>
-        <button onClick={() => scroll(topic3ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">→</button>
       </div>
 
-      {/* Topic 04 */}
-      <div className="relative bg-[#444444] py-8 px-4 text-white">
-        <button onClick={() => scroll(topic4ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">←</button>
-        <div ref={topic4ScrollRef} className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible scrollbar-hide scroll-smooth max-w-7xl mx-auto">
-          {topic4Items.map((item, index) => (
-            <div key={index} className="bg-[#444444] rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
-              <img src={item.image} alt={item.title} className="w-full h-[440px] object-fill rounded-[24px] mb-6" />
-              <h3 className="text-[20px] font-bold mb-2 text-white">{item.title}</h3>
-              <p className="text-[#CCCCCC] text-[16px] leading-[24px]">{item.description}</p>
-            </div>
-          ))}
-        </div>
-        <button onClick={() => scroll(topic4ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">→</button>
+     {/* Topic 04 */}
+<div className="bg-gradient-to-r from-[#E90065] to-[#53389E] py-8 px-4 text-white">
+  {/* --- MODIFICATION: Changed gap-6 to gap-10 --- */}
+  <div className="flex flex-row gap-28 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
+    {topic4Items.map((item, index) => (
+      <div key={index} className="bg-gradient-to-r from-[#E90065] to-[#53389E] rounded-[32px] md:w-[440px] p-8 min-w-[100vw] sm:min-w-0">
+        <img src={item.image} alt={item.title} className="w-full h-[440px] object-fill rounded-[24px] mb-6" />
+        <h3 className="text-[20px] font-bold mb-2 text-white">{item.title}</h3>
+        <p className="text-[#CCCCCC] text-[16px] leading-[24px]">{item.description}</p>
       </div>
+    ))}
+  </div>
+</div>
 
       {/* Topic 05 */}
-      <div className="relative bg-white py-8 px-4">
-        <button onClick={() => scroll(topic5ScrollRef, "left")} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">←</button>
-        <div ref={topic5ScrollRef} className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible scrollbar-hide scroll-smooth max-w-7xl mx-auto">
+      <div className="bg-white py-8 px-4">
+        <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
           {topic5Items.map((item, index) => (
             <div key={index} className="bg-white rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
               <img src={item.image} alt={item.title} className="w-full h-[300px] object-fill rounded-[24px] mb-6" />
@@ -158,26 +186,42 @@ export default function SpectraPlanners() {
             </div>
           ))}
         </div>
-        <button onClick={() => scroll(topic5ScrollRef, "right")} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full md:hidden">→</button>
       </div>
 
       {/* Appreciation Moments */}
-      <div className="bg-[#444444] py-10 px-4 text-white">
+      <div className="bg-gradient-to-r from-[#E90065] to-[#53389E] py-10 px-4 text-white">
         <div className="max-w-7xl mx-auto mb-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Appreciation Moments</h2>
           <div className="relative">
-            <button onClick={() => scroll(appreciationScrollRef, "left")} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#333] text-white px-4 py-2 z-10 rounded-full">←</button>
-            <div ref={appreciationScrollRef} className="flex overflow-x-scroll gap-6 scrollbar-hide scroll-smooth px-8">
+            <button
+              onClick={() => scroll(appreciationScrollRef, "left")}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#333] text-white px-4 py-2 z-10 rounded-full"
+            >
+              ←
+            </button>
+            <div
+              ref={appreciationScrollRef}
+              className="flex overflow-x-scroll gap-6 scrollbar-hide scroll-smooth px-8"
+            >
               {appreciationImages.map((img, idx) => (
                 <div key={idx} className="min-w-[260px] md:min-w-[300px] lg:min-w-[360px]">
                   <img src={img} alt={`Appreciation ${idx + 1}`} className="rounded-2xl w-full h-[360px] object-cover" />
                 </div>
               ))}
             </div>
-            <button onClick={() => scroll(appreciationScrollRef, "right")} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#333] text-white px-4 py-2 z-10 rounded-full">→</button>
+            <button
+              onClick={() => scroll(appreciationScrollRef, "right")}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#333] text-white px-4 py-2 z-10 rounded-full"
+            >
+              →
+            </button>
           </div>
         </div>
       </div>
+      
+      {/* HelloSection */}
+      <HelloSection />
+
     </section>
   );
 }

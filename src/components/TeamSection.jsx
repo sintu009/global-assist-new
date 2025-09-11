@@ -15,6 +15,11 @@ export default function TeamSection() {
     { id: 2, name: "Ravneet Kaur", role: "Business Development Manager", box: box2, img: mem2 },
     { id: 3, name: "Gurleen Kaur", role: "Business Development Executive", box: box3, img: mem3 },
     { id: 4, name: "Akshita", role: "Business Development Executive", box: box4, img: mem4 },
+    // Duplicated members to show scrolling
+    { id: 5, name: "Srishti Khatri", role: "Business Head", box: box1, img: mem1 },
+    { id: 6, name: "Ravneet Kaur", role: "Business Development Manager", box: box2, img: mem2 },
+    { id: 7, name: "Gurleen Kaur", role: "Business Development Executive", box: box3, img: mem3 },
+    { id: 8, name: "Akshita", role: "Business Development Executive", box: box4, img: mem4 },
   ];
 
   return (
@@ -22,12 +27,12 @@ export default function TeamSection() {
       {/* Heading Section */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16">
         <div className="text-center lg:text-left">
-          <p className="text-sm font-semibold uppercase tracking-wider">
+          <p className="text-xl font-semibold uppercase tracking-wider">
             <span className="gradient-shine">Our Team</span>
           </p>
-          <h2 className="text-4xl md:text-4xl font-bold mt-2 text-gray-900">
+          <h2 className="text-4xl md:text-4xl font-bold mt-4 text-gray-900">
             Meet the minds shaping <br />
-            <span className="text-purple-700">an industry</span>
+            <span className="gradient-shine">an industry</span>
           </h2>
         </div>
         <div className="text-center lg:text-left">
@@ -37,17 +42,17 @@ export default function TeamSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
+      {/* --- MODIFICATION START: Changed grid to flex container for horizontal scroll --- */}
+      <div className="flex overflow-x-auto gap-10 max-w-7xl mx-auto py-20 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
         {team.map((member) => (
-          // Step 1: Add "group" to the parent container
-          <div key={member.id} className="group flex flex-col items-center">
+          // --- Added flex-shrink-0 and defined widths for each card ---
+          <div key={member.id} className="group flex flex-col items-center flex-shrink-0 w-[70vw] sm:w-[40vw] md:w-[28vw] lg:w-[22vw]">
             <div className="relative w-full">
               <img
                 src={member.box}
                 alt={`Box ${member.id}`}
                 className="w-[95%] rounded-2xl mx-auto"
               />
-              {/* Step 2: Add animation classes and use "group-hover" on the image */}
               <img
                 src={member.img}
                 alt={member.name}
@@ -61,6 +66,7 @@ export default function TeamSection() {
           </div>
         ))}
       </div>
+       {/* --- MODIFICATION END --- */}
     </section>
   );
 }
