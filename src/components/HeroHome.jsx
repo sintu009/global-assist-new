@@ -25,7 +25,7 @@ const HeroHome = () => {
       // Animation loop for smoothing
       const smoothAnimation = () => {
         // Interpolate the current animation value towards the target (scrollY)
-        const smoothness = 0.3; // Increased for a much faster, smoother effect
+        const smoothness = 0.8; // Increased for a much faster, smoother effect
         animatedScrollLeft.current += (scrollY - animatedScrollLeft.current) * smoothness;
         animatedScrollRight.current += (scrollY - animatedScrollRight.current) * smoothness;
 

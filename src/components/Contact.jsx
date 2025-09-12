@@ -106,6 +106,10 @@ const Contact = () => {
             <FaMapMarkerAlt className="inline-block text-pink-400 text-2xl" />
             5165 Queen Mary Rd - GR-2Unit #101 Montreal, QC H3W 1X7
           </p>
+           <p className="text-xl text-gray-300 flex items-center gap-2">
+              <FaPhoneAlt className="inline-block text-cyan-400 text-xl" />
+              866-450-1441 (Toll Free)
+            </p>
           <p className="text-xl text-gray-300 flex items-center gap-2">
             <FaPhoneAlt className="inline-block text-cyan-400 text-xl" />
             +1 514-700-7280

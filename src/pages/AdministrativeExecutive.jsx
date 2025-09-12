@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import adminHero from "../assets/adminHero.png";
 import leftDeco from "../assets/leftDeco.png";
 import rightDeco from "../assets/rightDeco.png";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import project1 from "../assets/project1.png";
-import project2 from "../assets/adminproject.png";
 import GetInTouch from '../components/GetInTouch';
 import email from "../assets/email.png";
 import calendar from "../assets/calender.png";
@@ -122,7 +121,7 @@ export default function AdministrativeExecutive() {
         <div className="text-left">
           Keep projects on track and under control. <br />
           - Track progress & deadlines <br />
-          - - Assign and manage tasks <br />
+          - Assign and manage tasks <br />
           - Coordinate team efforts
         </div>
       ),
@@ -205,6 +204,31 @@ export default function AdministrativeExecutive() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeService, setActiveService] = useState(null);
 
+  // --- Animation setup for Services Section ---
+  const servicesControls = useAnimation();
+  const [servicesRef, servicesInView] = useInView({ threshold: 0.05, triggerOnce: false });
+
+  useEffect(() => {
+    if (servicesInView) {
+      servicesControls.start("visible");
+    } else {
+      servicesControls.start("hidden");
+    }
+  }, [servicesControls, servicesInView]);
+
+  // --- Animation setup for HelloSection ---
+  const helloControls = useAnimation();
+  const [helloRef, helloInView] = useInView({ threshold: 0.05, triggerOnce: false });
+
+  useEffect(() => {
+    if (helloInView) {
+      helloControls.start("visible");
+    } else {
+      helloControls.start("hidden");
+    }
+  }, [helloControls, helloInView]);
+
+
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? featureCards.length - 1 : prev - 1));
   };
@@ -223,7 +247,7 @@ export default function AdministrativeExecutive() {
         <title>Best Virtual Assistant Services for Administrative & Executive Support</title>
         <meta name="description" content="Get professional admin support with top executive virtual assistant services. Global Assist Inc helps businesses manage tasks efficiently and stay organized." />
       </Helmet>
-      <div className="font-sans text-[#222]">
+      <div className="font-sans text-[#222] relative">
         {/* Hero Section */}
         <motion.section
           variants={fadeUp}
@@ -278,8 +302,14 @@ export default function AdministrativeExecutive() {
           </motion.div>
         </motion.section>
 
-        {/* --- MODIFICATION START: Removed all animation props from this section --- */}
-        <section className="px-6 md:px-12 lg:px-20 py-16 bg-white">
+
+        <motion.section
+          ref={servicesRef}
+          animate={servicesControls}
+          initial="hidden"
+          variants={fadeUp}
+          className="px-6 md:px-12 lg:px-20 py-16 bg-white"
+        >
           {/* Heading */}
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold">
@@ -321,23 +351,21 @@ export default function AdministrativeExecutive() {
                       activeService === idx ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
                       }`}
                   >
-                    <p className="text-base text-left">
+                    <div className="text-base text-left">
                       {service.desc}
-                    </p>
+                    </div>
                   </div>
                 </div>
                 <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
               </div>
             ))}
           </div>
-        </section>
-        {/* --- MODIFICATION END --- */}
+        </motion.section>
 
-        {/* HelloSection */}
         <motion.div
+          ref={helloRef}
+          animate={helloControls}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
           variants={fadeUp}
         >
           <HelloSection />

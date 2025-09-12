@@ -26,15 +26,10 @@ const Founder = () => {
             Laimina<br />Methuselha
           </h3>
           <p className="text-black leading-relaxed">
-            Meet Laimina Methuselha, the visionary founder and CEO behind Global
-            Assist Inc., a dynamic and growing organization revolutionizing
-            outsourcing and virtual work solutions for small and mid-size firms
-            by providing more employment opportunities and delivering innovative
-            virtual solutions that empower business to thrive in today’s dynamic
-            landscape.
+           Meet Laimina Methuselha, the visionary founder and CEO behind Global Assist Inc,. a dynamic and growing organization revolutionizing outsourcing and virtual work solutions for small and mid-size firms by providing more employment opportunities and delivering innovative virtual solutions that empower business to thrive in today’s dynamic landscape. 
             <br />
-            Lamina's professional journey, with an impressive 15 years of corporate expertise, reflects her unwavering commitment to excellence. Having spearheaded a successful staffing brand for 8 years, she transitioned to establish Global Assist Inc. as her own visionary venture.
-            Her mission? To bridge the gap for small and mid-size businesses by connecting them with top-tier talent, thereby combatting unemployment while enabling individuals to pursue their passions from the comfort of their homes. Beyond her professional pursuits, Lamina is a devoted mother of two who cherishes quality time spent with her family and delights in exploring new destinations through travel
+           Laimina's professional journey, with an impressive 15 years of corporate expertise, reflects her unwavering commitment to excellence. Having spearheaded a successful staffing brand for 8 years, she transitioned to establish Global Assist Inc. as her own visionary venture. 
+Her mission? To bridge the gap for small and mid-size businesses by connecting them with top-tier talent, thereby combating unemployment while enabling individuals to pursue their passions from the comfort of their homes. Beyond her professional pursuits, Laimina is a devoted mother of two who cherishes quality time spent with her family and delights in exploring new destinations through travel.
           </p>
         </div>
       </div>

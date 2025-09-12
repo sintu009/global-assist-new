@@ -1,5 +1,5 @@
 import React from "react";
-import footerbg from "../assets/footerbg.png";
+import footerbg from "../assets/footerbg.jpg";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";

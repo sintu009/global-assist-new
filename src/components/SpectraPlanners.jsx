@@ -13,12 +13,16 @@ import img2 from "../assets/appre2.jpg";
 import img3 from "../assets/appre3.jpg";
 import img4 from "../assets/appre4.jpg";
 import img5 from "../assets/appre5.jpg";
-import HelloSection from "./HelloSection"; // Imported HelloSection
+import HelloSection from "./HelloSection";
+import globalpromo from "../assets/globalpromo.mp4";
+
+// ✅ 1. Imported the new image
+import fourth from "../assets/fourth.jpg";
 
 const topic1Items = [
-  { title: "Employee Recognition", videoUrl: "https://www.youtube.com/embed/aS-cWExV-gY" },
-  { title: "Employee Testimony", videoUrl: "https://www.youtube.com/embed/sFl046RtEXY" },
-  { title: "Global Assist Promo", videoUrl: "https://www.youtube.com/embed/HNY3T4IAQ9w" },
+  { title: "Employee Recognition", videoUrl: "https://www.youtube.com/embed/aS-cWExV-gY", type: "youtube" },
+  { title: "Employee Testimony", videoUrl: "https://www.youtube.com/embed/sFl046RtEXY", type: "youtube" },
+  { title: "Global Assist Promo", videoSrc: globalpromo, type: "local" },
 ];
 
 const topic2Items = [
@@ -28,10 +32,12 @@ const topic2Items = [
   { title: "2021 Achievements", videoUrl: "https://www.youtube.com/embed/FBdQd7lGXvk" },
 ];
 
+// ✅ 2. Added the new item to the array
 const topic3Items = [
   { image: planner7, title: "Award", type: "image" },
   { video: natashaclient, title: "Client Testimony", type: "video" },
   { image: planner9, title: "Award", type: "image" },
+  { image: fourth, title: "Certificate", type: "image" },
 ];
 
 const topic4Items = [
@@ -51,6 +57,8 @@ const appreciationImages = [img1, img2, img3, img4, img5];
 export default function SpectraPlanners() {
   const appreciationScrollRef = useRef(null);
   const topic2ScrollRef = useRef(null);
+  // ✅ 3. Created a new ref for the third topic carousel
+  const topic3ScrollRef = useRef(null);
 
   const scroll = (ref, direction) => {
     if (ref?.current) {
@@ -77,16 +85,23 @@ export default function SpectraPlanners() {
           {topic1Items.map((item, index) => (
             <div key={index} className="bg-white rounded-[32px] p-8 transition duration-300 min-w-[100vw] sm:min-w-0">
               <div className="w-full h-[240px] md:w-[360px] mb-6 rounded-[24px] overflow-hidden">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={item.videoUrl}
-                  title={item.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="rounded-[24px]"
-                ></iframe>
+                {item.type === 'local' ? (
+                  <video controls className="w-full h-full object-cover rounded-[24px]">
+                    <source src={item.videoSrc} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={item.videoUrl}
+                    title={item.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-[24px]"
+                  ></iframe>
+                )}
               </div>
               <h3 className="text-[20px] font-bold mb-2">{item.title}</h3>
             </div>
@@ -97,14 +112,12 @@ export default function SpectraPlanners() {
       {/* Topic 02 */}
       <div className="bg-gradient-to-r from-[#E90065] to-[#53389E] py-4 px-0 md:px-2 text-white">
         <div className="max-w-7xl mx-auto relative">
-          {/* Scroll Buttons */}
           <button
             onClick={() => scroll(topic2ScrollRef, "left")}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-[#E90065] to-[#53389E] text-white px-3 py-2 rounded-full"
           >
             ←
           </button>
-
           <div
             ref={topic2ScrollRef}
             className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-2"
@@ -132,7 +145,6 @@ export default function SpectraPlanners() {
               </div>
             ))}
           </div>
-
           <button
             onClick={() => scroll(topic2ScrollRef, "right")}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-[#E90065] to-[#53389E] text-white px-3 py-2 rounded-full"
@@ -142,38 +154,54 @@ export default function SpectraPlanners() {
         </div>
       </div>
 
-      {/* Topic 03 */}
+      {/* ✅ 4. Replaced the old Topic 03 with the new carousel structure */}
       <div className="bg-white py-8 px-4">
-        <div className="flex flex-row gap-6 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
-          {topic3Items.map((item, index) => (
-            <div key={index} className="bg-white rounded-[32px] md:w-[460px] p-8 min-w-[100vw] sm:min-w-0">
-              {item.type === "video" ? (
-                <video controls className="w-full h-[480px] object-fill rounded-[24px] mb-6" poster="">
-                  <source src={item.video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              ) : (
-                <img src={item.image} alt={item.title} className="w-full h-[480px] object-fill rounded-[24px] mb-6" />
-              )}
-              <h3 className="text-[20px] font-bold mb-2">{item.title}</h3>
+        <div className="max-w-7xl mx-auto relative">
+          <button
+            onClick={() => scroll(topic3ScrollRef, "left")}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full"
+          >
+            ←
+          </button>
+          <div
+            ref={topic3ScrollRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-8"
+          >
+            {topic3Items.map((item, index) => (
+              <div key={index} className="bg-white rounded-[32px] md:w-[460px] p-8 flex-shrink-0 min-w-[90vw] sm:min-w-0">
+                {item.type === "video" ? (
+                  <video controls className="w-full h-[480px] object-fill rounded-[24px] mb-6" poster="">
+                    <source src={item.video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img src={item.image} alt={item.title} className="w-full h-[480px] object-fill rounded-[24px] mb-6" />
+                )}
+                <h3 className="text-[20px] font-bold mb-2">{item.title}</h3>
+              </div>
+            ))}
+          </div>
+          <button
+            onClick={() => scroll(topic3ScrollRef, "right")}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#333] text-white px-3 py-2 rounded-full"
+          >
+            →
+          </button>
+        </div>
+      </div>
+
+      {/* Topic 04 */}
+      <div className="bg-gradient-to-r from-[#E90065] to-[#53389E] py-8 px-4 text-white">
+        <div className="flex flex-row gap-28 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
+          {topic4Items.map((item, index) => (
+            <div key={index} className="bg-gradient-to-r from-[#E90065] to-[#53389E] rounded-[32px] md:w-[440px] p-8 min-w-[100vw] sm:min-w-0">
+              <img src={item.image} alt={item.title} className="w-full h-[440px] object-fill rounded-[24px] mb-6" />
+              <h3 className="text-[20px] font-bold mb-2 text-white">{item.title}</h3>
+              <p className="text-[#CCCCCC] text-[16px] leading-[24px]">{item.description}</p>
             </div>
           ))}
         </div>
       </div>
-
-     {/* Topic 04 */}
-<div className="bg-gradient-to-r from-[#E90065] to-[#53389E] py-8 px-4 text-white">
-  {/* --- MODIFICATION: Changed gap-6 to gap-10 --- */}
-  <div className="flex flex-row gap-28 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible max-w-7xl mx-auto scrollbar-hide">
-    {topic4Items.map((item, index) => (
-      <div key={index} className="bg-gradient-to-r from-[#E90065] to-[#53389E] rounded-[32px] md:w-[440px] p-8 min-w-[100vw] sm:min-w-0">
-        <img src={item.image} alt={item.title} className="w-full h-[440px] object-fill rounded-[24px] mb-6" />
-        <h3 className="text-[20px] font-bold mb-2 text-white">{item.title}</h3>
-        <p className="text-[#CCCCCC] text-[16px] leading-[24px]">{item.description}</p>
-      </div>
-    ))}
-  </div>
-</div>
 
       {/* Topic 05 */}
       <div className="bg-white py-8 px-4">

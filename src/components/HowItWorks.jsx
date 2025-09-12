@@ -1,14 +1,16 @@
 import React from "react";
-import GetInTouch from "./GetInTouch"; 
+import GetInTouch from "./GetInTouch";
 import ProcessTimeline from "./ProcessTimeline";
+import HowItWorkcards from "./HowItWorkcards";
+import HelloSection from "./HelloSection";
 
 export default function HowItWorks() {
   return (
-    <div className="overflow-x-hidden">
+    <>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh]">
+      <section className="relative min-h-[80vh] overflow-x-hidden">
         <div className="relative min-h-[80vh] flex items-center justify-center text-center text-black">
-          {/* ✅ Background Video */}
+          {/* Background Video */}
           <video
             autoPlay
             muted
@@ -20,8 +22,8 @@ export default function HowItWorks() {
             Your browser does not support the video tag.
           </video>
 
-          {/* ✅ Text Content Overlay */}
-          <div className="relative z-10 space-y-4">
+          {/* Text Content Overlay */}
+          <div className="relative z-10 space-y-4 px-4">
             <p className="uppercase text-sm tracking-widest text-gray-700">One Stop Shop</p>
             <h1 className="text-3xl md:text-5xl font-roboto font-semibold leading-snug text-black">
               What can Global Assist <br className="hidden md:block" />General VAs do?
@@ -29,8 +31,14 @@ export default function HowItWorks() {
           </div>
         </div>
       </section>
-      <ProcessTimeline />
-      <GetInTouch />
-    </div>
+      
+      <HowItWorkcards />
+
+      {/* ✅ Wrapper to contain overflow from the components below */}
+      <div className="overflow-x-hidden">
+        <ProcessTimeline />
+        <HelloSection />
+      </div>
+    </>
   );
 }

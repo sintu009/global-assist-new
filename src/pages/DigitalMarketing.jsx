@@ -334,7 +334,7 @@ const services = [
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.05 }}
         >
           {/* Heading */}
           <div className="text-center mb-10">
@@ -364,7 +364,7 @@ const services = [
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.05 }}
               >
                 <div className="relative group rounded-xl overflow-hidden shadow-md cursor-pointer"
                   onClick={() => toggleService(idx)}>

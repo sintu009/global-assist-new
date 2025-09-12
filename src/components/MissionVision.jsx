@@ -15,7 +15,7 @@ const MissionVision = () => {
       </h1>
 
       {/* Top Image Section */}
-      <div className="w-full h-auto flex justify-center py-8 relative z-10">
+      <div className="w-full h-auto flex justify-center py-8 relative z-21">
         <img
           src={threePeepAbout}
           alt="Our Team"
