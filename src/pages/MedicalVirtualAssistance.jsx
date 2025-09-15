@@ -174,7 +174,7 @@ function MedicalVirtualAssistance() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.2 }}
         >
           {features.map((feature, index) => (
             <motion.div
@@ -213,7 +213,7 @@ function MedicalVirtualAssistance() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.2 }}
         >
           <section className="px-6 md:px-12 lg:px-20 py-16 bg-white">
             {/* Heading */}

@@ -207,7 +207,7 @@ const services = [
         <title>Virtual Assistant Digital Marketing Services | SEO & Online Marketing Support</title>
         <meta name="description" content="Enhance your online presence with expert digital marketing virtual assistants. Global Assist Inc offers SEO, social media, and marketing support to grow your business." />
       </Helmet>
-      <section className="font-['Roboto'] text-[#0A0D17] overflow-x-hidden">
+      <section className="font-['Roboto'] text-[#0A0D17] overflow-x-hidden scrollbar-hide">
         {/* Hero Section */}
         <div
           className="mt-0 md:-mt-14 pb-2 px-6 md:px-12 bg-white relative overflow-hidden"

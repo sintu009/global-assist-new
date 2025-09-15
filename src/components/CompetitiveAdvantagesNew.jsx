@@ -70,7 +70,7 @@ export default function CompetitiveAdvantagesNew() {
   }, [currentPage]);
 
   return (
-    <section className="bg-[#FCEED4] py-16 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="bg-purple-300 py-16 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-6xl mx-auto relative">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div

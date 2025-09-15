@@ -94,7 +94,7 @@ export default function ProcessTimeline() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white py-24 px-4 max-w-6xl mx-auto"
+      className="relative bg-white py-24 px-4 max-w-6xl mx-auto scrollbar-hide"
     >
       {/* Center vertical progress line */}
 <div className="hidden md:block absolute left-1/2 top-0 w-[2px] bg-gray-200 h-full transform -translate-x-1/2 z-0">

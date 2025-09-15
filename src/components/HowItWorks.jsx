@@ -8,7 +8,7 @@ export default function HowItWorks() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] overflow-x-hidden">
+      <section className="relative min-h-[80vh] overflow-x-hidden scrollbar-hide">
         <div className="relative min-h-[80vh] flex items-center justify-center text-center text-black">
           {/* Background Video */}
           <video

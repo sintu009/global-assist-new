@@ -3,6 +3,7 @@
   import Header from "./components/Header";
   import Footer from "./components/Footer";
   import ScrollToTop from "./components/ScrollToTop"; // ✅ Added scroll restoration
+
   import FooterNew from "./components/FooterNew";
 
   import HomePage from "./components/HomePage";
@@ -42,12 +43,16 @@
 
   import TawkMessenger from "./components/TawkMessenger";
 
+  import ScrollToTopButton from "./components/ScrollToTopButton";
+
+
   function App() {
     return (
       <Router>
         <ScrollToTop /> {/* ✅ Ensures scroll to top on every route change */}
         <TawkMessenger />
         <Header />
+        <ScrollToTopButton />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -87,6 +92,7 @@
         </Routes>
         <FooterNew />
       </Router>
+      
     );
   }
 

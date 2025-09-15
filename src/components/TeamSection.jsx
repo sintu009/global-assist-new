@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // Importing icons for buttons
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import box1 from "../assets/box1.png";
 import box2 from "../assets/box2.png";
 import box3 from "../assets/box3.png";
@@ -75,13 +75,31 @@ export default function TeamSection() {
   const handleScroll = (direction) => {
     const container = scrollContainerRef.current;
     if (container) {
-      const scrollAmount = container.offsetWidth * 0.8; // Scroll 80% of the visible width
+      const scrollAmount = container.offsetWidth * 0.8;
       container.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth',
       });
     }
   };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const scrollInterval = setInterval(() => {
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
+        container.scrollTo({
+          left: 0,
+          behavior: 'smooth'
+        });
+      } else {
+        handleScroll('right');
+      }
+    }, 5000);
+
+    return () => clearInterval(scrollInterval);
+  }, []);
 
   return (
     <section className="w-full py-20 px-6 lg:px-8">
@@ -107,7 +125,7 @@ export default function TeamSection() {
       <div className="max-w-7xl mx-auto">
         <div
           ref={scrollContainerRef}
-          className="flex overflow-x-auto gap-10 py-4 scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
+          className="flex overflow-x-auto gap-10 py-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
         >
           {team.map((member) => (
             <div key={member.id} className="group flex flex-col items-center flex-shrink-0 w-[70vw] sm:w-[40vw] md:w-[28vw] lg:w-[22vw]">
@@ -116,13 +134,15 @@ export default function TeamSection() {
                   src={member.box}
                   alt={`Box for ${member.name}`}
                   className="w-[95%] rounded-2xl mx-auto"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <motion.img
+                <img
                   src={member.img}
                   alt={member.name}
-                  className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] max-w-[360px] object-contain"
-                  whileHover={{ scale: 1.15 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] max-w-[360px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-115"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="mt-6 text-center">
