@@ -54,9 +54,9 @@ export default function CustomizedCRMSoftware() {
     title: "CRM Setup & Implementation",
     desc: (
       <div className="text-left">
-        Requirement Analysis – Understand business goals, workflows, and data structure. <br />
-        CRM Selection Consulting – Help choose the right CRM (HubSpot, Zoho, Salesforce, Pipedrive, etc.). <br />
-        Custom Implementation – Configure modules, pipelines, fields, and dashboards.
+        –Requirement Analysis  <br />
+        –CRM Selection Consulting – Help choose the right CRM  <br />
+        –Custom Implementation
       </div>
     ),
   },
@@ -65,9 +65,9 @@ export default function CustomizedCRMSoftware() {
     title: "Customization & Integration",
     desc: (
       <div className="text-left">
-        Custom Fields & Pipelines – Tailor the CRM to match your sales or service process. <br />
-        Third-Party Integrations – Connect with email platforms, social media, ad managers, accounting tools, etc. <br />
-        API Development – Custom integrations for unique business workflows.
+        –Custom Fields & Pipelines <br />
+        –Third-Party Integrations  <br />
+        –API Development
       </div>
     ),
   },
@@ -76,9 +76,9 @@ export default function CustomizedCRMSoftware() {
     title: "Sales & Marketing Alignment",
     desc: (
       <div className="text-left">
-        Lead Capture Forms & Landing Pages – Integrate with CRM to track and nurture leads. <br />
-        Email Campaign Management – Segment lists, run drip campaigns, and measure engagement. <br />
-        Lead Scoring & Prioritization – Identify high-value prospects for sales teams.
+        –Lead Capture Forms & Landing Pages  <br />
+        –Email Campaign Management  <br />
+        –Lead Scoring & Prioritization 
       </div>
     ),
   },
@@ -87,9 +87,9 @@ export default function CustomizedCRMSoftware() {
     title: "Data & Analytics",
     desc: (
       <div className="text-left">
-        Dashboard Creation – Real-time insights for leads, sales, and customer activities. <br />
-        Reporting & Forecasting – Customized reports on KPIs and revenue projections. <br />
-        Data Hygiene Services – Clean duplicates, enrich contact information, and ensure accuracy.
+        –Dashboard Creation <br />
+        –Reporting & Forecasting  <br />
+        –Data Hygiene Services 
       </div>
     ),
   },
@@ -98,9 +98,9 @@ export default function CustomizedCRMSoftware() {
     title: "Customer Support & Service Management",
     desc: (
       <div className="text-left">
-        Ticketing System Setup – Manage customer inquiries from multiple channels in one place. <br />
-        Knowledge Base & Self-Service Portal – Integrated support for customers. <br />
-        Customer Feedback Collection – Automated surveys or NPS within CRM.
+        –Ticketing System Setup  <br />
+        –Knowledge Base & Self-Service Portal – Integrated support for customers. <br />
+        –Customer Feedback Collection – Automated surveys or NPS within CRM.
       </div>
     ),
   },
@@ -109,9 +109,9 @@ export default function CustomizedCRMSoftware() {
     title: "Training & Adoption",
     desc: (
       <div className="text-left">
-        Team Training – Hands-on sessions for sales, marketing, and service teams. <br />
-        User Documentation – Custom manuals and video walkthroughs. <br />
-        Best Practices Workshops – For data entry, pipeline updates, and reporting.
+        –Team Training – Hands-on sessions  <br />
+        –User Documentation  <br />
+        –Best Practices Workshops 
       </div>
     ),
   },

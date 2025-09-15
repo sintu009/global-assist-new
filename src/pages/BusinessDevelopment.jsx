@@ -61,9 +61,9 @@ export default function BusinessDevelopment() {
     title: "Strategy & Market Research",
     desc: (
       <div className="text-left">
-        Business Growth Strategy – Define short- and long-term goals, market positioning, and revenue models. <br />
-        Market & Competitor Analysis – Identify gaps, new opportunities, and trends. <br />
-        Target Audience Development – Build Ideal Customer Profiles (ICPs) and buyer personas.
+        –Business Growth Strategy  <br />
+        –Market & Competitor Analysis  <br />
+        –Target Audience Development 
       </div>
     ),
   },
@@ -72,9 +72,9 @@ export default function BusinessDevelopment() {
     title: "Partnership & Networking",
     desc: (
       <div className="text-left">
-        Strategic Partnerships / Alliances – Identify, approach, and negotiate with potential partners. <br />
-        Channel / Reseller Development – Build distribution or affiliate channels. <br />
-        Industry Event Representation – Attend expos, conferences, and networking events to generate leads.
+        –Strategic Partnerships / Alliances <br />
+        –Channel / Reseller Development <br />
+        –Industry Event Representation
       </div>
     ),
   },
@@ -83,9 +83,9 @@ export default function BusinessDevelopment() {
     title: "Lead Generation & Client Acquisition",
     desc: (
       <div className="text-left">
-        Outbound Prospecting – Email, LinkedIn, and phone outreach to targeted prospects. <br />
-        Inbound Strategy Support – Help create funnels, content, and offers to attract leads. <br />
-        Appointment Setting / Demo Scheduling – Hand-off warm leads to sales teams.
+        –Outbound Prospecting  <br />
+        –Inbound Strategy Support  <br />
+        –Appointment Setting / Demo Scheduling 
       </div>
     ),
   },
@@ -94,9 +94,9 @@ export default function BusinessDevelopment() {
     title: "Training & Consulting",
     desc: (
       <div className="text-left">
-        Sales & BD Training – Train staff on prospecting, negotiation, and relationship management. <br />
-        Negotiation & Closing Techniques – Improve deal size and conversion rates. <br />
-        Account Management & Customer Success – Build retention and referral systems.
+        –Sales & BD Training  <br />
+        –Negotiation & Closing Techniques <br />
+        –Account Management & Customer Success 
       </div>
     ),
   },
@@ -105,9 +105,9 @@ export default function BusinessDevelopment() {
     title: "Reporting & Continuous Improvement",
     desc: (
       <div className="text-left">
-        Weekly/Monthly BD Reporting – Track activity, opportunities, and revenue impact. <br />
-        Market Feedback Loop – Gather insights from clients to improve offerings. <br />
-        Competitive Intelligence Updates – Ongoing monitoring of industry trends.
+        –Weekly/Monthly BD Reporting <br />
+        –Market Feedback Loop <br />
+        –Competitive Intelligence Updates
       </div>
     ),
   },
@@ -116,9 +116,9 @@ export default function BusinessDevelopment() {
     title: "Sales Pipeline & Process Optimization",
     desc: (
       <div className="text-left">
-        Pipeline Development – Design and optimize stages from lead to close. <br />
-        Sales Playbook Creation – Scripts, objection handling, outreach templates. <br />
-        Automation & Tools – Implement sales/marketing automation tools (HubSpot, Zoho, Pipedrive, etc.).
+        –Pipeline Development  <br />
+        –Sales Playbook Creation <br />
+        –Automation & Tools 
       </div>
     ),
   },

@@ -38,9 +38,9 @@ const services = [
     title: "Strategy & Planning",
     desc: (
       <div className="text-left">
-        Target Audience Research – Identify buyer personas, decision makers, and ideal customer profiles (ICPs). <br />
-        Market & Competitor Analysis – See what channels and messaging competitors use. <br />
-        Lead Generation Funnel Design – Map out how strangers become leads → prospects → customers.
+        –Target Audience Research. <br />
+        –Market & Competitor Analysis. <br />
+        –Lead Generation Funnel Design. 
       </div>
     ),
   },
@@ -49,9 +49,9 @@ const services = [
     title: "Data & Prospecting",
     desc: (
       <div className="text-left">
-        Database Building / List Creation – Curate targeted B2B/B2C lists with verified contacts. <br />
-        CRM Setup & Management – Integrate or optimize CRM tools (HubSpot, Salesforce, Zoho, etc.) for lead tracking. <br />
-        Lead Scoring – Rank leads based on engagement, fit, and intent.
+        –Database Building / List Creation  <br />
+        –CRM Setup & Management <br />
+        –Lead Scoring – Rank leads based on engagement, fit, and intent.
       </div>
     ),
   },
@@ -60,9 +60,9 @@ const services = [
     title: "Outreach Campaigns",
     desc: (
       <div className="text-left">
-        Email Outreach Campaigns – Cold email, nurture sequences, drip campaigns. <br />
-        LinkedIn Outreach – Connect, message, and nurture leads on LinkedIn. <br />
-        Telemarketing / Cold Calling – Pre-qualify leads via phone.
+        –Email Outreach Campaigns – Cold email, nurture sequences, drip campaigns. <br />
+        –LinkedIn Outreach – Connect, message, and nurture leads on LinkedIn. <br />
+        –Telemarketing / Cold Calling – Pre-qualify leads via phone.
       </div>
     ),
   },
@@ -71,9 +71,9 @@ const services = [
     title: "Digital Marketing for Lead Generation",
     desc: (
       <div className="text-left">
-        SEO (Search Engine Optimization) – Rank on Google for high-intent keywords. <br />
-        Paid Ads (PPC) – Google Ads, Meta Ads, LinkedIn Ads, etc., targeted at lead capture. <br />
-        Landing Page Creation – High-converting pages with forms and calls-to-action.
+        –SEO (Search Engine Optimization) <br />
+        –Paid Ads (PPC) – Google Ads, Meta Ads, LinkedIn Ads, etc. <br />
+        –Landing Page Creation – High-converting pages with forms and calls-to-action.
       </div>
     ),
   },
@@ -82,9 +82,9 @@ const services = [
     title: "Lead Capture & Conversion Tools",
     desc: (
       <div className="text-left">
-        Lead Forms / Popups / Chatbots – Set up tools on websites or landing pages. <br />
-        Lead Magnet Development – Checklists, webinars, free tools, templates to encourage sign-ups. <br />
-        Appointment Setting – Schedule calls or demos for your client’s sales team.
+        –Lead Forms / Popups / Chatbots  <br />
+        –Lead Magnet Development <br />
+        –Appointment Setting 
       </div>
     ),
   },
@@ -93,9 +93,9 @@ const services = [
     title: "Nurturing & Analytics",
     desc: (
       <div className="text-left">
-        Email Drip Sequences – Nurture cold leads into warm prospects. <br />
-        Retargeting Ads – Bring back visitors who didn’t convert. <br />
-        A/B Testing – Test subject lines, CTAs, landing pages to improve conversion rates.
+        –Email Drip Sequences  <br />
+        –Retargeting Ads  <br />
+        –A/B Testing – Test subject lines, CTAs, landing pages to improve conversion rates.
       </div>
     ),
   },
