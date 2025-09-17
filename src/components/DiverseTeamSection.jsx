@@ -6,8 +6,9 @@ const DiverseTeamSection = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-xl md:text-3xl font-bold">
           We're a diverse team focused on <br/>innovation and globalization.<br/> <br/>
-          Global Assist Inc. is a leading 360-degree Business solution firm with offices in the USA, Canada, India, and the Philippines and branches spread globally. We identify with the importance of your work and make sure that your requirements are looked after in the best way possible.
+          
         </h2>
+        <h3 className="font-bold">Global Assist Inc. is a leading 360-degree Business solution firm with offices in the USA, Canada, India, and the Philippines and branches spread globally. We identify with the importance of your work and make sure that your requirements are looked after in the best way possible.</h3>
       </div>
     </section>
   );
