@@ -38,37 +38,43 @@ import parameswari from "../assets/parmeshwari.png";
 import fiorella from "../assets/fiorella.png";
 
 export default function TeamSection() {
-  const team = [
-    { id: 1, name: "Natasha Shukla", role: "Business Head", box: box1, img: mem1 },
-    { id: 2, name: "Raina Gupta", role: "Opertions Manager", box: box2, img: mem2 },
-    { id: 3, name: "Anushka Gupta", role: "Sales Manager", box: box3, img: mem3 },
-    { id: 4, name: "Kanika Chauhan", role: "Project Manager", box: box4, img: mem4 },
-    { id: 5, name: "Arpita Singh", role: "Administrative Assistant", box: box1, img: arpita },
-    { id: 6, name: "Jonald Garlan", role: "Medical VA", box: box1, img: jonald },
-    { id: 7, name: "Ankita", role: "Real Estate VA", box: box1, img: ankita },
-    { id: 8, name: "Mary David", role: "Medical VA", box: box1, img: mary },
-    { id: 9, name: "Karla Ron", role: "Admin Assistant", box: box1, img: karla },
-    { id: 10, name: "GURJEET KAUR RANA", role: "Admin Assistant", box: box1, img: gurjeet },
-    { id: 11, name: "Gema Rebolledo", role: "Administration & Social Media VA", box: box1, img: gema },
-    { id: 12, name: "Gladys Verina", role: "Real estate VA", box: box1, img: gladys},
-    { id: 13, name: "Anjali", role: "Insurance VA", box: box1, img: anjali },
-    { id: 14, name: "Jeizl", role: "Medical VA", box: box1, img: jeizl },
-    { id: 15, name: "Manish Khera", role: "Accountant & Bookkeeper", box: box1, img: manish },
-    { id: 16, name: "Alma Narvaez", role: "Bookkeeper & Admin assistant", box: box1, img: alma },
-    { id: 17, name: "Shubham", role: "Graphic Designer & Video Editor", box: box1, img: shubham },
-    { id: 18, name: "Jesús R. Quero", role: "Journalist / VA Marketing", box: box1, img: jesus },
-    { id: 19, name: "Mohd Zubair", role: "Web Developer", box: box1, img: zubair },
-    { id: 20, name: "Manav Basotia", role: "Creative Marketing Specialist", box: box1, img: manav },
-    { id: 21, name: "Zunaira", role: "Business Developer", box: box1, img: zunaira },
-    { id: 22, name: "Mark", role: "Business Developer", box: box1, img: mark },
-    { id: 23, name: "Sneha Rathode", role: "Appointment Setter", box: box1, img: sneha },
-    { id: 24, name: "Aradhya Sinha", role: "Social Media Analyst", box: box1, img: aradhya },
-    { id: 25, name: "Mandeep", role: "Data Analyst", box: box1, img: mandeep },
-    { id: 26, name: "Ronit Singh Nayal", role: "Web Developer", box: box1, img: ronit },
-    { id: 27, name: "Arka", role: "Digital Marketing Consultant", box: box1, img: arka },
-    { id: 28, name: "Parameswari Roy", role: "Business Development Executive", box: box1, img: parameswari },
-    { id: 29, name: "Fiorella Arias", role: "Real Estate transaction coordinator", box: box1, img: fiorella },
-  ];
+  const boxes = [box1, box2, box3, box4];
+
+const team = [
+  { id: 1, name: "Natasha Shukla", role: "Business Head", img: mem1 },
+  { id: 2, name: "Raina Gupta", role: "Opertions Manager", img: mem2 },
+  { id: 3, name: "Anushka Gupta", role: "Sales Manager", img: mem3 },
+  { id: 4, name: "Kanika Chauhan", role: "Project Manager", img: mem4 },
+  { id: 5, name: "Arpita Singh", role: "Administrative Assistant", img: arpita },
+  { id: 6, name: "Jonald Garlan", role: "Medical VA", img: jonald },
+  { id: 7, name: "Ankita", role: "Real Estate VA", img: ankita },
+  { id: 8, name: "Mary David", role: "Medical VA", img: mary },
+  { id: 9, name: "Karla Ron", role: "Admin Assistant", img: karla },
+  { id: 10, name: "GURJEET KAUR RANA", role: "Admin Assistant", img: gurjeet },
+  { id: 11, name: "Gema Rebolledo", role: "Administration & Social Media VA", img: gema },
+  { id: 12, name: "Gladys Verina", role: "Real estate VA", img: gladys},
+  { id: 13, name: "Anjali", role: "Insurance VA", img: anjali },
+  { id: 14, name: "Jeizl", role: "Medical VA", img: jeizl },
+  { id: 15, name: "Manish Khera", role: "Accountant & Bookkeeper", img: manish },
+  { id: 16, name: "Alma Narvaez", role: "Bookkeeper & Admin assistant", img: alma },
+  { id: 17, name: "Shubham", role: "Graphic Designer & Video Editor", img: shubham },
+  { id: 18, name: "Jesús R. Quero", role: "Journalist / VA Marketing", img: jesus },
+  { id: 19, name: "Mohd Zubair", role: "Web Developer", img: zubair },
+  { id: 20, name: "Manav Basotia", role: "Creative Marketing Specialist", img: manav },
+  { id: 21, name: "Zunaira", role: "Business Developer", img: zunaira },
+  { id: 22, name: "Mark", role: "Business Developer", img: mark },
+  { id: 23, name: "Sneha Rathode", role: "Appointment Setter", img: sneha },
+  { id: 24, name: "Aradhya Sinha", role: "Social Media Analyst", img: aradhya },
+  { id: 25, name: "Mandeep", role: "Data Analyst", img: mandeep },
+  { id: 26, name: "Ronit Singh Nayal", role: "Web Developer", img: ronit },
+  { id: 27, name: "Arka", role: "Digital Marketing Consultant", img: arka },
+  { id: 28, name: "Parameswari Roy", role: "Business Development Executive", img: parameswari },
+  { id: 29, name: "Fiorella Arias", role: "Real Estate transaction coordinator", img: fiorella },
+].map((member, index) => ({
+  ...member,
+  box: boxes[index % boxes.length], // cycle through box1 → box2 → box3 → box4
+}));
+
 
   const scrollContainerRef = useRef(null);
 
