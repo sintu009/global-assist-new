@@ -12,11 +12,17 @@ const Achievements = () => {
         
         {/* Centered Image Container */}
         <div className="flex justify-center">
-          <img
-            src={photoji}
-            alt="Our Achievement"
-            className="rounded-2xl shadow-lg border-4 border-white max-w-full h-auto"
-          />
+          <a
+            href="https://digitaljournal.com/pr/news/revupmarketer/global-assist-transforms-solo-venture-1269477098.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={photoji}
+              alt="Our Achievement"
+              className="rounded-2xl shadow-lg border-4 border-white max-w-full h-auto cursor-pointer"
+            />
+          </a>
         </div>
       </div>
     </section>
