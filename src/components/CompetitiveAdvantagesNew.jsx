@@ -62,7 +62,7 @@ export default function CompetitiveAdvantagesNew() {
   useEffect(() => {
     const timer = setInterval(() => {
       goNext();
-    }, 8000);
+    }, 4000);
 
     return () => {
       clearInterval(timer);

@@ -69,7 +69,6 @@ const FooterNew = () => {
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform duration-300"
               >
-                {/* --- THIS IS THE UPDATED GOOGLE CALENDAR ICON --- */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -79,7 +78,9 @@ const FooterNew = () => {
                   <path fill="#4285F4" d="M12 2H4a2 2 0 0 0-2 2v8h10z" />
                   <path fill="#EA4335" d="M12 2h8a2 2 0 0 1 2 2v8h-10z" />
                   <path fill="#FBBC05" d="M12 22h8a2 2 0 0 0 2-2v-8h-10z" />
-                  <text x="12" y="14"
+                  <text
+                    x="12"
+                    y="14"
                     fontSize="8"
                     fill="white"
                     textAnchor="middle"
@@ -206,12 +207,6 @@ const FooterNew = () => {
             <span className="text-cyan-500 font-semibold">Real Fast</span>
           </div>
 
-          {/* Center - copyright */}
-          <div className="mb-2 md:mb-0 text-center">
-            © 2025 <span className="font-semibold">Global Assist®</span>. All
-            Rights Reserved.
-          </div>
-
           {/* Right - contact info */}
           <div className="flex flex-col md:items-end text-center md:text-right">
             <div className="flex gap-4 justify-center md:justify-end">
@@ -229,6 +224,14 @@ const FooterNew = () => {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Copyright - separate for mobile & desktop */}
+        <div className="mt-4 text-center block md:hidden">
+          © 2025 <span className="font-semibold">Global Assist®</span>. All Rights Reserved.
+        </div>
+        <div className="hidden md:block text-center -mt-8">
+          © 2025 <span className="font-semibold">Global Assist®</span>. All Rights Reserved.
         </div>
       </div>
     </footer>

@@ -9,6 +9,7 @@ import Timeline from '../components/Timeline';
 import FooterNew from '../components/FooterNew';
 import Founder from '../components/Founder';
 import TeamSection from '../components/TeamSection';
+import Achievements from '../components/Achievements';
 
 const AboutPage = () => {
   return (
@@ -20,6 +21,7 @@ const AboutPage = () => {
       <Timeline />
       
       {/* <OurTeamSection/> */}
+      <Achievements/>
       <DepartmentsSection />
       {/* <GetInTouch/> */}
       <TeamSection/>
