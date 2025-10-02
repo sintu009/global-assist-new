@@ -4,6 +4,8 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { SiZoom } from "react-icons/si";
+import PartneredIWB from "../assets/Partnered_with_IWB.jpeg";
+
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -59,70 +61,93 @@ const FooterNew = () => {
           <hr className="border-gray-600 mb-6" />
 
           {/* Schedule meeting section */}
-          <div>
-            <p className="mb-4 text-lg">Schedule a meet with us.</p>
-            <div className="flex justify-center lg:justify-start gap-6 text-5xl">
-              {/* Google Calendar */}
-              <a
-                href="https://calendar.google.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform duration-300"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-12 h-12"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            {/* Left Column - Schedule a meet */}
+            <div>
+              <p className="mb-4 text-lg font-medium">Schedule a meet with us.</p>
+              <div className="flex justify-center lg:justify-start gap-6 text-5xl">
+                {/* Google Calendar */}
+                <a
+                  href="https://calendar.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform duration-300"
                 >
-                  <path fill="#34A853" d="M12 22a2 2 0 0 1-2-2v-8h4v8a2 2 0 0 1-2 2z" />
-                  <path fill="#4285F4" d="M12 2H4a2 2 0 0 0-2 2v8h10z" />
-                  <path fill="#EA4335" d="M12 2h8a2 2 0 0 1 2 2v8h-10z" />
-                  <path fill="#FBBC05" d="M12 22h8a2 2 0 0 0 2-2v-8h-10z" />
-                  <text
-                    x="12"
-                    y="14"
-                    fontSize="8"
-                    fill="white"
-                    textAnchor="middle"
-                    alignmentBaseline="middle"
-                    fontWeight="bold"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="w-12 h-12"
                   >
-                    31
-                  </text>
-                </svg>
-              </a>
+                    <path fill="#34A853" d="M12 22a2 2 0 0 1-2-2v-8h4v8a2 2 0 0 1-2 2z" />
+                    <path fill="#4285F4" d="M12 2H4a2 2 0 0 0-2 2v8h10z" />
+                    <path fill="#EA4335" d="M12 2h8a2 2 0 0 1 2 2v8h-10z" />
+                    <path fill="#FBBC05" d="M12 22h8a2 2 0 0 0 2-2v-8h-10z" />
+                    <text
+                      x="12"
+                      y="14"
+                      fontSize="8"
+                      fill="white"
+                      textAnchor="middle"
+                      alignmentBaseline="middle"
+                      fontWeight="bold"
+                    >
+                      31
+                    </text>
+                  </svg>
+                </a>
 
-              {/* Calendly */}
-              <a
-                href="https://calendly.com/mina-36"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform duration-300"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  className="w-12 h-12"
+                {/* Calendly */}
+                <a
+                  href="https://calendly.com/mina-36"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform duration-300"
                 >
-                  <rect width="256" height="256" rx="60" fill="#0069FF" />
-                  <path
-                    fill="#FFF"
-                    d="M172 188a64 64 0 1 1 0-120l-14 22a40 40 0 1 0 0 76z"
-                  />
-                </svg>
-              </a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256"
+                    className="w-12 h-12"
+                  >
+                    <rect width="256" height="256" rx="60" fill="#0069FF" />
+                    <path
+                      fill="#FFF"
+                      d="M172 188a64 64 0 1 1 0-120l-14 22a40 40 0 1 0 0 76z"
+                    />
+                  </svg>
+                </a>
 
-              {/* Zoom */}
+                {/* Zoom */}
+                <a
+                  href="https://us05web.zoom.us/j/5587388488?pwd=akhtUWh4VEdDaHJpZGhtQm9OYkdIUT09"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform duration-300"
+                >
+                  <SiZoom className="text-[#2D8CFF] w-12 h-12" />
+                </a>
+              </div>
+            </div>
+
+
+
+            {/* Right Column - Partnered with IWB */}
+            <div className="text-center lg:text-left">
+              <p className="mb-4 text-lg font-medium">Founding member of IWB</p>
               <a
-                href="https://us05web.zoom.us/j/5587388488?pwd=akhtUWh4VEdDaHJpZGhtQm9OYkdIUT09"
+                href="https://immigrantwomeninbusiness.com/founding-members/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform duration-300"
+                className="inline-block hover:scale-105 transition-transform duration-300"
               >
-                <SiZoom className="text-[#2D8CFF] w-12 h-12" />
+                <img
+                  src={PartneredIWB}
+                  alt="Partnered with IWB"
+                  className="w-40 h-auto mx-auto lg:mx-0 rounded-md border border-gray-200"
+                />
               </a>
             </div>
           </div>
+
         </motion.div>
       </div>
 
